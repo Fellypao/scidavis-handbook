@@ -1,0 +1,279 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Plot Menu</title>
+<link rel="stylesheet" href="scidavis.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<meta name="keywords" content="Qt, SciDAVis, Data, Analysis, Plotting">
+<link rel="home" href="index.html" title="The SciDAVis Handbook">
+<link rel="up" href="reference.html" title="Chapter 5. Command Reference">
+<link rel="prev" href="sec-graph-menu.html" title="The Graph Menu">
+<link rel="next" href="sec-plot3d-menu.html" title="The Plot 3D menu">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">The Plot Menu</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="sec-graph-menu.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 5. Command Reference</th>
+<td width="20%" align="right"> <a accesskey="n" href="sec-plot3d-menu.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="sect1" title="The Plot Menu">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="sec-plot-menu"></a>The Plot Menu</h2></div></div></div>
+<p>This menu is active only when a table is selected. It can also be accessed in the context menu when one or more columns of a table are selected. These commands allow to plot the data selected in the active table. There are several possibilities to plot from a table:</p>
+<div class="variablelist"><dl>
+<dt></dt>
+<dd><p>Conventional X-Y plots: lines, scatter</p></dd>
+<dt></dt>
+<dd><p>Other plots which are drawn as X-Y plots: columns, rows</p></dd>
+<dt></dt>
+<dd><p>Plots which need the computation of a distribution of values from the columns of data: histograms, box plots</p></dd>
+<dt></dt>
+<dd><p>Vector plots which need four columns</p></dd>
+<dt></dt>
+<dd><p>3D plots drawn from a set of (X,Y,Z) triplets in three columns</p></dd>
+</dl></div>
+<div class="variablelist"><dl>
+<dt>
+<a name="line-cmd"></a><span class="term"><span class="command"><strong>Line</strong></span></span>
+</dt>
+<dd>
+<p>Plots the selected data columns in the active table window using the "Line" style. This command can also be activated by clinking on the <span class="inlinemediaobject"><img src="icons/lPlot.png"></span> icon of the <a class="link" href="sec-table-toolbar.html" title="The Table Toolbar.">Table toolbar</a>. Once the plot is created, the drawing of the data series can be customized (see <a class="xref" href="using.html#sec-customize-2d-plot" title="Customization of a 2D plot">the section called “Customization of a 2D plot”</a>).</p>
+<div class="informalfigure">
+<a name="fig-plot-line"></a><div class="mediaobject"><img src="pics/plot-lines.png"></div>
+</div>
+</dd>
+<dt>
+<a name="scatter-cmd"></a><span class="term"><span class="command"><strong>Scatter</strong></span></span>
+</dt>
+<dd>
+<p>Plots the selected data columns in the active table window using the "Scatter" style. This command can also be activated by clinking on the <span class="inlinemediaobject"><img src="icons/pPlot.png"></span> icon of the <a class="link" href="sec-table-toolbar.html" title="The Table Toolbar.">Table toolbar</a>. Once the plot is created, the drawing of the data series can be customized (see <a class="xref" href="using.html#sec-customize-2d-plot" title="Customization of a 2D plot">the section called “Customization of a 2D plot”</a>).</p>
+<div class="informalfigure">
+<a name="fig-plot-scatter"></a><div class="mediaobject"><img src="pics/plot-scatter.png"></div>
+</div>
+</dd>
+<dt>
+<a name="line-symbol-cmd"></a><span class="term"><span class="command"><strong>Line+Symbol</strong></span></span>
+</dt>
+<dd>
+<p>Plots the selected data columns in the active table window using the "Line + Symbol" style.This command can also be activated by clinking on the <span class="inlinemediaobject"><img src="icons/lpPlot.png"></span> icon of the <a class="link" href="sec-table-toolbar.html" title="The Table Toolbar.">Table toolbar</a>. Once the plot is created, the drawing of the data series can be customized (see <a class="xref" href="using.html#sec-customize-2d-plot" title="Customization of a 2D plot">the section called “Customization of a 2D plot”</a>).</p>
+<div class="informalfigure">
+<a name="fig-plot-linesymbols"></a><div class="mediaobject"><img src="pics/plot-line-symbols.png"></div>
+</div>
+</dd>
+<dt>
+<a name="special-line-symbol-cmd"></a><span class="term"><span class="command"><strong>Special Line/Symbol</strong></span> →</span>
+</dt>
+<dd>
+<p></p>
+<div class="variablelist"><dl>
+<dt>
+<a name="vertical-drop-lines-cmd"></a><span class="term"><span class="command"><strong>Special Line/Symbol→Vertical Drop Lines</strong></span></span>
+</dt>
+<dd>
+<p>Plots the selected data columns in the active table window using the "Vertical drop lines" style. Once the plot is created, the drawing of the data series can be customized (see <a class="xref" href="using.html#sec-customize-2d-plot" title="Customization of a 2D plot">the section called “Customization of a 2D plot”</a>).</p>
+<div class="informalfigure">
+<a name="fig-plot-droplines"></a><div class="mediaobject"><img src="pics/plot-drop-lines.png"></div>
+</div>
+</dd>
+<dt>
+<a name="spline-cmd"></a><span class="term"><span class="command"><strong>Special Line/Symbol→Splines</strong></span></span>
+</dt>
+<dd>
+<p>Plots the selected data columns in the active table window using the "Spline" style. Once the plot is created, the drawing of the data series can be customized (see <a class="xref" href="using.html#sec-customize-2d-plot" title="Customization of a 2D plot">the section called “Customization of a 2D plot”</a>).</p>
+<div class="informalfigure">
+<a name="fig-plot-spline"></a><div class="mediaobject"><img src="pics/plot-splines.png"></div>
+</div>
+</dd>
+<dt>
+<a name="vertical-steps-cmd"></a><span class="term"><span class="command"><strong>Special Line/Symbol→Vertical Steps</strong></span></span>
+</dt>
+<dd>
+<p>Plots the selected data columns in the active table window using the "Vertical Steps" style. Once the plot is created, the drawing of the data series can be customized (see <a class="xref" href="using.html#sec-customize-2d-plot" title="Customization of a 2D plot">the section called “Customization of a 2D plot”</a>).</p>
+<div class="informalfigure">
+<a name="fig-plot-vert-step"></a><div class="mediaobject"><img src="pics/plot-vertical-steps.png"></div>
+</div>
+</dd>
+<dt>
+<a name="horizontal-steps-cmd"></a><span class="term"><span class="command"><strong>Special Line/Symbol→Horizontal Steps</strong></span></span>
+</dt>
+<dd>
+<p>Plots the selected data columns in the active table window using the "Horizontal Steps" style. Once the plot is created, the drawing of the data series can be customized (see <a class="xref" href="using.html#sec-customize-2d-plot" title="Customization of a 2D plot">the section called “Customization of a 2D plot”</a>).</p>
+<div class="informalfigure">
+<a name="fig-plot-hor-step"></a><div class="mediaobject"><img src="pics/plot-horizontal-steps.png"></div>
+</div>
+</dd>
+</dl></div>
+</dd>
+<dt>
+<a name="columns-cmd"></a><span class="term"><span class="command"><strong>Vertical Bars</strong></span></span>
+</dt>
+<dd>
+<p>Plots the selected data columns in the active table window using the "Columns" style, that is vertical bars.</p>
+<div class="informalfigure">
+<a name="fig-plot-bars"></a><div class="mediaobject"><img src="pics/plot-vertical-bars.png"></div>
+</div>
+</dd>
+<dt>
+<a name="rows-cmd"></a><span class="term"><span class="command"><strong>Horizontal Bars</strong></span></span>
+</dt>
+<dd>
+<p>Plots the selected data columns in the active table window using the "Rows" style.</p>
+<div class="informalfigure">
+<a name="fig-plot-rows"></a><div class="mediaobject"><img src="pics/plot-horizontal-bars.png"></div>
+</div>
+</dd>
+<dt>
+<a name="area-cmd"></a><span class="term"><span class="command"><strong>Area</strong></span></span>
+</dt>
+<dd>
+<p>Plots the selected data columns in the active table window using the "Area" style, that is a line style with the area under the curve filled.</p>
+<div class="informalfigure">
+<a name="fig-plot-area"></a><div class="mediaobject"><img src="pics/plot-area.png"></div>
+</div>
+</dd>
+<dt>
+<a name="pie-cmd"></a><span class="term"><span class="command"><strong>Pie</strong></span></span>
+</dt>
+<dd>
+<p>Creates a 2D Pie plot of the selected column in the active table window (only one column allowed). See <a class="xref" href="sec-special-plots.html#sec-pie-plots" title="Pie plots">the section called “Pie plots”</a> for more details.</p>
+<div class="informalfigure">
+<a name="fig-plot-pie"></a><div class="mediaobject"><img src="pics/example-pie.png"></div>
+</div>
+</dd>
+<dt>
+<a name="vectors-xyxy-cmd"></a><span class="term"><span class="command"><strong>Vectors XYXY</strong></span></span>
+</dt>
+<dd>
+<p>Creates a vectors plot of the selected column in the active table window. You must select four columns for this particular type of plot. The two first columns give the coordinates for the starting points of the vectors, the two last columns giving the information regarding the end points. See <a class="xref" href="sec-special-plots.html#sec-vectors-plots" title="Vectors plots">the section called “Vectors plots”</a> for more details.</p>
+<div class="informalfigure">
+<a name="fig-plot-vectors"></a><div class="mediaobject"><img src="pics/example-vector.png"></div>
+</div>
+</dd>
+<dt>
+<a name="vectors-xyam-cmd"></a><span class="term"><span class="command"><strong>Vectors XYAM</strong></span></span>
+</dt>
+<dd><p>Creates a vectors plot of the selected column in the active table window. You must select four columns for this particular type of plot. The two first columns give the coordinates for the starting points of the vectors, the two last columns giving the angle (in radians) and the magnitude of the vectors. See <a class="xref" href="sec-special-plots.html#sec-vectors-plots" title="Vectors plots">the section called “Vectors plots”</a> for more details.</p></dd>
+<dt><span class="term"><span class="command"><strong>Statistical graphs</strong></span></span></dt>
+<dd>
+<p>Statistical plot will not give a direct drawing of the data selected in the table, but they will give a representation of the frequency distribution of the Y-values.</p>
+<div class="variablelist"><dl>
+<dt>
+<a name="box-plot-cmd"></a><span class="term"><span class="command"><strong>Statistical graphs→Box Plot</strong></span></span>
+</dt>
+<dd>
+<p>Creates a box plot of the selected data columns in the active table window. This type of plot is used to give a graphical representation of the some classical parameters of the frequency distribution such as the mean of data, the min and max values, the position of the 95 and 5 percentiles, etc. The choice of the statistical parameters and the graphical parameters can be modified (see <a class="xref" href="sec-statistical-plots.html#sec-box-plots" title="Box plots">the section called “Box plots”</a>).</p>
+<div class="informalfigure">
+<a name="fig-plot-box"></a><div class="mediaobject"><img src="pics/example-box.png"></div>
+</div>
+</dd>
+<dt>
+<a name="histogram-cmd"></a><span class="term"><span class="command"><strong>Statistical graphs→Histogram</strong></span></span>
+</dt>
+<dd>
+<p>Creates a frequency histograms of the selected data columns in the active table window.</p>
+<div class="informalfigure">
+<a name="fig-plot-histogram"></a><div class="mediaobject"><img src="pics/example-histogram.png"></div>
+</div>
+<p>With this command, a frequency distribution is computed from your data.  The default binning uses 10 steps between the max and the min of Y-values. The parameters used to compute the distribution and the graphical parameters used for the drawing of the columns can be modified (see <a class="xref" href="sec-statistical-plots.html#sec-histograms" title="Histograms">the section called “Histograms”</a> for details).</p>
+<p>If you want to draw an histogram directly from values, use the <a class="link" href="sec-plot-menu.html#bars-cmd"><span class="command"><strong>3D Plots→Bars</strong></span> command</a>.</p>
+</dd>
+<dt>
+<a name="stacked-histogram-cmd"></a><span class="term"><span class="command"><strong>Statistical graphs→Stacked Histogram</strong></span></span>
+</dt>
+<dd><p>Creates vertically stacked layers displaying the histograms of the selected data columns in the active table window (one histogram per layer) See the <a class="link" href="sec-plot-menu.html#vertical-2-layers-cmd"><span class="command"><strong>Panel→Vertical 2 Layers</strong></span> command</a> for more details.</p></dd>
+</dl></div>
+</dd>
+<dt><span class="term"><span class="command"><strong>Panel</strong></span></span></dt>
+<dd>
+<p>These commands can be used to obtain quickly some classical arrangements of multiple plot.</p>
+<div class="variablelist"><dl>
+<dt>
+<a name="vertical-2-layers-cmd"></a><span class="term"><span class="command"><strong>Panel→Vertical 2 Layers</strong></span></span>
+</dt>
+<dd><p>Creates 2 vertically stacked layers displaying the selected data columns in the active table window (one curve per layer).</p></dd>
+<dt>
+<a name="horizontal-2-layers-cmd"></a><span class="term"><span class="command"><strong>Panel→Horizontal 2 Layers</strong></span></span>
+</dt>
+<dd><p>Creates 2 horizontally stacked layers displaying the selected data columns in the active table window (one curve per layer).</p></dd>
+<dt>
+<a name="four-layers-cmd"></a><span class="term"><span class="command"><strong>Panel→4 Layers</strong></span></span>
+</dt>
+<dd><p>Creates 4 layers on a 2x2 grid, displaying the selected data columns in the active table window (one curve per layer).</p></dd>
+<dt>
+<a name="stacked-layers-cmd"></a><span class="term"><span class="command"><strong>Panel→Stacked Layers</strong></span></span>
+</dt>
+<dd><p>Creates vertically stacked layers displaying the selected data columns in the active table window (one curve per layer).</p></dd>
+</dl></div>
+</dd>
+<dt><span class="term"><span class="command"><strong>3D Plots</strong></span></span></dt>
+<dd>
+<p></p>
+<div class="variablelist"><dl>
+<dt>
+<a name="ribbons-cmd"></a><span class="term"><span class="command"><strong>3D Plots→Ribbon</strong></span></span>
+</dt>
+<dd>
+<p>Makes a 3D plot of the selected data column in the active table window (only one column allowed) using the "Ribbon" style.</p>
+<div class="informalfigure">
+<a name="fig-3dplot-ribbons"></a><div class="mediaobject"><img src="pics/3d-gallery-ribbons.png"></div>
+</div>
+</dd>
+<dt>
+<a name="bars-cmd"></a><span class="term"><span class="command"><strong>3D Plots→Bars</strong></span></span>
+</dt>
+<dd>
+<p>Makes a 3D plot of the selected data column in the active table window (only one column allowed) using the "3D Bars" style.</p>
+<div class="informalfigure">
+<a name="fig-3dplot-columns"></a><div class="mediaobject"><img src="pics/3d-gallery-bars.png"></div>
+</div>
+</dd>
+<dt>
+<a name="scatter3d-cmd"></a><span class="term"><span class="command"><strong>Scatter</strong></span></span>
+</dt>
+<dd>
+<p>Makes a 3D plot of the selected data column in the active table window (only one column allowed) using the "3D Dots" style. The 3D point symbol style can be changed via the 3D Plots Settings dialog.</p>
+<div class="informalfigure">
+<a name="fig-3dplot-crosshairs"></a><div class="mediaobject"><img src="pics/3d-gallery-cross-hairs.png"></div>
+</div>
+<p>With scatter plots, you can choose the kind of graphic item which is used to plot the data points. The example above is done with cross hairs, but you can also select points or cones. This can be done either with the corresponding icons of the <a class="link" href="sec-3d-surface-toolbar.html" title="The 3D Surfaces Toolbar.">3D surface toolbar</a> (respectively <span class="inlinemediaobject"><img src="icons/crosses.png"></span> <span class="inlinemediaobject"><img src="icons/pointsMesh.png"></span> and <span class="inlinemediaobject"><img src="icons/cones.png"></span> for cross-hairs, dots and cones) or with the <a class="link" href="sec-3d-plots.html#sec-customize-3d-plot" title="Customization of a 3D plot">custom-curves dialog</a>.</p>
+</dd>
+<dt>
+<a name="trajectory-cmd"></a><span class="term"><span class="command"><strong>3D Plots→Trajectory</strong></span></span>
+</dt>
+<dd>
+<p>Makes a 3D plot of the selected data column in the active table window (only one column allowed) using the "3D Line" style. The line width and color may be changed via the 3D Plots Settings dialog.</p>
+<div class="informalfigure">
+<a name="fig-3dplot-trajectory"></a><div class="mediaobject"><img src="pics/3d-gallery-trajectory.png"></div>
+</div>
+</dd>
+</dl></div>
+</dd>
+</dl></div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="sec-graph-menu.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="reference.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="sec-plot3d-menu.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">The Graph Menu </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> The Plot 3D menu</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

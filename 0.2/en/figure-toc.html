@@ -1,0 +1,252 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The SciDAVis Handbook</title>
+<link rel="stylesheet" href="scidavis.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<meta name="description" content="This document is a handbook for using SciDAVis, a program for two- and three-dimensional graphical presentation of data sets and for data analysis. It is updated for version 0.2.3. This manual is organized in several chapters: The first one describes the main concepts and terms which are used in SciDAVis.The second and third chapters build a tutorial on how to obtain plots from different data sets, and to perform mathematical and statistical analysis of data and curves. They are the ones you need to read first to understand the basics of SciDAVis and to be able to work with.The next chapter describe some specific possibilities of SciDAVis, that is the scripting.The two last chapters are descriptions of all the commands and toolbars used in SciDAVis. These chapters are the reference manual of SciDAVis.">
+<meta name="keywords" content="Qt, SciDAVis, Data, Analysis, Plotting">
+<link rel="home" href="index.html" title="The SciDAVis Handbook">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">The SciDAVis Handbook</th></tr></table>
+<hr>
+</div>
+<div class="list-of-figures">
+<p><b>List of Figures</b></p>
+<dl>
+<dt>1.1. <a href="general-concepts.html#fig-scidavis-session">A typical SciDAVis session</a>
+</dt>
+<dt>1.2. <a href="general-concepts.html#fig-the-table">A SciDAVis table with the properties dialog developped and the type tag selected.</a>
+</dt>
+<dt>1.3. <a href="general-concepts.html#fig-the-table_2">The two other tags of the properties dialog of SciDAVis tables.</a>
+</dt>
+<dt>1.4. <a href="general-concepts.html#fig-matrix">The SciDAVis matrix</a>
+</dt>
+<dt>1.5. <a href="general-concepts.html#fig-plot-window">An example of SciDAVis 2D graph with 2 layers.</a>
+</dt>
+<dt>1.6. <a href="general-concepts.html#fig-note-window">The SciDAVis Note Window</a>
+</dt>
+<dt>1.7. <a href="general-concepts.html#fig-note-window-1">The SciDAVis Note Window used as a calculator</a>
+</dt>
+<dt>1.8. <a href="general-concepts.html#fig-log-window">The SciDAVis Log window with the information related to a fit on a curve</a>
+</dt>
+<dt>1.9. <a href="general-concepts.html#fig-project-explorer">The SciDAVis Project Explorer</a>
+</dt>
+<dt>2.1. <a href="using.html#fig-simple-2dplot-1">A simple 2D plot: the table.</a>
+</dt>
+<dt>2.2. <a href="using.html#fig-simple-2dplot-2">A simple 2D plot: the default plot.</a>
+</dt>
+<dt>2.3. <a href="using.html#fig-simple-2dplot-3">A simple 2D plot: the plot finished.</a>
+</dt>
+<dt>2.4. <a href="using.html#fig-two-axes-plot">A table with two series of values (X1,Y1) and (X2,Y2).</a>
+</dt>
+<dt>2.5. <a href="using.html#fig-two-axes-plot-1">A 2D plot with two Y and two X axis.</a>
+</dt>
+<dt>2.6. <a href="using.html#fig-direct-function-plot-1">Direct plot of a function.</a>
+</dt>
+<dt>2.7. <a href="using.html#fig-direct-function-plot-2">Direct plot of a parametric function.</a>
+</dt>
+<dt>2.8. <a href="using.html#fig-direct-function-plot-3">Direct plot of a function in polar coordinates.</a>
+</dt>
+<dt>2.9. <a href="using.html#fig-table-function-plot-1">Function plot: filling of the X column.</a>
+</dt>
+<dt>2.10. <a href="using.html#fig-table-function-plot-2">Function plot: filling of the Y column.</a>
+</dt>
+<dt>2.11. <a href="using.html#fig-plot-details-layer">The <span class="emphasis"><em>Plot details</em></span> Dialog: general properties of the layers.</a>
+</dt>
+<dt>2.12. <a href="using.html#fig-plot-associations">The <span class="emphasis"><em>Plot details</em></span> Dialog: Plot Associations.</a>
+</dt>
+<dt>2.13. <a href="using.html#fig-details-axes">The <span class="emphasis"><em>Plot details</em></span> Dialog: Choice of axes.</a>
+</dt>
+<dt>2.14. <a href="using.html#fig-format-lines">The Plot details Dialog: Line formatting.</a>
+</dt>
+<dt>2.15. <a href="using.html#fig-format-symbols">The Plot details Dialog: Symbol formatting.</a>
+</dt>
+<dt>2.16. <a href="using.html#fig-format-pattern">The Plot details Dialog: Pattern formatting for bars.</a>
+</dt>
+<dt>2.17. <a href="using.html#fig-format-spacing">The Plot details Dialog: Spacing formatting for bars.</a>
+</dt>
+<dt>2.18. <a href="using.html#fig-preferences-dialog-3a">The preferences dialog: 2D plot options.</a>
+</dt>
+<dt>2.19. <a href="sec-special-plots.html#fig-example-pie">An example of pie plot.</a>
+</dt>
+<dt>2.20. <a href="sec-special-plots.html#fig-format-pie">Pie segment formatting.</a>
+</dt>
+<dt>2.21. <a href="sec-special-plots.html#fig-example-vector">An example of a vector plot (fluid flow around a cylinder in a laminar mode).</a>
+</dt>
+<dt>2.22. <a href="sec-special-plots.html#fig-format-vector-xyxy">Vector-XYXY formatting.</a>
+</dt>
+<dt>2.23. <a href="sec-special-plots.html#fig-format-vector-xyam">Vector-XYAM formatting.</a>
+</dt>
+<dt>2.24. <a href="sec-statistical-plots.html#fig-description-box-plot">An example of a box plot for three columns.</a>
+</dt>
+<dt>2.25. <a href="sec-statistical-plots.html#fig-format-box-1">The Custom Curves Dialog for box: pattern formatting.</a>
+</dt>
+<dt>2.26. <a href="sec-statistical-plots.html#fig-format-box-2">The Custom Curves Dialog for box: whiskers formatting.</a>
+</dt>
+<dt>2.27. <a href="sec-statistical-plots.html#fig-format-box-3">The Custom Curves Dialog for box: percentile formatting.</a>
+</dt>
+<dt>2.28. <a href="sec-statistical-plots.html#fig-example-histogram">An example of histogram.</a>
+</dt>
+<dt>2.29. <a href="sec-statistical-plots.html#fig-format-histogram-1">Pattern formatting in histograms.</a>
+</dt>
+<dt>2.30. <a href="sec-statistical-plots.html#fig-format-histogram-2">Whiskers formatting in histograms.</a>
+</dt>
+<dt>2.31. <a href="sec-statistical-plots.html#fig-format-histogram-3">Interval selection in histograms.</a>
+</dt>
+<dt>2.32. <a href="sec-3d-plots.html#fig-exemple-3dplot">Example of a 3D Plots.</a>
+</dt>
+<dt>2.33. <a href="sec-3d-plots.html#fig-define-surface-plot">Definition of a new surface 3D plot</a>
+</dt>
+<dt>2.34. <a href="sec-3d-plots.html#fig-default-surface-plot">The 3D surface plot created by default</a>
+</dt>
+<dt>2.35. <a href="sec-3d-plots.html#fig-assign-formula-matrix">Assigning a multi-lines formula to a matrix</a>
+</dt>
+<dt>2.36. <a href="sec-3d-plots.html#fig-contour-options-1">The Contour curves options dialog.</a>
+</dt>
+<dt>2.37. <a href="sec-3d-plots.html#fig-preferences-dialog-4">The preferences dialog: 3D plot options.</a>
+</dt>
+<dt>2.38. <a href="sec-adding-objects.html#fig-text-options">The text options dialog.</a>
+</dt>
+<dt>3.1. <a href="analysis.html#fig-exemple-fft-1">A signal and the FFT dialog box for a plot.</a>
+</dt>
+<dt>3.2. <a href="analysis.html#fig-exemple-fft-2">The resulting FFT with the characteristic frequencies.</a>
+</dt>
+<dt>3.3. <a href="analysis.html#fig-exemple-fft-3">The <span class="command">FFT</span> dialog box for a table.</a>
+</dt>
+<dt>3.4. <a href="sec-filtering.html#fig-filter-fft-low-signal">Signal after a FFT low pass filter</a>
+</dt>
+<dt>3.5. <a href="sec-filtering.html#fig-filter-fft-high-signal">Signal after a FFT high pass filter</a>
+</dt>
+<dt>3.6. <a href="sec-filtering.html#fig-filter-fft-band-signal">Signal after a FFT band pass filter</a>
+</dt>
+<dt>3.7. <a href="sec-filtering.html#fig-filter-fft-block-signal">Signal after a FFT block band filter</a>
+</dt>
+<dt>3.8. <a href="sec-correlate.html#fig-exemple-correlation-1">An example of a correlation between two functions: the two signals.</a>
+</dt>
+<dt>3.9. <a href="sec-correlate.html#fig-exemple-correlation-2">An example of a correlation between two functions: the correlation function.</a>
+</dt>
+<dt>3.10. <a href="sec-fitting.html#fig-non-linear-curve-fit-1">The first step of the <span class="command">Fit Wizard</span> dialog box.</a>
+</dt>
+<dt>3.11. <a href="sec-fitting.html#fig-non-linear-curve-fit-2">The second step of the <span class="command">Fit Wizard</span> dialog box.</a>
+</dt>
+<dt>3.12. <a href="sec-fitting.html#fig-non-linear-curve-fit-3">The results of the <span class="command">Fit Wizard</span>.</a>
+</dt>
+<dt>3.13. <a href="sec-fitting.html#fig-fit-linear">The results of a <span class="command">Quick Fit→Fit Linear</span>.</a>
+</dt>
+<dt>3.14. <a href="sec-fitting.html#fig-fit-bolzman">The results of a <span class="command">Quick Fit→Fit Bolzmann (Sigmoïdal)</span>.</a>
+</dt>
+<dt>3.15. <a href="sec-fitting.html#fig-fit-gauss">The results of a <span class="command">Quick Fit→Fit Gaussian</span>.</a>
+</dt>
+<dt>3.16. <a href="sec-fitting.html#fig-fit-lorentz">The results of a <span class="command">Quick Fit→Fit Lorentzian</span>.</a>
+</dt>
+<dt>3.17. <a href="sec-fitting.html#fig-fit-multipeak">The selection of the position of the peaks.</a>
+</dt>
+<dt>3.18. <a href="sec-fitting.html#fig-fit-multipeak-result">The results of a <span class="command">Quick Fit→Fit Multipeak→Gaussian</span>.</a>
+</dt>
+<dt>3.19. <a href="sec-fitting.html#fig-fit-preference">The preference dialog for fitting.</a>
+</dt>
+<dt>3.20. <a href="sec-interpolate.html#fig-interpolate-methods">Comparison of the three methods of interpolation</a>
+</dt>
+<dt>5.1. <a href="reference.html#fig-new-function-plot-dialog">The <span class="command">New→New Function Plot</span> dialog box.</a>
+</dt>
+<dt>5.2. <a href="reference.html#fig-define-surface-plot-dialog">The <span class="command">New→New 3D Surface Plot</span> dialog box.</a>
+</dt>
+<dt>5.3. <a href="reference.html#fig-open-dialog">The <span class="command">New→New 3D Surface Plot</span> dialog box.</a>
+</dt>
+<dt>5.4. <a href="reference.html#fig-open-image-file">The result of <span class="command">Open image File</span>.</a>
+</dt>
+<dt>5.5. <a href="reference.html#fig-export-graph">The <span class="command">Export Graph→Current</span> dialog.</a>
+</dt>
+<dt>5.6. <a href="reference.html#fig-print-dialog-1">The basic <span class="command">Print</span> dialog.</a>
+</dt>
+<dt>5.7. <a href="reference.html#fig-export-ascii">The <span class="command">Export Ascii</span> dialog.</a>
+</dt>
+<dt>5.8. <a href="reference.html#fig-import-ascii">The <span class="command">Import Ascii</span> dialog.</a>
+</dt>
+<dt>5.9. <a href="sec-edit-menu.html#fig-preferences-dialog1a">The general options dialog: application options.</a>
+</dt>
+<dt>5.10. <a href="sec-view-menu.html#fig-plot-wizard">The plot wizard dialog box.</a>
+</dt>
+<dt>5.11. <a href="sec-view-menu.html#fig-project-explorer-1">The project explorer panel.</a>
+</dt>
+<dt>5.12. <a href="sec-view-menu.html#fig-undo-redo-history">The undo-redo history.</a>
+</dt>
+<dt>5.13. <a href="sec-view-menu.html#fig-scripting-console">The scripting console.</a>
+</dt>
+<dt>5.14. <a href="sec-graph-menu.html#fig-add-remove-curve">The <span class="command">Add/Remove Curve</span> dialog box.</a>
+</dt>
+<dt>5.15. <a href="sec-graph-menu.html#fig-add-error-bars-1">The <span class="command">Add Error Bars</span> dialog.</a>
+</dt>
+<dt>5.16. <a href="sec-graph-menu.html#fig-add-error-bars-2">A plot with X and Y Error Bars.</a>
+</dt>
+<dt>5.17. <a href="sec-graph-menu.html#add-function-dialog-1">The <span class="command">Add Function</span> dialog box: cartesian coordinates.</a>
+</dt>
+<dt>5.18. <a href="sec-graph-menu.html#add-function-dialog-2">The <span class="command">Add Function</span> dialog box: parametric coordinates.</a>
+</dt>
+<dt>5.19. <a href="sec-graph-menu.html#add-function-dialog-3">The <span class="command">Add Function</span> dialog box: polar coordinates.</a>
+</dt>
+<dt>5.20. <a href="sec-graph-menu.html#fig-add-text-dialog">The <span class="command">Add Text</span> dialog box.</a>
+</dt>
+<dt>5.21. <a href="sec-graph-menu.html#fig-line-options-1">The <span class="emphasis"><em>Arrow options</em></span> dialog: first tab</a>
+</dt>
+<dt>5.22. <a href="sec-graph-menu.html#fig-line-options-2">The <span class="emphasis"><em>Arrow options</em></span> dialog: second tab</a>
+</dt>
+<dt>5.23. <a href="sec-graph-menu.html#fig-line-options-3">The <span class="emphasis"><em>Geometry</em></span> dialog: third tab</a>
+</dt>
+<dt>5.24. <a href="sec-graph-menu.html#fig-add-layer-dialog">The <span class="command">Add Layer</span> dialog box.</a>
+</dt>
+<dt>5.25. <a href="sec-graph-menu.html#fig-define-layer-1">The <span class="command">Arrange Layers</span> dialog</a>
+</dt>
+<dt>5.26. <a href="sec-analysis-menu.html#fig-integrate-dialog">The <span class="command">Integrate</span> dialog box.</a>
+</dt>
+<dt>5.27. <a href="sec-analysis-menu.html#fig-smooth-1">The <span class="command">Smooth→Savitsky-Golay</span> dialog.</a>
+</dt>
+<dt>5.28. <a href="sec-analysis-menu.html#fig-smooth-2">The <span class="command">Smooth→Moving Window Average</span> dialog.</a>
+</dt>
+<dt>5.29. <a href="sec-analysis-menu.html#fig-comparison-smooth">Comparison of the two smoothing methods.</a>
+</dt>
+<dt>5.30. <a href="sec-analysis-menu.html#fig-smooth-fft">The dialog and an example of FFT smoothing.</a>
+</dt>
+<dt>5.31. <a href="sec-format-menu.html#fig-plot-options-4-dialog">2D plot options dialog: General settings.</a>
+</dt>
+<dt>5.32. <a href="sec-format-menu.html#fig-surface-plot-options-5">Surface plot options: general settings.</a>
+</dt>
+<dt>5.33. <a href="sec-format-menu.html#fig-plot-options-1-dialog">Plot options dialog: scales settings.</a>
+</dt>
+<dt>5.34. <a href="sec-format-menu.html#fig-surface-plot-options-1">Surface plot options: scales settings.</a>
+</dt>
+<dt>5.35. <a href="sec-format-menu.html#fig-plot-options-3-dialog">General plot options dialog: the axis tab.</a>
+</dt>
+<dt>5.36. <a href="sec-format-menu.html#fig-plot-options-2-dialog">General plot options dialog: the grid tab.</a>
+</dt>
+<dt>5.37. <a href="sec-format-menu.html#fig-surface-plot-options-3">Surface plot options dialog: the title tab.</a>
+</dt>
+<dt>6.1. <a href="toolbars.html#fig-file-toolbar">The SciDAVis File Toolbar</a>
+</dt>
+<dt>6.2. <a href="sec-edit-toolbar.html#fig-edit-toolbar">The SciDAVis Edit Toolbar</a>
+</dt>
+<dt>6.3. <a href="sec-plot-toolbar.html#plot-file-toolbar">The SciDAVis Plot Toolbar with its different sub-menus</a>
+</dt>
+<dt>6.4. <a href="sec-graph-toolbar.html#graph-file-toolbar">The SciDAVis Graph Toolbar with its different sub-menus</a>
+</dt>
+<dt>6.5. <a href="sec-table-toolbar.html#table-toolbar">The SciDAVis Table Toolbar</a>
+</dt>
+<dt>6.6. <a href="sec-matrix-plot-toolbar.html#matrix-plot-toolbar">The SciDAVis matrix Plot Toolbar</a>
+</dt>
+<dt>6.7. <a href="sec-3d-surface-toolbar.html#surfaces-3d-toolbar">The SciDAVis 3D Surfaces Toolbar</a>
+</dt>
+</dl>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer"><tr>
+<td width="40%" align="left" valign="top"> </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> </td>
+</tr></table>
+</div>
+</body>
+</html>
