@@ -567,6 +567,23 @@ l.deleteFitCurves()
 <pre class="programlisting" width="40">
 l.numCurves()
 	  </pre>
+
+<p>Use the following functions to change the axis attachment of a curve:</p>
+<pre class="programlisting" width="40">
+c = l.curve(number)
+l.setCurveAxes(number, x-axis, y-axis)
+c.setXAxis(x-axis)
+c.setYAxis(y-axis)
+</pre>
+<p>where <code class="varname">number</code> is curve's index, <code class="varname">x-axis</code> is either
+<code class="varname">Layer.Bottom</code>  or <code class="varname">Layer.Top</code> and <code class="varname">y-axis</code> is either
+<code class="varname">Layer.Left</code>  or <code class="varname">Layer.Right</code></p>
+<pre class="programlisting" width="40">
+l.setCurveAxes(0, Layer.Top, Layer.Right)  # modify the first curve in the layer (curve index is 0)
+c.setXAxis(Layer.Bottom)
+c.setYAxis(Layer.Right)  # attach curve c to the right Y axis
+</pre>
+
 <p>Layers and whole Graphs can be printed and exported from within
         Python. Before you do this, you would probably want to change layer and axis
         titles as well as legend texts: </p>
@@ -581,28 +598,13 @@ l.setLegend(text)
 l.setScale(int axis, double start, double end, double step=0.0, int majorTicks=5, int minorTicks=5, int type=0, bool inverted=False);
 </pre>
 <p>
-	  where <code class="varname">axis</code> is a number between 0 and 3 with the following signification: </p>
-<div class="variablelist"><dl>
-<dt><span class="term">0.</span></dt>
-<dd><p>Left axis</p></dd>
-<dt><span class="term">1.</span></dt>
-<dd><p>Right axis</p></dd>
-<dt><span class="term">2.</span></dt>
-<dd><p>Bottom axis</p></dd>
-<dt><span class="term">3.</span></dt>
-<dd><p>Top axis</p></dd>
-</dl></div>
+	where <code class="varname">axis</code> is one of <code class="varname">Layer.Left</code>, <code class="varname">Layer.Right</code>,
+    <code class="varname">Layer.Bottom</code>, <code class="varname">Layer.Top</code>, <br>
+    <code class="varname">type</code> specifies the desired scale type:
+    <code class="varname">0</code> for <code class="varname">Linear</code> or <code class="varname">1</code> for <code class="varname">Log10</code><br>
+	and <code class="varname">step</code> defines the size of the interval between the major scale ticks. If not specified (default value is 0.0), the step size is calculated automatically.
+	  The other flags should be self-explanatory.</p>
 <p>
-<code class="varname">type</code> specifies the desired scale type: </p>
-<div class="variablelist"><dl>
-<dt><span class="term">0.</span></dt>
-<dd><p>Linear</p></dd>
-<dt><span class="term">1.</span></dt>
-<dd><p>Log10</p></dd>
-</dl></div>
-<p>
-	  and <code class="varname">step</code> defines the size of the interval between the major scale ticks. If not specified (default value is 0.0), the step size is calculated automatically.
-	  The other flags should be self-explanatory.
 	  Now, here is how you can export a layer </p>
 <pre class="programlisting" width="40">
 l.print()
@@ -1235,6 +1237,10 @@ layer.replot()
 <dd>Return smallest Y value of the curve's points.</dd>
 <dt><span class="term">maxYValue()</span></dt>
 <dd>Return largest Y value of the curve's points.</dd>
+<dt><span class="term">setXAxis(x-axis)</span></dt>
+<dd>Set the x-axis to which the curve is attached. x-axis is Layer.Bottom or Layer.Top.<br>See also: setCurveAxes</dd>
+<dt><span class="term">setYAxis(y-axis)</span></dt>
+<dd>Set the x-axis to which the curve is attached. y-axis is Layer.Left or Layer.Right.<br>See also: setCurveAxes</dd>
 <dt><span class="term">setPen(QPen)</span></dt>
 <dd>Sets the pen used to draw the lines of the curve. See PyQt documentation
 						 for how to construct a QPen.</dd>
@@ -1522,7 +1528,7 @@ layer.replot()
 <dt><span class="term">removeLegend()</span></dt>
 <dd>Remove the legend (i.e., the object returned by legend()), if one
 						 currently exists.</dd>
-<dt><span class="term">addTimeStamap</span></dt>
+<dt><span class="term">addTimeStamp</span></dt>
 <dd>Add a text marker containing the current date and time.</dd>
 <dt><span class="term">enableAxis(int,bool)</span></dt>
 <dd>Enable/disable drawing of the indicating axis, which must be one of the
@@ -1630,6 +1636,12 @@ layer.replot()
 						 be used for drawing elements added to the layer after the call to
 						 setAntialiasing(). If the update flag is True (default), the antialiasing setting
 						 of existing elements is updated as well.</dd>
+<dt><span class="term">setCurveAxes(number, x-axis, y-axis)</span></dt>
+<dd>Set the attached axes of a curve in the layer. Number is the curve index, x-axis is either Layer.Bottom
+						 or Layer.Top, and y-axis is either Layer.Left or Layer.Right.<br>
+						 Note: when using this method the involved axes are autoscaled.<br>
+                         See also: setXAxis, setYAxis
+                         </dd>
 <dt><span class="term">canvas()</span></dt>
 <dd>Gives access to the QtGui.QWidget acting as a canvas, i.e it contains all
 						 curves and markers on the layer (but not axes and title).</dd>
