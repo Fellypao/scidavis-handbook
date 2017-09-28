@@ -1,0 +1,154 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>3D plots</title>
+<link rel="stylesheet" type="text/css" href="scidavis.css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="keywords" content="Qt, SciDAVis, Data, Analysis, Plotting">
+<link rel="home" href="index.html" title="The SciDAVis Handbook">
+<link rel="up" href="using.html" title="Chapter 2. Drawing plots with SciDAVis">
+<link rel="prev" href="sec-statistical-plots.html" title="Statistical plots">
+<link rel="next" href="sec-multilayer-plots.html" title="Multilayer Plots">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">3D plots</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="sec-statistical-plots.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 2. Drawing plots with SciDAVis</th>
+<td width="20%" align="right"> <a accesskey="n" href="sec-multilayer-plots.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="sect1">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="sec-3d-plots"></a>3D plots</h2></div></div></div>
+<a class="indexterm" name="idp1379318308"></a><p>3D plot are generated from data defined as <span class="emphasis"><em>Z=f(X,Y)</em></span>. As for 2D plots, there are two ways to obtain a 3D plot depending on the way the (X,Y,Z) values are defined:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>You can have your Z values in a <a class="link" href="general-concepts.html#sec-intro-matrix" title="Matrix">matrix</a>. SciDAVis will consider that all the data present in the matrix are Z values, and the X and Y values can be defined as a linear function of the columns and rows numbers.</p>
+<p>The data in the matrix can be entered in several ways:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>one by one from the keyboard,</p></li>
+<li class="listitem"><p>by reading an ascii file in a table and converting the table into a matrix,</p></li>
+<li class="listitem"><p>by setting the values with a function.</p></li>
+</ul></div>
+</li>
+<li class="listitem"><p>If you want to plot a function, you don't need a matrix. You can use directly the <a class="link" href="reference.html#new-surface-3d-plot-cmd"><span class="command"><strong>New→New 3D Surface Plot</strong></span> command</a>.</p></li>
+</ul></div>
+<p>There are several kinds of 3D plots which can be selected, see the <a class="link" href="sec-plot3d-menu.html" title="The Plot 3D menu">plot3d menu</a> section of the <a class="link" href="reference.html" title="Chapter 5. Command Reference">reference chapter</a> for a list of the availables plots.</p>
+<div class="figure">
+<a name="fig-exemple-3dplot"></a><p class="title"><b>Figure 2.32. Example of a 3D Plots.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/exemple-plot3d.png" alt="Example of a 3D Plots."></div></div>
+</div>
+<br class="figure-break"><p>
+The 3D plots use OpenGL so you can easily rotate, scale and shift them with the mouse. Via the 3D plot settings dialog or via the Surface 3D Toolbar you can change all the predefined settings of a three dimensional plot: grids, scales, axes, title, legend and colors for the different elements.
+</p>
+<p>There are several types of plots which can be built from a matrix. They are presented in the <a class="link" href="sec-plot3d-menu.html" title="The Plot 3D menu">plot3d menu</a></p>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="sec-3d-plot-function"></a>Direct 3D plot from a function</h3></div></div></div>
+<a class="indexterm" name="idp1379327860"></a><p>This is the simplest way to obtain a 3d plot. It is done with the <a class="link" href="reference.html#new-surface-3d-plot-cmd"><span class="command"><strong>New→New 3D Surface Plot</strong></span> command</a> from the <a class="link" href="reference.html#sec-file-menu" title="The File Menu">File menu</a> or directly with the <span class="keycode">CTRL+ALT+Z</span>. This will open the following dialog box:</p>
+<div class="figure">
+<a name="fig-define-surface-plot"></a><p class="title"><b>Figure 2.33. Definition of a new surface 3D plot</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/define-surface-plot.png" alt="Definition of a new surface 3D plot"></div></div>
+</div>
+<br class="figure-break"><p>You can enter the function z=f(x,y) and the ranges for X, Y and Z. Then SciDAVis will create a default 3d plot:</p>
+<div class="figure">
+<a name="fig-default-surface-plot"></a><p class="title"><b>Figure 2.34. The 3D surface plot created by default</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/3D-function-plot-default.png" alt="The 3D surface plot created by default"></div></div>
+</div>
+<br class="figure-break"><p>You can then customize this plot by opening the <a class="link" href="sec-3d-plots.html#sec-customize-3d-plot" title="Customization of a 3D plot">Surface plot options dialog</a>. You can modify the axis ranges and parameters, add a title, change the colors of the different items, and modify the aspect ratio of the plot. In addition, you can use the different commands of the <a class="link" href="sec-3d-surface-toolbar.html" title="The 3D Surfaces Toolbar.">3D surface toolbar</a> to add grids on the walls or to modify the style of the plot. After some modifications, you can obtain the plot presented above.</p>
+<p>If you want to modify the function itself, you can use the <span class="command"><strong>surface...</strong></span> command which can be activated from the context menu with a right click on the 3D plot. This will re-open the <span class="emphasis"><em>define surface function dialog box</em></span>.</p>
+<p>The 3D plotting system uses openGL, therefore these plots can be manipulated with the mouse:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>by clicking on the left button and moving the mouse, you can change the viewpoint of the plot. You can come back to the default viewpoint by clicking on the <span class="inlinemediaobject"><img src="icons/reset_rotation.png"></span> icon of the <a class="link" href="sec-3d-surface-toolbar.html" title="The 3D Surfaces Toolbar.">3D surface toolbar</a>.</p></li>
+<li class="listitem"><p>The ??? can be used to zoom or unzoom the plot. You can come back to the default zoom value by clicking on the <span class="inlinemediaobject"><img src="icons/fit_frame.png"></span> icon of the <a class="link" href="sec-3d-surface-toolbar.html" title="The 3D Surfaces Toolbar.">3D surface toolbar</a>.</p></li>
+</ul></div>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="sec-3d-plot-matrix"></a>3D plot from a matrix</h3></div></div></div>
+<a class="indexterm" name="idp1379340092"></a><p>The second way to obtain a 3D plot is to use a <a class="link" href="general-concepts.html#sec-intro-matrix" title="Matrix">matrix</a>. Therefore, the first step is to fill the matrix. This can be done by defining a function.</p>
+<p>The <a class="link" href="reference.html#new-matrix-cmd"><span class="command"><strong>New→New Matrix</strong></span> command</a> create a default empty matrix with 32x32 cells. Then use the <a class="link" href="sec-matrix-menu.html#matrix-dimensions-cmd"><span class="command"><strong>Dimensions</strong></span> command</a> from the <a class="link" href="sec-matrix-menu.html" title="The Matrix Menu">Matrix menu</a> to modify the number of rows and columns of the matrix. The <a class="link" href="sec-matrix-menu.html#set-coordinates-cmd"><span class="command"><strong>Set Coordinates</strong></span> command</a> can then be used to define the X and Y ranges. </p>
+<p>Then use the <a class="link" href="sec-table-menu.html#assign-formula-cmd"><span class="command"><strong>Assign Formula</strong></span> command</a> to fill the cells with numbers. The ranges of X and Y defined in the previous step are not known by this dialog box, then the function is defined with the row and column numbers (i and j) as entry parameters.</p>
+<div class="figure">
+<a name="fig-assign-formula-matrix"></a><p class="title"><b>Figure 2.35. Assigning a multi-lines formula to a matrix</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/assign-formula-matrix.png" alt="Assigning a multi-lines formula to a matrix"></div></div>
+</div>
+<br class="figure-break"><p>The other way to obtain a matrix is to import an ASCII file into a table with the <a class="link" href="reference.html#import-ascii-cmd"><span class="command"><strong>Import Ascii</strong></span> command</a> from the <a class="link" href="reference.html#sec-file-menu" title="The File Menu">File menu</a>. The table can then be transformed in a matrix with the command <a class="link" href="sec-table-menu.html#convert-to-matrix-cmd"><span class="command"><strong>Convert to Matrix</strong></span> command</a> from the <a class="link" href="sec-table-menu.html" title="The Table Menu">Table menu</a>.</p>
+<p>You can then use this matrix to build a 3D plot with one of the command of the <a class="link" href="sec-plot-menu.html" title="The Plot Menu">Plot menu</a>.</p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="sec-customize-3d-plot"></a>Customization of a 3D plot</h3></div></div></div>
+<a class="indexterm" name="idp1379350548"></a><p>A dialog with five tab is activated by double clicking on a contour curve (or on the plotting area) of a 3D plot. It can also be accessed by the commands of the <a class="link" href="sec-format-menu.html" title="The Format Menu">Format menu</a>.</p>
+<div class="figure">
+<a name="fig-contour-options-1"></a><p class="title"><b>Figure 2.36. The Contour curves options dialog.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/contour-curve-dialog-1.png" alt="The Contour curves options dialog."></div></div>
+</div>
+<br class="figure-break"><p>The first group of settings <span class="emphasis"><em>Scales</em></span> is used to define the scales of the three axis. It works in the same way as scaling of 2D plots.</p>
+<div class="informalfigure">
+<a name="fig-contour-options-2"></a><div class="mediaobject"><img src="pics/contour-curve-dialog-2.png"></div>
+</div>
+<p>The second tab <span class="emphasis"><em>Axis</em></span> is used to define the labels of the three axis. You can also customize the size of the ticks, beware that this size is given in real units. Therefore, it should be chosen in relation to the axis ranges: for example, if you put a length of 1 for the ticks of the X-axis, the length will correspond to a unit of 1 from the Y axis. In the same way, Y and Z ticks are computed in reference to X range.</p>
+<p>The third tab <span class="emphasis"><em>Title</em></span> is used to modify the title of the plot. Compared to conventional label dialog box of SciDAVis, it exhibits some limitations related to the 3D drawing system (no subscripts, superscript, no bold or italic characters). See the <a class="link" href="sec-format-menu.html#format-title-cmd"><span class="command"><strong>Title</strong></span> command</a> for more details.</p>
+<div class="informalfigure">
+<a name="fig-contour-options-4"></a><div class="mediaobject"><img src="pics/contour-curve-dialog-4.png"></div>
+</div>
+<p>The fourth tab <span class="emphasis"><em>Colors</em></span> is used to modify the color of the different elements. For <span class="emphasis"><em>General</em></span> and <span class="emphasis"><em>Coordinate System</em></span> elements, it is a conventional choosing color dialog box. You can also customize the colormap used to draw the data. See the next section for more details on color maps.</p>
+<div class="informalfigure">
+<a name="fig-contour-options-5"></a><div class="mediaobject"><img src="pics/contour-curve-dialog-5.png"></div>
+</div>
+<p>The last tab <span class="emphasis"><em>General</em></span> is used to modify some global parameters of the plots. The <span class="emphasis"><em>orthogonal</em></span> check box allows to change the 3D view from conventional perspective to orthogonal view. It correspond to the <span class="inlinemediaobject"><img src="icons/perspective.png"></span> icon of the <a class="link" href="sec-3d-surface-toolbar.html" title="The 3D Surfaces Toolbar.">3D surface toolbar</a>. The parameter <span class="emphasis"><em>resolution</em></span> is 1 by default, it indicates that all data points are used to draw the contour curves. If the line network is too dense, you can increase this parameter: with a value of 2 only 1 value over 2 will be used.</p>
+<p>By default, the plot use the same graphic scales for the three axes. If the ranges are very different, you can adjust the size of the plot by changing the zoom over the different axes. In the example presented above, X and Y ranges are 10 while Z range is 0.2, then a zoom of 3000% should be used for Z axis if the zooms on X and Y are kept at 100%. You can also use the <span class="inlinemediaobject"><img src="icons/fit_frame.png"></span> icon of the <a class="link" href="sec-3d-surface-toolbar.html" title="The 3D Surfaces Toolbar.">3D surface toolbar</a> to adjust automatically these zoom values.</p>
+<div class="sect3">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="sec-color-schemes"></a>Modification of color schemes</h4></div></div></div>
+<p>The two colors (data min and data max) defines the color scheme which is used to show the Z-values. They are the colors used for the minimum value of Z (Z<sub>min</sub>) and the maximum value of Z (Z<sub>max</sub>). We can define the colors by their Red, Green and Blue parameters: [R,G,B]. Then, a value Z will be represented by a color defined as a linear interpolation:</p>
+<div class="informalequation"><div class="mediaobject"><img src="equations/equation_couleur.png"></div></div>
+<p>The default colors for Z<sub>min</sub> and Z<sub>max</sub> are respectively blue ( [R,G,B] = [0,0,255] ) and red ( [R,G,B] = [255,0,0] ). This lead to the following color scheme:</p>
+<div class="informalfigure">
+<a name="fig-default-color-scheme"></a><div class="mediaobject"><img src="pics/color-scheme-default.png"></div>
+</div>
+<p>Another classical color scheme can be built with Z<sub>min</sub> = [160,32,32] and Z<sub>max</sub> = [255,255,0] (yellow). It leads to:</p>
+<div class="informalfigure">
+<a name="fig-color-scheme-1"></a><div class="mediaobject"><img src="pics/color-scheme-1.png"></div>
+</div>
+<p>Another way to define colors is to read a colormap from a file. The format of the file is simple: each line defines a color by red, green and blue values as integers between 0 and 255. The numbers should be separated by spaces. You can find several examples of colormaps on the <a class="ulink" href="http://sourceforge.net/project/showfiles.php?group_id=78209" target="_top">QwtPlot3D web site</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="sec-default-3d-plot"></a>Changing default 3D plot options</h3></div></div></div>
+<a class="indexterm" name="idp1379372692"></a><p>Most of the parameters presented in the previous section can be set by default with the <a class="link" href="sec-edit-menu.html#preferences-cmd"><span class="command"><strong>Preferences</strong></span> command</a> of the <a class="link" href="sec-edit-menu.html" title="The Edit Menu">Edit menu</a>.</p>
+<div class="figure">
+<a name="fig-preferences-dialog-4"></a><p class="title"><b>Figure 2.37. The preferences dialog: 3D plot options.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/preferences-dialog4.png" alt="The preferences dialog: 3D plot options."></div></div>
+</div>
+<br class="figure-break">
+</div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="sec-statistical-plots.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="using.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="sec-multilayer-plots.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">Statistical plots </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> Multilayer Plots</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Edit Menu</title>
+<link rel="stylesheet" type="text/css" href="scidavis.css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="keywords" content="Qt, SciDAVis, Data, Analysis, Plotting">
+<link rel="home" href="index.html" title="The SciDAVis Handbook">
+<link rel="up" href="reference.html" title="Chapter 5. Command Reference">
+<link rel="prev" href="reference.html" title="Chapter 5. Command Reference">
+<link rel="next" href="sec-view-menu.html" title="The View Menu">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">The Edit Menu</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="reference.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 5. Command Reference</th>
+<td width="20%" align="right"> <a accesskey="n" href="sec-view-menu.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="sect1">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="sec-edit-menu"></a>The Edit Menu</h2></div></div></div>
+<div class="variablelist"><dl class="variablelist">
+<dt>
+<a name="undo-cmd"></a><span class="term">Edit → <span class="command"><strong>Undo</strong></span> (<span class="keycode">CTRL+Z</span>)</span>
+</dt>
+<dd>
+<p>Undo the last command done on tables or matrix. It can also be accessed by clicking on the <span class="inlinemediaobject"><img src="icons/undo.png"></span> icon of the <a class="link" href="sec-edit-toolbar.html" title="The Edit Toolbar">edit toolbar</a>. The list of commands which are in the stack can be seen with the <a class="link" href="sec-view-menu.html#undo-redo-history-cmd"><span class="command"><strong>Undo/Redo History</strong></span> command</a>.</p>
+<p>This command is not available for plot windows.</p>
+</dd>
+<dt>
+<a name="redo-cmd"></a><span class="term">Edit → <span class="command"><strong>Redo</strong></span> (<span class="keycode">CTRL+R</span>)</span>
+</dt>
+<dd>
+<p>Restores the modifications in a table after a "Undo" operation. It can also be accessed by clicking on the <span class="inlinemediaobject"><img src="icons/redo.png"></span> icon of the <a class="link" href="sec-edit-toolbar.html" title="The Edit Toolbar">edit toolbar</a>. The list of commands which are in the stack can be seen with the <a class="link" href="sec-view-menu.html#undo-redo-history-cmd"><span class="command"><strong>Undo/Redo History</strong></span> command</a>.</p>
+<p>This function is not available for plot windows.</p>
+</dd>
+<dt>
+<a name="cut-cmd"></a><span class="term">Edit → <span class="command"><strong>Cut Selection</strong></span> (<span class="keycode">CTRL+X</span>)</span>
+</dt>
+<dd><p>Copies the current selection to the clipboard and deletes the selection.  It can also be accessed by clicking on the <span class="inlinemediaobject"><img src="icons/cut.png"></span> icon of the <a class="link" href="sec-edit-toolbar.html" title="The Edit Toolbar">edit toolbar</a>. The command currently works for spreadsheets and for 2D plots objects.</p></dd>
+<dt>
+<a name="copy-cmd"></a><span class="term">Edit → <span class="command"><strong>Copy Selection</strong></span> (<span class="keycode">CTRL+C</span>)</span>
+</dt>
+<dd><p>Copies the current selection to the clipboard. It can also be accessed by clicking on the <span class="inlinemediaobject"><img src="icons/copy.png"></span> icon of the <a class="link" href="sec-edit-toolbar.html" title="The Edit Toolbar">edit toolbar</a>. The command currently works for spreadsheets and for 2D plots objects.</p></dd>
+<dt>
+<a name="paste-cmd"></a><span class="term">Edit → <span class="command"><strong>Paste Selection</strong></span> (<span class="keycode">CTRL+V</span>)</span>
+</dt>
+<dd><p>Pastes the content of the clipboard to the active window. It can also be accessed by clicking on the <span class="inlinemediaobject"><img src="icons/paste.png"></span> icon of the <a class="link" href="sec-edit-toolbar.html" title="The Edit Toolbar">edit toolbar</a>. The command currently works for spreadsheets and for 2D plots objects.</p></dd>
+<dt>
+<a name="delete-cmd"></a><span class="term">Edit → <span class="command"><strong>Delete Selection</strong></span> (<span class="keycode">del</span>)</span>
+</dt>
+<dd><p>Cleares the current selection. It can also be accessed by clicking on the <span class="inlinemediaobject"><img src="icons/erase.png"></span> icon of the <a class="link" href="sec-edit-toolbar.html" title="The Edit Toolbar">edit toolbar</a>. The command currently works for spreadsheets and for 2D plots objects.</p></dd>
+<dt>
+<a name="delete-fit-tables"></a><span class="term">Edit → <span class="command"><strong>Delete Fit Tables</strong></span></span>
+</dt>
+<dd>
+<p>Each time yo do a fit of your data with some mathematical model, a new table is created to put the results of the fit (i.e. the values computed by the model). These tables can be used to plot comparisons of experimental and fitted values.</p>
+<p>If you have done several fitting tentatives, a number of unused table may be present in your project. This command allows to remove the results of all the differents fits that you have tested.</p>
+</dd>
+<dt>
+<a name="clear-log-information-cmd"></a><span class="term">Edit → <span class="command"><strong>Clear Log Information</strong></span></span>
+</dt>
+<dd><p>Deletes from the project file all the history information about the analysis operations performed by the user (fitting, integrations, etc). The <a class="link" href="general-concepts.html#sec-intro-log-window" title="Log Window">log panel</a> is then empty. If your project is reload from a file, all the fitting will be done again and the log-panel will be filled.</p></dd>
+<dt>
+<a name="preferences-cmd"></a><span class="term">Edit → <span class="command"><strong>Preferences</strong></span></span>
+</dt>
+<dd>
+<a class="indexterm" name="idp1381030732"></a><p>The preference dialog is used to customize the application. It has five different tabs. If you confirm your changes to the default behaviour of the application, the changes are saved and stored imediatelly.</p>
+<p>The first icon can be selected to change the <span class="emphasis"><em>General</em></span> options of the application. In the first tab:  <span class="emphasis"><em>Application</em></span>, the style is the general decoration used for the windows. It defines the aspect of the buttons and dialog boxes, as an example all screenshots presented in this manual have been done with the Cleanlooks style available in KDE. The available styles are part of the Qt library. The font is the general font used for the GUI (menus, dialogs, etc), it doesn't apply to the plots. You can select the language of the application in the corresponding combo-box. All the available translations can be downloaded from the following address: <a class="ulink" href="http://sourceforge.net/project/showfiles.php?group_id=199120" target="_top">Sourceforge repository</a>, you can also use the <a class="link" href="sec-help-menu.html#translations-cmd"><span class="command"><strong>Translations</strong></span> command</a> from the <a class="link" href="sec-help-menu.html" title="The Help Menu">Help menu</a>.The translated messages are in a file with the extension <span class="emphasis"><em>.qm</em></span> which must be placed in a folder called <span class="emphasis"><em>share/translations/</em></span>, situated in the same location as the SciDAVis executable, in order to be loaded by the application.</p>
+<div class="figure">
+<a name="fig-preferences-dialog1a"></a><p class="title"><b>Figure 5.9. The general options dialog: application options.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/preferences-dialog1a.png" alt="The general options dialog: application options."></div></div>
+</div>
+<br class="figure-break"><p>The second tab of the <span class="emphasis"><em>General</em></span> option set is used to disable the prompting on deleting of objects.</p>
+<div class="informalfigure">
+<a name="fig-preferences-dialog1b"></a><div class="mediaobject"><img src="pics/preferences-dialog1b.png"></div>
+</div>
+<p>In the third tab, you can change the default color for the workspace of the application. You can also choose the background color and the text color for panels. The panels are the Log Window (activated by the <a class="link" href="sec-view-menu.html#results-log-cmd"><span class="command"><strong>Results Log</strong></span> command</a>) and the Project explorer (activated by the <a class="link" href="sec-view-menu.html#project-explorer-cmd"><span class="command"><strong>Project Explorer</strong></span> command</a>.</p>
+<div class="informalfigure">
+<a name="fig-preferences-dialog1c"></a><div class="mediaobject"><img src="pics/preferences-dialog1c.png"></div>
+</div>
+<p>The last tab is use to set the default format for numbers. This format will be used in any new table of matrix. If you check the <span class="emphasis"><em>Update...</em></span> option, the decimal separator of the numbers already present in tables will be modified.</p>
+<div class="informalfigure">
+<a name="fig-preferences-dialog-1d"></a><div class="mediaobject"><img src="pics/preferences-dialog1d.png"></div>
+</div>
+<p>The other icons can be used to define the default behaviour of specific objects. Refer to the corresponding sections for more details: <a class="link" href="general-concepts.html#sec-intro-table" title="Tables">tables</a>, <a class="link" href="using.html#sec-default-2d-plot" title="Changing default 2D plot options">2D links</a>, <a class="link" href="sec-3d-plots.html#sec-default-3d-plot" title="Changing default 3D plot options">3D links</a> and <a class="link" href="sec-fitting.html#sec-default-parameters-fitting" title="Changing default parameters for fitting">Fitting</a>.</p>
+</dd>
+</dl></div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="reference.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="reference.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="sec-view-menu.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">Chapter 5. Command Reference </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> The View Menu</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

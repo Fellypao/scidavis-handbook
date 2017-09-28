@@ -1,0 +1,450 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Chapter 4. Scripting</title>
+<link rel="stylesheet" type="text/css" href="scidavis.css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="keywords" content="Qt, SciDAVis, Data, Analysis, Plotting">
+<link rel="home" href="index.html" title="The SciDAVis Handbook">
+<link rel="up" href="index.html" title="The SciDAVis Handbook">
+<link rel="prev" href="sec-interpolate.html" title="Interpolation">
+<link rel="next" href="sec-python.html" title="Python">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">Chapter 4. Scripting</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="sec-interpolate.html">Prev</a> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="sec-python.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div><h1 class="title">
+<a name="scripting"></a>Chapter 4. Scripting</h1></div></div></div>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl class="toc">
+<dt><span class="sect1"><a href="scripting.html#sec-muParser">muParser</a></span></dt>
+<dt><span class="sect1"><a href="sec-python.html">Python</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="sec-python.html#idp1379997012">Getting Started</a></span></dt>
+<dt><span class="sect2"><a href="sec-python.html#idp1380002156">Python Basics</a></span></dt>
+<dt><span class="sect2"><a href="sec-python.html#idp1380014452">Evaluation Reloaded</a></span></dt>
+<dt><span class="sect2"><a href="sec-python.html#Python-functions">Mathematical Functions</a></span></dt>
+<dt><span class="sect2"><a href="sec-python.html#Python-API-Intro">Accessing SciDAVis's functions from Python</a></span></dt>
+<dt><span class="sect2"><a href="sec-python.html#Python-API">API documentation</a></span></dt>
+<dt><span class="sect2"><a href="sec-python.html#Python-init">The Initialization File</a></span></dt>
+</dl></dd>
+</dl>
+</div>
+<a class="indexterm" name="idp1379907468"></a><p>SciDAVis supports different interpreters
+  for evaluating mathematical expressions and for executing scripts.</p>
+<div class="sect1">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="sec-muParser"></a>muParser</h2></div></div></div>
+<a class="indexterm" name="idp1379895916"></a><p>The constants _e=e=E and _pi=pi=PI=Pi are defined, as well as the
+		 operators and functions listed below. muParser is purely a parser for mathematical
+		 expressions and as such does not support executing complex scripts. However,
+		 you can make formulas easier to read and modify by assigning subexpressions to
+		 variables and inserting comments.
+	 </p>
+<p><span class="emphasis"><em>Variable assignments</em></span> evaluate to the assigned value, so
+		 they can be used in the middle of a formula. They can also stand on a line of
+		 their own, or separated from other parts of the formula by a semicolon (;).
+		 The result of evaluating the last line of a multi-line formula is taken as the
+		 result of the whole formula.
+	 </p>
+<p><span class="emphasis"><em>Comments</em></span> start with a hash mark (#) and run till the end
+		 of the line.</p>
+<div class="table">
+<a name="idp1379940228"></a><p class="title"><b>Table 4.1. Supported Mathematical Operators</b></p>
+<div class="table-contents"><table summary="Supported Mathematical Operators" width="100%" border="1">
+<colgroup>
+<col align="left" class="name">
+<col align="justify" class="description">
+</colgroup>
+<thead><tr>
+<th align="left">Name</th>
+<th align="justify">Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td align="left">+</td>
+<td align="justify">Addition</td>
+</tr>
+<tr>
+<td align="left">-</td>
+<td align="justify">Substraction</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="justify">Multiplication</td>
+</tr>
+<tr>
+<td align="left">/</td>
+<td align="justify">Division</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="justify">Exponentiation (raise a to the power of b)</td>
+</tr>
+<tr>
+<td align="left">and</td>
+<td align="justify">logical and (returns 0 or 1)</td>
+</tr>
+<tr>
+<td align="left">or</td>
+<td align="justify">logical or (returns 0 or 1)</td>
+</tr>
+<tr>
+<td align="left">xor</td>
+<td align="justify">logical exclusive or (returns 0 or 1)</td>
+</tr>
+<tr>
+<td align="left">&lt;</td>
+<td align="justify">less then (returns 0 or 1)</td>
+</tr>
+<tr>
+<td align="left">&lt;=</td>
+<td align="justify">less then or equal (returns 0 or 1)</td>
+</tr>
+<tr>
+<td align="left">==</td>
+<td align="justify">equal (returns 0 or 1)</td>
+</tr>
+<tr>
+<td align="left">&gt;=</td>
+<td align="justify">greater then or equal (returns 0 or 1)</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="justify">greater then (returns 0 or 1)</td>
+</tr>
+<tr>
+<td align="left">!=</td>
+<td align="justify">not equal (returns 0 or 1)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<br class="table-break"><div class="table">
+<a name="idp1379951500"></a><p class="title"><b>Table 4.2. Mathematical Functions</b></p>
+<div class="table-contents"><table summary="Mathematical Functions" width="100%" border="1">
+<colgroup>
+<col align="left" class="name">
+<col align="justify" class="description">
+</colgroup>
+<thead><tr>
+<th align="left">Name</th>
+<th align="justify">Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td align="left">abs(x)</td>
+<td align="justify">absolute value of x</td>
+</tr>
+<tr>
+<td align="left">acos(x)</td>
+<td align="justify">inverse cosinus</td>
+</tr>
+<tr>
+<td align="left">acosh(x)</td>
+<td align="justify">inverse hyperbolic cosinus</td>
+</tr>
+<tr>
+<td align="left">asin(x)</td>
+<td align="justify">inverse sinus</td>
+</tr>
+<tr>
+<td align="left">asinh(x)</td>
+<td align="justify">inverse hyperbolic sinus</td>
+</tr>
+<tr>
+<td align="left">atan(x)</td>
+<td align="justify">inverse tangent</td>
+</tr>
+<tr>
+<td align="left">atanh(x)</td>
+<td align="justify">inverse hyperbolic tangent</td>
+</tr>
+<tr>
+<td align="left">avg(x1,x2,x3,...)</td>
+<td align="justify">average value, this command accept a list of arguments
+              separated by commas</td>
+</tr>
+<tr>
+<td align="left">bessel_j0(x)</td>
+<td align="justify">Regular cylindrical Bessel function of zeroth order,
+              J<sub>0</sub>(x).</td>
+</tr>
+<tr>
+<td align="left">bessel_j1(x)</td>
+<td align="justify">Regular cylindrical Bessel function of first order,
+              J<sub>1</sub>(x).</td>
+</tr>
+<tr>
+<td align="left">bessel_jn(x,n)</td>
+<td align="justify">Regular cylindrical Bessel function of
+              n<sup>th</sup> order,
+              J<sub>n</sub>(x).</td>
+</tr>
+<tr>
+<td align="left">bessel_jn_zero(n, s)</td>
+<td align="justify">s<sup>th</sup> zero of regular cylindrical Bessel function
+						of n<sup>th</sup> order,
+						J<sub>n</sub>(bessel_jn_zero(n,s))=0
+					</td>
+</tr>
+<tr>
+<td align="left">bessel_y0(x)</td>
+<td align="justify">Irregular cylindrical Bessel function of zeroth order,
+              Y<sub>0</sub>(x) for x&gt;0.</td>
+</tr>
+<tr>
+<td align="left">bessel_y1(x)</td>
+<td align="justify">Irregular cylindrical Bessel function of first order,
+              Y<sub>1</sub>(x) for x&gt;0.</td>
+</tr>
+<tr>
+<td align="left">bessel_yn(x,n)</td>
+<td align="justify">Irregular cylindrical Bessel function of
+              n<sup>th</sup> order,
+              Y<sub>n</sub>(x) for x&gt;0.</td>
+</tr>
+<tr>
+<td align="left">beta (a,b)</td>
+<td align="justify">Computes the Beta Function, B(a,b) =
+              Gamma(a)*Gamma(b)/Gamma(a+b) for a &gt; 0 and b &gt; 0.</td>
+</tr>
+<tr>
+<td align="left">ceil(x)</td>
+<td align="justify">ceiling; smallest integer greater or equal to x</td>
+</tr>
+<tr>
+<td align="left">cos(x)</td>
+<td align="justify">cosinus of x</td>
+</tr>
+<tr>
+<td align="left">cosh(x)</td>
+<td align="justify">hyperbolic cosinus of x</td>
+</tr>
+<tr>
+<td align="left">erf(x)</td>
+<td align="justify">error function of x</td>
+</tr>
+<tr>
+<td align="left">erfc(x)</td>
+<td align="justify">Complementary error function erfc(x) = 1 -
+              erf(x).</td>
+</tr>
+<tr>
+<td align="left">erfz(x)</td>
+<td align="justify">The Gaussian probability density function Z(x).</td>
+</tr>
+<tr>
+<td align="left">erfq(x)</td>
+<td align="justify">The upper tail of the Gaussian probability function
+              Q(x).</td>
+</tr>
+<tr>
+<td align="left">exp(x)</td>
+<td align="justify">Exponential function: e raised to the power of x.</td>
+</tr>
+<tr>
+<td align="left">floor(x)</td>
+<td align="justify">floor; largest integer less than or equal to x</td>
+</tr>
+<tr>
+<td align="left">gamma(x)</td>
+<td align="justify">Computes the Gamma function, subject to x not being a
+              negative integer</td>
+</tr>
+<tr>
+<td align="left">gammaln(x)</td>
+<td align="justify">Computes the logarithm of the Gamma function, subject to
+              x not a being negative integer. For x&lt;0, log(|Gamma(x)|) is
+              returned.</td>
+</tr>
+<tr>
+<td align="left">hazard(x)</td>
+<td align="justify">Computes the hazard function for the normal distribution
+              h(x) = erfz(x)/erfq(x).</td>
+</tr>
+<tr>
+<td align="left">ln(x)</td>
+<td align="justify">natural logarythm of x</td>
+</tr>
+<tr>
+<td align="left">log(x)</td>
+<td align="justify">decimal logarythm of x</td>
+</tr>
+<tr>
+<td align="left">log2(x)</td>
+<td align="justify">base 2 logarythm of x</td>
+</tr>
+<tr>
+<td align="left">w0(x)</td>
+<td align="justify">Principal branch of Lambert's W function, W<sub>0</sub>(x).
+						W<sub>0</sub> is defined as a solution to the equation
+						W<sub>0</sub>(x)*exp(W<sub>0</sub>(x))=x.
+						For x&lt;0, there are tow real-valued branches; this function computes the one where
+						W&gt;-1 for x&lt;0 (compare w1(x)).
+					</td>
+</tr>
+<tr>
+<td align="left">w1(x)</td>
+<td align="justify">Secondary branch of Lambert's W function, W<sub>-1</sub>(x).
+						W<sub>-1</sub> is defined as a solution to the equation
+						W<sub>-1</sub>(x)*exp(W<sub>-1</sub>(x))=x.
+						For x&lt;0, there are tow real-valued branches; this function computes the one where
+						W&lt;-1 for x&lt;0 (compare w0(x)).
+					</td>
+</tr>
+<tr>
+<td align="left">min(x1,x2,x3,...)</td>
+<td align="justify">Minimum of the list of arguments</td>
+</tr>
+<tr>
+<td align="left">max(x1,x2,x3,...)</td>
+<td align="justify">Maximum of the list of arguments</td>
+</tr>
+<tr>
+<td align="left">mod(x,y)</td>
+<td align="justify">x modulo y; remainder of integer division x/y</td>
+</tr>
+<tr>
+<td align="left">pow(x,y)</td>
+<td align="justify">x to the power of y, x^y</td>
+</tr>
+<tr>
+<td align="left">rint(x)</td>
+<td align="justify">Round to nearest integer.</td>
+</tr>
+<tr>
+<td align="left">sign(x)</td>
+<td align="justify">Sign function: -1 if x&lt;0; 1 if x&gt;0.</td>
+</tr>
+<tr>
+<td align="left">sin(x)</td>
+<td align="justify">sinus of x</td>
+</tr>
+<tr>
+<td align="left">sinh(x)</td>
+<td align="justify">hyperblic sinus of x</td>
+</tr>
+<tr>
+<td align="left">sqrt(x)</td>
+<td align="justify">square root of x</td>
+</tr>
+<tr>
+<td align="left">tan(x)</td>
+<td align="justify">tangent of x</td>
+</tr>
+<tr>
+<td align="left">tanh(x)</td>
+<td align="justify">hyperbolic tangent of x</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<br class="table-break"><div class="table">
+<a name="idp1379986020"></a><p class="title"><b>Table 4.3. Non-Mathematical Functions</b></p>
+<div class="table-contents"><table summary="Non-Mathematical Functions" width="100%" border="1">
+<colgroup>
+<col align="left" class="name">
+<col align="justify" class="description">
+</colgroup>
+<thead><tr>
+<th align="left">Name</th>
+<th align="justify">Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td align="left">cell(a,b)</td>
+<td align="justify">In the contex of a matrix, returns the value at row a and column b.
+					  In the context of a table, returns the value at column a and row b (remember that tables use column logic).
+					  Everywhere else, this function is undefined.
+
+					  In the case of tables, the column is specified as a path string; see the
+					  documentation of column() for supported path formats.
+				  </td>
+</tr>
+<tr>
+<td align="left">cell_(column, row)</td>
+<td align="justify">
+						In the context of a table, return the value of a cell specified using 1-based indices.
+						Wherever possible, you should use cell() instead, because inserting/removing/moving
+						columns will break formulas using cell_().
+					</td>
+</tr>
+<tr>
+<td align="left">col(c)</td>
+<td align="justify">
+					  DEPRECATED; use column() or cell() instead.
+					  Note that the user interface still uses col() until a proper language-specific mechanism
+					  is implemented.
+				  </td>
+</tr>
+<tr>
+<td align="left">column("path")</td>
+<td align="justify">
+						In a column formula, returns the value in the given column and current row (i).
+						The column path can either be the name of column in the current table, more
+						generally a relative path to a column in another table (e.g. "../otherTable/col")
+						or an absolute path (i.e., relative to the project root; e.g.
+						"/folder/otherTable/col"). Searching for a table anywhere in the project using
+						"otherTable/col" (without leading slash) is supported for backwards-compatibility
+						reasons, but is strongly discouraged - a future release will drop the requirement
+						of project-wide unique table names, at which point this usage will cease to be
+						well-defined.
+					</td>
+</tr>
+<tr>
+<td align="left">column_(index)</td>
+<td align="justify">In a column formula, returns the value in the column given by 1-based index
+						and current row (i). You should use column() wherever possible, because inserting/
+						removing/moving columns will break formulas using column_().
+					</td>
+</tr>
+<tr>
+<td align="left">if(e1,e2,e3)</td>
+<td align="justify">if e1 is true, e2 is executed else e3 is
+              executed.</td>
+</tr>
+<tr>
+<td align="left">tablecol(t,c)</td>
+<td align="justify">
+					  DEPRECATED; use column() instead.
+				  </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<br class="table-break">
+</div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="sec-interpolate.html">Prev</a> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="sec-python.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">Interpolation </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> Python</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

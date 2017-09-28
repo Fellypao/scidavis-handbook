@@ -1,0 +1,185 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Fitting of data and curves</title>
+<link rel="stylesheet" type="text/css" href="scidavis.css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="keywords" content="Qt, SciDAVis, Data, Analysis, Plotting">
+<link rel="home" href="index.html" title="The SciDAVis Handbook">
+<link rel="up" href="analysis.html" title="Chapter 3. Analysis of data and curves">
+<link rel="prev" href="sec-deconvolute.html" title="Deconvolution">
+<link rel="next" href="sec-interpolate.html" title="Interpolation">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">Fitting of data and curves</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="sec-deconvolute.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 3. Analysis of data and curves</th>
+<td width="20%" align="right"> <a accesskey="n" href="sec-interpolate.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="sect1">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="sec-fitting"></a>Fitting of data and curves</h2></div></div></div>
+<p>Fitting can be done in two ways:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>A general <span class="emphasis"><em>Fit Wizard</em></span> which allows to use complex functions and to adjust the fitting parameters.</p></li>
+<li class="listitem"><p>A set of simplified fitting dialog boxes for most used functions like exponential growth or decay, etc.</p></li>
+</ul></div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="sec-non-linear-curve-fit"></a>Non Linear Curve Fit</h3></div></div></div>
+<a class="indexterm" name="idp1379759332"></a><p>This function can be accessed by the <a class="link" href="sec-analysis-menu.html#fit-wizard-plot-cmd"><span class="command"><strong>Fit Wizard</strong></span> command</a> of the <a class="link" href="sec-analysis-menu.html#sec-analysis-plots-menu" title="Commands for the analysis of curves in plots">Analysis-plots menu</a> when a plot is selected, or the <a class="link" href="sec-analysis-menu.html#sec-analysis-tables-menu" title="Commands for the analysis of data in tables">Analysis-tables menu</a> when aa table window is selected. In the latter case, this command first creates a new plot window using the list of selected columns in the table.</p>
+<p>This Command is used to fit discrete data points with a mathematical function. The fitting is done by minimizing the least square difference between the data points and the Y values of the function.</p>
+<div class="sidebar">
+<div class="titlepage"><div><div><p class="title"><b>Note:</b></p></div></div></div>
+<p>If the data points are modified, the fit is not re-calculated. Then, you need to remove the old fitted curve and to redo the fit with the same function and the new points.</p>
+</div>
+<p>The top of the dialog box is used to choose a function among the one which are already define. Four types of functions are available: the user defined functions which have been saved, the classical functions proposed by SciDAVis in the analysis menu, the simple elementary built-in functions, and external functions via pluggins.</p>
+<p>To choose one of these functions, you just have to select it and to click on the checkbox under the selector.</p>
+<p>If you want to define your own function, you can use the bottom half of the dialog box. You can write you own mathematical expression or add expressions obtained with the function selector. Then you need to define the parameters which have to be fitted in a comma separated list.</p>
+<div class="figure">
+<a name="fig-non-linear-curve-fit-1"></a><p class="title"><b>Figure 3.10. The first step of the <span class="command">Fit Wizard</span> dialog box.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/fit-dialog1.png" alt="The first step of the Fit Wizard dialog box."></div></div>
+</div>
+<br class="figure-break"><p>The second step is to define the parameters for the fit. You have to give initial guess for the fitting parameters.</p>
+<div class="figure">
+<a name="fig-non-linear-curve-fit-2"></a><p class="title"><b>Figure 3.11. The second step of the <span class="command">Fit Wizard</span> dialog box.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/fit-dialog2.png" alt="The second step of the Fit Wizard dialog box."></div></div>
+</div>
+<br class="figure-break"><p> In this second tab you can also choose a weighting method for your fit (the default is <span class="emphasis"><em>No weighting</em></span>). The available weighting methods are:</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem"><p><span class="emphasis"><em>Instrumental</em></span>: the values of the associated error bars are used as weighting coefficients. You must add Y-error bars to the analyzed curve before performing the fit.</p></li>
+<li class="listitem"><p><span class="emphasis"><em>Statistical</em></span>: the weighting coefficients are calculated as the square-roots of each data point in the fitted curve.</p></li>
+<li class="listitem"><p><span class="emphasis"><em>Arbitrary Dataset</em></span>: you have the possibility to set the weighting coefficients using an arbitrary data set. The column used for the weighting must have a number of rows equal to the number of points in the fitted curve. </p></li>
+</ol></div>
+<p>After the fit, the log window is opened to show the results of the fitting process.</p>
+<p>Depending on the settings in the <span class="emphasis"><em>Custom Output</em></span> tab, a function curve (option <span class="emphasis"><em>Uniform X Function</em></span>) or a new table (if you choose the option <span class="emphasis"><em>Same X as Fitting Data</em></span>) will be created for each fit. The new table includes all the X and Y values used to compute and to plot the fitted function and is hidden by default, but it can be found and viewed with the <a class="link" href="sec-view-menu.html#project-explorer-cmd">project explorer</a>.</p>
+<div class="figure">
+<a name="fig-non-linear-curve-fit-3"></a><p class="title"><b>Figure 3.12. The results of the <span class="command">Fit Wizard</span>.</b></p>
+<div class="figure-contents">
+<div class="informalexample"><p>The results are shown in the log window, the curve is plotted in the active window, and a table is created to store the fit.</p></div>
+<div class="mediaobject"><img src="pics/fit-dialog3.png" alt="The results of the Fit Wizard."></div>
+</div>
+</div>
+<br class="figure-break">
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="sec-ajustements-specifiques"></a>Fitting to specific curves</h3></div></div></div>
+<p>SciDAVis include quick access to the most usefull functions for fitting. Beware that when you use these commands, SciDAVis uses default values as initial guesses for the parameters. Therefore, the convergence may be difficult or even impossible if these initial values are too far from the final values. In this case, you can use the <a class="link" href="sec-analysis-menu.html#fit-wizard-table-cmd"><span class="command"><strong>Fit Wizard</strong></span> command</a> or the <a class="link" href="sec-analysis-menu.html#fit-wizard-plot-cmd"><span class="command"><strong>Fit Wizard</strong></span> command</a>, select the function in the <span class="emphasis"><em>built-in</em></span> set and give good initial values for parameters.</p>
+<div class="sect3">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="sec-fit-linear"></a>Fitting to a line</h4></div></div></div>
+<a class="indexterm" name="idp1379779684"></a><p>This command is used to fit a curve which has a linear shape. The results will be given in the <a class="link" href="general-concepts.html#sec-intro-log-window" title="Log Window">Log panel</a>.</p>
+<div class="figure">
+<a name="fig-fit-linear"></a><p class="title"><b>Figure 3.13. The results of a <span class="command">Quick Fit→Fit Linear</span>.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/fit-linear.png" alt="The results of a Quick Fit→Fit Linear."></div></div>
+</div>
+<br class="figure-break">
+</div>
+<div class="sect3">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="sec-fit-polynomial"></a>Fitting to a polynomial</h4></div></div></div>
+<a class="indexterm" name="idp1379783820"></a><p>This command is used to fit a curve which has a linear shape. The results will be given in the <a class="link" href="general-concepts.html#sec-intro-log-window" title="Log Window">Log panel</a></p>
+<div class="informalfigure">
+<a name="fig-fit-polynomial-dialog"></a><div class="mediaobject"><img src="pics/fit-polynomial.png"></div>
+</div>
+</div>
+<div class="sect3">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="sec-fit-bolzmann"></a>Fitting to a Bolzmann function</h4></div></div></div>
+<a class="indexterm" name="idp1379787052"></a><p>This command is used to fit a curve which has a sigmoidal shape. The function used is:</p>
+<div class="equation">
+<a name="idp1379788036"></a><p class="title"><b>Equation 3.3. Bolzmann equation</b></p>
+<div class="equation-contents"><div class="mediaobject"><img src="equations/equation_bolzmann.png"></div></div>
+</div>
+<br class="equation-break"><p>in which A<sub>2</sub> is the high Y limit, A<sub>1</sub> is the low Y limit, x<sub>0</sub> is the inflexion point and dx is the width.</p>
+<div class="figure">
+<a name="fig-fit-bolzman"></a><p class="title"><b>Figure 3.14. The results of a <span class="command">Quick Fit→Fit Bolzmann (Sigmoïdal)</span>.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/fit-sigmoidal.png" alt="The results of a Quick Fit→Fit Bolzmann (Sigmoïdal)."></div></div>
+</div>
+<br class="figure-break">
+</div>
+<div class="sect3">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="sec-fit-gaussian"></a>Fitting to a Gauss function</h4></div></div></div>
+<a class="indexterm" name="idp1379792852"></a><p>This command is used to fit a curve which has a bell shape. The function used is:</p>
+<div class="equation">
+<a name="idp1379793812"></a><p class="title"><b>Equation 3.4. Gauss equation</b></p>
+<div class="equation-contents"><div class="mediaobject"><img src="equations/equation_gauss.png"></div></div>
+</div>
+<br class="equation-break"><p>in which A is the height, w is the width, x<sub>c</sub> is the center and y<sub>0</sub> is the Y-values offset.</p>
+<div class="figure">
+<a name="fig-fit-gauss"></a><p class="title"><b>Figure 3.15. The results of a <span class="command">Quick Fit→Fit Gaussian</span>.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/fit-gaussian.png" alt="The results of a Quick Fit→Fit Gaussian."></div></div>
+</div>
+<br class="figure-break">
+</div>
+<div class="sect3">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="sec-fit-lorentzian"></a>Fitting to a Lorentz function</h4></div></div></div>
+<a class="indexterm" name="idp1379801524"></a><p>This command is used to fit a curve which has a bell shape. The function used is:</p>
+<div class="equation">
+<a name="idp1379796676"></a><p class="title"><b>Equation 3.5. Lorentz equation</b></p>
+<div class="equation-contents"><div class="mediaobject"><img src="equations/equation_lorentz.png"></div></div>
+</div>
+<br class="equation-break"><p>in which A is the area, w is the width, x<sub>c</sub> is the center and y<sub>0</sub> is the Y-values offset.</p>
+<div class="figure">
+<a name="fig-fit-lorentz"></a><p class="title"><b>Figure 3.16. The results of a <span class="command">Quick Fit→Fit Lorentzian</span>.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/fit-lorentzian.png" alt="The results of a Quick Fit→Fit Lorentzian."></div></div>
+</div>
+<br class="figure-break">
+</div>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="sec-fit-multipeak"></a>Multi-Peaks fitting</h3></div></div></div>
+<a class="indexterm" name="idp1379804036"></a><p>This kind of fitting allows to fit your data points to a sum of N Gaussian or Lorentzian functions. The first step is to specify the number of peaks. Then you must define the position of each peak on the curve. This is done by selecting one data point on the plot, then validate your choice for each peak with the <span class="emphasis"><em>ENTER</em></span> key.</p>
+<div class="figure">
+<a name="fig-fit-multipeak"></a><p class="title"><b>Figure 3.17. The selection of the position of the peaks.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/fit-multipeak-1.png" alt="The selection of the position of the peaks."></div></div>
+</div>
+<br class="figure-break"><p>Then, the fitting is done in the same way as for the other quick-fit commands. For the position of the data points used for the selection of the position of the peaks are just initial guesses for the fitting.</p>
+<div class="figure">
+<a name="fig-fit-multipeak-result"></a><p class="title"><b>Figure 3.18. The results of a <span class="command">Quick Fit→Fit Multipeak→Gaussian</span>.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/fit-multipeak-2.png" alt="The results of a Quick Fit→Fit Multipeak→Gaussian."></div></div>
+</div>
+<br class="figure-break"><p>As for the other quick-fit commands, if you want to fit with a sum of more complex curves (e.g. a combination of lorentzian and gaussian functions), use the <a class="link" href="sec-fitting.html#sec-non-linear-curve-fit" title="Non Linear Curve Fit">Fit Wizard</a>.</p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="sec-default-parameters-fitting"></a>Changing default parameters for fitting</h3></div></div></div>
+<p>This dialog can be accessed by the <a class="link" href="sec-edit-menu.html#preferences-cmd"><span class="command"><strong>Preferences</strong></span> command</a> of the <a class="link" href="sec-edit-menu.html" title="The Edit Menu">Edit menu</a>. It allows to modify the way the fitted curves are drawn on the plots and some options for the presentation of the fitted values. If you want to modify some parameters related to the fitting itself, like the tolerance, you have to do it in the <a class="link" href="sec-fitting.html#sec-non-linear-curve-fit" title="Non Linear Curve Fit">Fit Wizard</a>.</p>
+<div class="figure">
+<a name="fig-fit-preference"></a><p class="title"><b>Figure 3.19. The preference dialog for fitting.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/preferences-dialog5.png" alt="The preference dialog for fitting."></div></div>
+</div>
+<br class="figure-break">
+</div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="sec-deconvolute.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="analysis.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="sec-interpolate.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">Deconvolution </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> Interpolation</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

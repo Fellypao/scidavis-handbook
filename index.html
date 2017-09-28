@@ -1,0 +1,175 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The SciDAVis Handbook</title>
+<link rel="stylesheet" type="text/css" href="scidavis.css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="description" content="This document is a handbook for using SciDAVis, a program for two- and three-dimensional graphical presentation of data sets and for data analysis. It is updated for version 1.22 and newer (including the 1.x series). This manual is organized in several chapters: The first one describes the main concepts and terms which are used in SciDAVis.The second and third chapters build a tutorial on how to obtain plots from different data sets, and to perform mathematical and statistical analysis of data and curves. They are the ones you need to read first to understand the basics of SciDAVis and to be able to work with.The next chapter describe some specific possibilities of SciDAVis, that is the scripting.The two last chapters are descriptions of all the commands and toolbars used in SciDAVis. These chapters are the reference manual of SciDAVis.">
+<meta name="keywords" content="Qt, SciDAVis, Data, Analysis, Plotting">
+<link rel="home" href="index.html" title="The SciDAVis Handbook">
+<link rel="next" href="introduction.html" title="Chapter 1. Introduction">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">The SciDAVis Handbook</th></tr>
+<tr>
+<td width="20%" align="left"> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="introduction.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div lang="en" class="book">
+<div class="titlepage">
+<div>
+<div><h1 class="title">
+<a name="idp1375287196"></a>The SciDAVis Handbook</h1></div>
+<div><div class="authorgroup">
+<div class="author">
+<h3 class="author">
+<span class="firstname">Ion</span> <span class="surname">Vasilief</span>
+</h3>
+<div class="affiliation"><div class="address"><p><code class="email">&lt;<a class="email" href="mailto:ion_vasilief@yahoo.fr">ion_vasilief@yahoo.fr</a>&gt;</code></p></div></div>
+</div>
+<div class="author">
+<h3 class="author">
+<span class="firstname">Roger</span> <span class="surname">Gadiou</span>
+</h3>
+<div class="affiliation"><div class="address"><p><code class="email">&lt;<a class="email" href="mailto:Roger.Gadiou@orange.fr">Roger.Gadiou@orange.fr</a>&gt;</code></p></div></div>
+</div>
+<div class="author">
+<h3 class="author">
+<span class="firstname">Knut</span> <span class="surname">Franke</span>
+</h3>
+<div class="affiliation"><div class="address"><p><code class="email">&lt;<a class="email" href="mailto:Knut.Franke@gmx.de">Knut.Franke@gmx.de</a>&gt;</code></p></div></div>
+</div>
+<div class="author">
+<h3 class="author">
+<span class="firstname">Fellype</span> <span class="surname">Nascimento</span>
+</h3>
+<div class="affiliation"><div class="address"><p><code class="email">&lt;<a class="email" href="mailto:fellypao@yahoo.com.br">fellypao@yahoo.com.br</a>&gt;</code></p></div></div>
+</div>
+<div class="author">
+<h3 class="author">
+<span class="firstname">Miquel</span> <span class="surname">Garriga</span>
+</h3>
+<div class="affiliation"><div class="address"><p><code class="email">&lt;<a class="email" href="mailto:gbmiquel@users.sf.net">gbmiquel@users.sf.net</a>&gt;</code></p></div></div>
+</div>
+</div></div>
+<div><p class="releaseinfo">Version updated for SciDAVis 1.22 and newer (including the 1.x series)</p></div>
+<div><p class="copyright">Copyright © 2001, 2002, 2003, 2004, 2005 Ion Vasilief</p></div>
+<div><p class="copyright">Copyright © 2006, 2007 Roger Gadiou, Knut Franke and Ion Vasilief</p></div>
+<div><p class="copyright">Copyright © 2008, 2009, 2010 Roger Gadiou and Knut Franke</p></div>
+<div><p class="copyright">Copyright © 2017 Fellype do Nascimento and Miquel Garriga </p></div>
+<div><div class="legalnotice">
+<a name="idp1376267388"></a><p><span class="emphasis"><em>Legal notice:</em></span> Permission is granted to copy, distribute and/or modify this document under the terms of the <a class="link" href="manual_appendix.html#fdl" title="GNU Free Documentation License">GNU Free Documentation License</a>, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts.</p>
+</div></div>
+<div><div class="abstract">
+<p class="title"><b>Abstract</b></p>
+<p>This document is a handbook for using SciDAVis, a program for two- and three-dimensional graphical presentation of data sets and for data analysis. It is updated for version 1.22 and newer (including the 1.x series). This manual is organized in several chapters:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>The <a class="link" href="introduction.html" title="Chapter 1. Introduction">first one</a> describes the main concepts and terms which are used in SciDAVis.</p></li>
+<li class="listitem"><p>The <a class="link" href="using.html" title="Chapter 2. Drawing plots with SciDAVis">second</a> and <a class="link" href="analysis.html" title="Chapter 3. Analysis of data and curves">third</a> chapters build a tutorial on how to obtain plots from different data sets, and to perform mathematical and statistical analysis of data and curves. They are the ones you need to read first to understand the basics of SciDAVis and to be able to work with.</p></li>
+<li class="listitem"><p>The next chapter describe some specific possibilities of SciDAVis, that is the <a class="link" href="scripting.html" title="Chapter 4. Scripting">scripting</a>.</p></li>
+<li class="listitem"><p>The two last chapters are descriptions of all the <a class="link" href="reference.html" title="Chapter 5. Command Reference">commands</a> and <a class="link" href="toolbars.html" title="Chapter 6. The Toolbars">toolbars</a> used in SciDAVis. These chapters are the reference manual of SciDAVis.</p></li>
+</ul></div>
+</div></div>
+</div>
+<hr>
+</div>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl class="toc">
+<dt><span class="chapter"><a href="introduction.html">1. Introduction</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="introduction.html#sec-scidavis-intro">What is SciDAVis?</a></span></dt>
+<dt><span class="sect1"><a href="command-line-options.html">Command Line Parameters</a></span></dt>
+<dt><span class="sect1"><a href="general-concepts.html">General Concepts and Terms</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="using.html">2. Drawing plots with SciDAVis</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="using.html#sec-2d-plots">2D X-Y plots</a></span></dt>
+<dt><span class="sect1"><a href="sec-special-plots.html">Other special 2D plots</a></span></dt>
+<dt><span class="sect1"><a href="sec-statistical-plots.html">Statistical plots</a></span></dt>
+<dt><span class="sect1"><a href="sec-3d-plots.html">3D plots</a></span></dt>
+<dt><span class="sect1"><a href="sec-multilayer-plots.html">Multilayer Plots</a></span></dt>
+<dt><span class="sect1"><a href="sec-adding-objects.html">Adding objects to a plot</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="analysis.html">3. Analysis of data and curves</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="analysis.html#sec-fft">Fast Fourier Transform</a></span></dt>
+<dt><span class="sect1"><a href="sec-filtering.html">Filtering of data curves</a></span></dt>
+<dt><span class="sect1"><a href="sec-correlate.html">Correlation and autocorrelation</a></span></dt>
+<dt><span class="sect1"><a href="sec-convolute.html">Convolution of functions</a></span></dt>
+<dt><span class="sect1"><a href="sec-deconvolute.html">Deconvolution</a></span></dt>
+<dt><span class="sect1"><a href="sec-fitting.html">Fitting of data and curves</a></span></dt>
+<dt><span class="sect1"><a href="sec-interpolate.html">Interpolation</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="scripting.html">4. Scripting</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="scripting.html#sec-muParser">muParser</a></span></dt>
+<dt><span class="sect1"><a href="sec-python.html">Python</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="reference.html">5. Command Reference</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="reference.html#sec-file-menu">The File Menu</a></span></dt>
+<dt><span class="sect1"><a href="sec-edit-menu.html">The Edit Menu</a></span></dt>
+<dt><span class="sect1"><a href="sec-view-menu.html">The View Menu</a></span></dt>
+<dt><span class="sect1"><a href="sec-graph-menu.html">The Graph Menu</a></span></dt>
+<dt><span class="sect1"><a href="sec-plot-menu.html">The Plot Menu</a></span></dt>
+<dt><span class="sect1"><a href="sec-plot3d-menu.html">The Plot 3D menu</a></span></dt>
+<dt><span class="sect1"><a href="sec-tools-menu.html">The Tools Menu</a></span></dt>
+<dt><span class="sect1"><a href="sec-analysis-menu.html">The Analysis Menu</a></span></dt>
+<dt><span class="sect1"><a href="sec-table-menu.html">The Table Menu</a></span></dt>
+<dt><span class="sect1"><a href="sec-matrix-menu.html">The Matrix Menu</a></span></dt>
+<dt><span class="sect1"><a href="sec-format-menu.html">The Format Menu</a></span></dt>
+<dt><span class="sect1"><a href="sec-windows-menu.html">The Window Menu</a></span></dt>
+<dt><span class="sect1"><a href="sec-help-menu.html">The Help Menu</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="toolbars.html">6. The Toolbars</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="toolbars.html#sec-file-toolbar">The File Toolbar</a></span></dt>
+<dt><span class="sect1"><a href="sec-edit-toolbar.html">The Edit Toolbar</a></span></dt>
+<dt><span class="sect1"><a href="sec-plot-toolbar.html">The Plot Toolbar.</a></span></dt>
+<dt><span class="sect1"><a href="sec-graph-toolbar.html">The Graph Toolbar.</a></span></dt>
+<dt><span class="sect1"><a href="sec-table-toolbar.html">The Table Toolbar.</a></span></dt>
+<dt><span class="sect1"><a href="sec-matrix-plot-toolbar.html">The matrix plot Toolbar.</a></span></dt>
+<dt><span class="sect1"><a href="sec-3d-surface-toolbar.html">The 3D Surfaces Toolbar.</a></span></dt>
+</dl></dd>
+<dt><span class="appendix"><a href="manual_appendix.html">A. Appendix</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="manual_appendix.html#credits">Credits and License</a></span></dt>
+<dt><span class="sect1"><a href="getting-scidavis.html">How to obtain SciDAVis</a></span></dt>
+<dt><span class="sect1"><a href="requirements.html">Requirements</a></span></dt>
+<dt><span class="sect1"><a href="installation-from-binary.html">Installation from binary packages</a></span></dt>
+<dt><span class="sect1"><a href="compilation.html">Compilation and Installation from sources</a></span></dt>
+</dl></dd>
+<dt><span class="appendix"><a href="faq.html">B. Frequently asked questions</a></span></dt>
+<dd><dl><dt><span class="qandaset"><a href="faq.html#idp1382861836">Frequently Asked Questions</a></span></dt></dl></dd>
+<dt><span class="index"><a href="manual-index.html">index</a></span></dt>
+</dl>
+</div>
+<div class="ListofTitles"><a href="figure-toc.html">List of Figures</a></div>
+<div class="ListofTitles"><a href="table-toc.html">List of Tables</a></div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left"> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="introduction.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top"> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right" valign="top"> Chapter 1. Introduction</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

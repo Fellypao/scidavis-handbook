@@ -1,0 +1,200 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Graph Menu</title>
+<link rel="stylesheet" type="text/css" href="scidavis.css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="keywords" content="Qt, SciDAVis, Data, Analysis, Plotting">
+<link rel="home" href="index.html" title="The SciDAVis Handbook">
+<link rel="up" href="reference.html" title="Chapter 5. Command Reference">
+<link rel="prev" href="sec-view-menu.html" title="The View Menu">
+<link rel="next" href="sec-plot-menu.html" title="The Plot Menu">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">The Graph Menu</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="sec-view-menu.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 5. Command Reference</th>
+<td width="20%" align="right"> <a accesskey="n" href="sec-plot-menu.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="sect1">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="sec-graph-menu"></a>The Graph Menu</h2></div></div></div>
+<p>This menu is only active when a plot window is selected.</p>
+<div class="variablelist"><dl class="variablelist">
+<dt>
+<a name="add-remove-curve-cmd"></a><span class="term">Graph → <span class="command"><strong>Add/Remove Curve</strong></span> (<span class="keycode">ALT+C</span>)</span>
+</dt>
+<dd>
+<p>Opens the <span class="command"><strong>Add/Remove Curve</strong></span> dialog, allowing to easily add or remove curves from the active plot layer. This dialog can also be used to modify a curve which is already plotted by changing the columns which are used as X or Y values.</p>
+<a class="indexterm" name="idp1381079404"></a><a class="indexterm" name="idp1381079956"></a><p>The left window shows the columns which are available for plotting in the different tables of the project, and the right window gives the list of the curves already plotted. In the case presented below, there are two tables in which the <span class="command"><strong>Add/Remove Curve</strong></span> dialog box allows to select columns. If you use this dialog box to add a column, the X column will be the one define as X in the corresponding table.</p>
+<div class="figure">
+<a name="fig-add-remove-curve"></a><p class="title"><b>Figure 5.14. The <span class="command">Add/Remove Curve</span> dialog box.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/add-remove-curve.png" alt="The Add/Remove Curve dialog box."></div></div>
+</div>
+<br class="figure-break"><p>In this dialog box, if you select one curve of the plot in the right window, you can change the columns used for X and Y with the <span class="emphasis"><em>Plot Association</em></span> button. In any case, you can't mix the X values of one table with the Y values of another one. If you wan't to do this, you have to copy the columns in the same table.</p>
+<p>If the curve selected is a function, you can modify it. Refer to the <a class="link" href="sec-graph-menu.html#add-function-cmd"><span class="command"><strong>Add Function</strong></span> command</a> for more details on functions editing.</p>
+</dd>
+<dt>
+<a name="add-error-bars-cmd"></a><span class="term">Graph → <span class="command"><strong>Add Error Bars</strong></span> (<span class="keycode">CTRL+B</span>)</span>
+</dt>
+<dd>
+<a class="indexterm" name="idp1381086300"></a><p>This command is used to plot X and/or Y error bars around the data points.</p>
+<p>It must be taken care that the "add" button add the errors bars, and so do the "OK" button. Then, you should close the dialog with cancel if you have clicked on the "add" button.</p>
+<div class="figure">
+<a name="fig-add-error-bars-1"></a><p class="title"><b>Figure 5.15. The <span class="command">Add Error Bars</span> dialog.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/add-error-bars-1.png" alt="The Add Error Bars dialog."></div></div>
+</div>
+<br class="figure-break"><p>There are three ways to specify the size of the bar:</p>
+<div class="variablelist"><dl class="variablelist">
+<dt><span class="term">A column of the table</span></dt>
+<dd><p>In this case, the values of the selected column are used to compute the error bars. if V is the value of the data point, and E the value of the errorbar column, the size of the bars will be V-E to V+E.</p></dd>
+<dt><span class="term">A percentage of the values</span></dt>
+<dd><p>if E is the percentage selected, the size of the bars will be V(1-E/100) to V(1+E/100). It must be noticed that, in addition to the errorbars on the plot, this command will create a new column in the active table with can be used in the way as with the previous option. This column can be modified like any other one.</p></dd>
+<dt><span class="term">The standard deviation of the values</span></dt>
+<dd><p>the standard deviation of the values. This has a meaning only of the data are centered around an average value. Like with the previous option, a new column will be created in the active table.</p></dd>
+</dl></div>
+<div class="figure">
+<a name="fig-add-error-bars-2"></a><p class="title"><b>Figure 5.16. A plot with X and Y Error Bars.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/add-error-bars-2.png" alt="A plot with X and Y Error Bars."></div></div>
+</div>
+<br class="figure-break">
+</dd>
+<dt>
+<a name="add-function-cmd"></a><span class="term">Graph → <span class="command"><strong>Add Function</strong></span> (<span class="keycode">CTRL+ALT+F</span>)</span>
+</dt>
+<dd>
+<a class="indexterm" name="idp1381096572"></a><p>This dialog box is used to add a function curve to the active plot. The function can be built with the common operators: * + / - and ^ for the power. The intrinsic functions available are listed in the <a class="link" href="scripting.html#sec-muParser" title="muParser">appendix</a>.</p>
+<p>The most common way to define a function is the classical cartesian coordinate definition y=f(x), this is the defaut option. The two following parameters allow to select the x range used for the plot, and the last one is used for the number of data points that are computed in the X-range.</p>
+<div class="figure">
+<a name="add-function-dialog-1"></a><p class="title"><b>Figure 5.17. The <span class="command">Add Function</span> dialog box: cartesian coordinates.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/add-function-dialog1.png" alt="The Add Function dialog box: cartesian coordinates."></div></div>
+</div>
+<br class="figure-break"><p>The functions can also be defined in a parametric definition: if <span class="emphasis"><em>t</em></span> is the parameter, the (x,y) data points are computed by x=f(t) and y=g(t). The first parameter is the name of the parametric variable (here <span class="emphasis"><em>t</em></span>) followed by the range, the definition of the two functions and the number of data points.</p>
+<div class="figure">
+<a name="add-function-dialog-2"></a><p class="title"><b>Figure 5.18. The <span class="command">Add Function</span> dialog box: parametric coordinates.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/add-function-dialog2.png" alt="The Add Function dialog box: parametric coordinates."></div></div>
+</div>
+<br class="figure-break"><p>The last way is the polar definition of the function: if <span class="emphasis"><em>t</em></span> is the parameter, the radius <span class="emphasis"><em>r</em></span> and the angle <span class="emphasis"><em>theta</em></span> are computed by r=f(t) and theta=g(t). Then the (x,y) data points are computed by x=r*cos(theta) and y=r*sin(theta).</p>
+<p>The first parameter is the name of the parametric variable (here <span class="emphasis"><em>t</em></span>) followed by the range, the definition of the two functions and the number of data points.The angle is defined in radians, and the constant value <span class="emphasis"><em>pi</em></span> can be used: it is possible to use 3*pi to define the parameter range.</p>
+<div class="figure">
+<a name="add-function-dialog-3"></a><p class="title"><b>Figure 5.19. The <span class="command">Add Function</span> dialog box: polar coordinates.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/add-function-dialog3.png" alt="The Add Function dialog box: polar coordinates."></div></div>
+</div>
+<br class="figure-break">
+</dd>
+<dt>
+<a name="add-text-cmd"></a><span class="term">Graph → <span class="command"><strong>Add Text</strong></span> (<span class="keycode">ALT+T</span>)</span>
+</dt>
+<dd>
+<a class="indexterm" name="idp1381109012"></a><p>Opens a dialog allowing you to select whether the text is to be added to the active plot layer or on a new layer. The cursor changes to an edit text cursor. Next, you must click in the plot window to specify the position of the new text box. A text dialog will pop-up allowing you to type the new text to be displayed and all its properties (color, font, etc...)</p>
+<p>If you choose the <span class="emphasis"><em>On new layer</em></span> option, the text will be inserted as a new layer which has the size and the position of the text. You can then modify the size and position of this layer with the <span class="emphasis"><em>layer Geometry</em></span> (see the <a class="link" href="sec-graph-menu.html#add-layer-cmd"><span class="command"><strong>Add Layer</strong></span> command</a> for details). Beware that in this case, all text which is not in the layer will be clipped, therefore, you need to modify the layer to modify the position of the text. If you choose the <span class="emphasis"><em>On Active layer</em></span> option, the text will be inserted in the selected layer, and its position can be modified directly with the mouse inside this layer.</p>
+<div class="figure">
+<a name="fig-add-text-dialog"></a><p class="title"><b>Figure 5.20. The <span class="command">Add Text</span> dialog box.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/add-text.png" alt="The Add Text dialog box."></div></div>
+</div>
+<br class="figure-break">
+</dd>
+<dt>
+<a name="draw-arrow-cmd"></a><span class="term">Graph → <span class="command"><strong>Draw Arrow</strong></span> (<span class="keycode">CTRL+ALT+A</span>)</span>
+</dt>
+<dd>
+<a class="indexterm" name="idp1381119844"></a><p>Changes the active layer operation mode to the drawing mode. You must click on the layer canvas in order to specify the starting point for the new arrow, and then click once more to specify its ending point. You can edit the new arrow using the Arrow dialog. You can swith back to the normal operating mode by clicking the "Pointer" icon in the Plot toolbar.</p>
+<p>Then, a dialog allows to modify a line or an arrow which has been created. One can open it with a double click on an arrow or a line, or by selecting an arrow or a line and selecting <span class="emphasis"><em>Properties...</em></span> with the right button of the mouse.</p>
+<p>The first tab allows to change the color, the line type and the line width. This last parameter is set in pixels. It is possible to define a default style for all the new lines by pressing the <span class="emphasis"><em>Set Default</em></span> button.</p>
+<div class="figure">
+<a name="fig-line-options-1"></a><p class="title"><b>Figure 5.21. The <span class="emphasis"><em>Arrow options</em></span> dialog: first tab</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/line-options-1.png" alt="The Arrow options dialog: first tab"></div></div>
+</div>
+<br class="figure-break"><p>The <span class="emphasis"><em>Arrow head</em></span> tab is used to modify the shape of the head of the arrow. The length is set in pixels and the angle is in degrees. It is also possible to define a default style for the arrow heads using the same <span class="emphasis"><em>Set Default</em></span> button.</p>
+<div class="figure">
+<a name="fig-line-options-2"></a><p class="title"><b>Figure 5.22. The <span class="emphasis"><em>Arrow options</em></span> dialog: second tab</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/line-options-2.png" alt="The Arrow options dialog: second tab"></div></div>
+</div>
+<br class="figure-break"><p>The <span class="emphasis"><em>Geometry</em></span> tab allows to specify the start and end points of the line/arrow. The coordinates can be set as a function of the scales values displayed on the left axis (Y) and on the bottom axis (X) or in pixels, by choosing the desired method from the <span class="emphasis"><em>Unit</em></span> pull-down list. The pixel coordinates are relative to the top-left corner of the layer which contains the line.</p>
+<div class="figure">
+<a name="fig-line-options-3"></a><p class="title"><b>Figure 5.23. The <span class="emphasis"><em>Geometry</em></span> dialog: third tab</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/line-options-3.png" alt="The Geometry dialog: third tab"></div></div>
+</div>
+<br class="figure-break"><p></p>
+</dd>
+<dt>
+<a name="draw-line-cmd"></a><span class="term">Graph → <span class="command"><strong>Draw Line</strong></span> (<span class="keycode">CTRL+ALT+L</span>)</span>
+</dt>
+<dd><p>Changes the active layer operation mode to the drawing mode. You must click on the layer canvas in order to specify the starting point for the new arrow, and then click once more to specify its ending point. You can edit the new arrow using the line dialog. You can swith back to the normal operating mode by clicking the "Pointer" icon in the Plot toolbar.</p></dd>
+<dt>
+<a name="add-time-stamp-cmd"></a><span class="term">Graph → <span class="command"><strong>Add Time Stamp</strong></span> (<span class="keycode">CTRL+ALT+T</span>)</span>
+</dt>
+<dd>
+<p>This command is used to add a special label in the current plot which contains the current date and time. The properties of this label can be customized like any other label that is added by the <a class="link" href="sec-graph-menu.html#add-text-cmd"><span class="command"><strong>Add Text</strong></span> command</a>.</p>
+<p>A timestamp label is not modified if the plot is modified, saved, etc.</p>
+</dd>
+<dt>
+<a name="add-image-cmd"></a><span class="term">Graph → <span class="command"><strong>Add Image</strong></span> (<span class="keycode">ALT+I</span>)</span>
+</dt>
+<dd><p>Opens a file dialog allowing you to select an image to be added to the active plot layer. Only a link to the image file will be saved into the project file and not the image itself. The new image is added to the left-top corner of the layer and can be moved by drag-and-drop.</p></dd>
+<dt>
+<a name="new-legend-cmd"></a><span class="term">Graph → <span class="command"><strong>New Legend</strong></span> (<span class="keycode">CTRL+L</span>)</span>
+</dt>
+<dd><p>Adds a new legend object to the active plot layer. You can have more than one legend on a plot. These legends can then be customized by double clicking on a given legend.</p></dd>
+<dt>
+<a name="automatic-layout-cmd"></a><span class="term">Graph → <span class="command"><strong>Automatic Layout</strong></span></span>
+</dt>
+<dd><p>Restore the drawind parameters of the layout to its default values (as they are defined in the dialog box of the <a class="link" href="sec-graph-menu.html#arrange-layers-cmd"><span class="command"><strong>Arrange Layers</strong></span> command</a>): margins between the layer and the window border of 5 pixels, layer centered in the window, etc.</p></dd>
+<dt>
+<a name="add-layer-cmd"></a><span class="term">Graph → <span class="command"><strong>Add Layer</strong></span> (<span class="keycode">ALT+L</span>)</span>
+</dt>
+<dd>
+<a class="indexterm" name="idp1381141804"></a><p>This dialog is opened when you want to add a new layer on the active plot. If you select <span class="emphasis"><em>Guess</em></span>, SciDAVis will divide the window in two columns and put the new layer on the right. If you choose <span class="emphasis"><em>Top-Left Corner</em></span>, SciDAVis will create a new layer with the maximum possible size over the existing layer, this layer contains an empty plot.</p>
+<div class="figure">
+<a name="fig-add-layer-dialog"></a><p class="title"><b>Figure 5.24. The <span class="command">Add Layer</span> dialog box.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/add-layer.png" alt="The Add Layer dialog box."></div></div>
+</div>
+<br class="figure-break"><p>You can then modify the size and position of each layer by selecting it with the layer number buttons  <span class="inlinemediaobject"><img src="pics/layer-button.png"></span> and selecting the <span class="emphasis"><em>Layer Geometry</em></span> command from the context menu.</p>
+</dd>
+<dt>
+<a name="remove-layer-cmd"></a><span class="term">Graph → <span class="command"><strong>Remove Layer</strong></span> (<span class="keycode">ALT+R</span>)</span>
+</dt>
+<dd><p>Deletes the active layer and prompts out a question dialog allowing you to choose whether the remaining layers should be automatically re-arranged or not.</p></dd>
+<dt>
+<a name="arrange-layers-cmd"></a><span class="term">Graph → <span class="command"><strong>Arrange Layers</strong></span> (<span class="keycode">ALT+A</span>)</span>
+</dt>
+<dd>
+<a class="indexterm" name="idp1381149116"></a><p>This dialog allows to modify the geometrical arrangement of the plots which are already present in the active window. You can also add new layers or remove existing ones.</p>
+<div class="figure">
+<a name="fig-define-layer-1"></a><p class="title"><b>Figure 5.25. The <span class="command">Arrange Layers</span> dialog</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/arrange-layers.png" alt="The Arrange Layers dialog"></div></div>
+</div>
+<br class="figure-break"><p>The <span class="emphasis"><em>Arrange Layers</em></span> dialog is used to modify the geometrical arrangement of the plots. You can specify the numbers of rows and columns which will define a table of plots. As pointed out above, you can also add or remove layers with this dialog, using the "Number of Layers" box.</p>
+<p>With the default setting, SciDAVis computes the size of the layers from the size of the window. If you check the <span class="emphasis"><em>Layer Canvas Size</em></span>, you can set the size of the layers and SciDAVis will modify the size of the window.</p>
+<p>The two right zones allow to set the alignement of the layers in the window, and the margins between the layer borders and the window limits.</p>
+<p>If you do some modifications on your plot, the alignment of the different axis may not be conserved. You can exec again the <span class="command"><strong>Arrange Layers</strong></span> to re-arrange your plot.</p>
+</dd>
+</dl></div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="sec-view-menu.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="reference.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="sec-plot-menu.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">The View Menu </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> The Plot Menu</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

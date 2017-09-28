@@ -1,0 +1,200 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Chapter 6. The Toolbars</title>
+<link rel="stylesheet" type="text/css" href="scidavis.css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="keywords" content="Qt, SciDAVis, Data, Analysis, Plotting">
+<link rel="home" href="index.html" title="The SciDAVis Handbook">
+<link rel="up" href="index.html" title="The SciDAVis Handbook">
+<link rel="prev" href="sec-help-menu.html" title="The Help Menu">
+<link rel="next" href="sec-edit-toolbar.html" title="The Edit Toolbar">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">Chapter 6. The Toolbars</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="sec-help-menu.html">Prev</a> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="sec-edit-toolbar.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div><h1 class="title">
+<a name="toolbars"></a>Chapter 6. The Toolbars</h1></div></div></div>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl class="toc">
+<dt><span class="sect1"><a href="toolbars.html#sec-file-toolbar">The File Toolbar</a></span></dt>
+<dt><span class="sect1"><a href="sec-edit-toolbar.html">The Edit Toolbar</a></span></dt>
+<dt><span class="sect1"><a href="sec-plot-toolbar.html">The Plot Toolbar.</a></span></dt>
+<dt><span class="sect1"><a href="sec-graph-toolbar.html">The Graph Toolbar.</a></span></dt>
+<dt><span class="sect1"><a href="sec-table-toolbar.html">The Table Toolbar.</a></span></dt>
+<dt><span class="sect1"><a href="sec-matrix-plot-toolbar.html">The matrix plot Toolbar.</a></span></dt>
+<dt><span class="sect1"><a href="sec-3d-surface-toolbar.html">The 3D Surfaces Toolbar.</a></span></dt>
+</dl>
+</div>
+<p>
+All toolbars can be moved and docked to a more convenient location (left, right or bottom sides of the application window) or on the desktop (outside the main window) by drag-and-drop, using their left side handle. The toolbars are automatically enabled/disabled depending on the currently active window: for example if the current window is a table, the Table toolbar will be enabled and all the other toolbars will be automatically disabled. 
+</p>
+<p>
+The same approach is used for showing/hiding the toolbars: if there are no more visible tables in the workspace, the Table toolbar will be automatically hidden and will be shown again when the users adds a new table into the project. A toolbar can be manually shown/hidden by the user, at any time, by right-clicking on the main window menu area and checking/unchecking the corresponding box in the pop-up menu. 
+</p>
+<div class="sect1">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="sec-file-toolbar"></a>The File Toolbar</h2></div></div></div>
+<p>
+The <span class="emphasis"><em>File Toolbar</em></span> allows to access commands mainly from the <a class="link" href="reference.html#sec-file-menu" title="The File Menu">File menu</a>. Refer to this section for a more complete description of these commands.
+</p>
+<div class="figure">
+<a name="fig-file-toolbar"></a><p class="title"><b>Figure 6.1. The SciDAVis File Toolbar</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/file-toolbar.png" alt="The SciDAVis File Toolbar"></div></div>
+</div>
+<br class="figure-break"><div class="table">
+<a name="idp1382235260"></a><p class="title"><b>Table 6.1. File toolbar commands.</b></p>
+<div class="table-contents"><table summary="File toolbar commands." width="100%" border="1">
+<colgroup>
+<col align="center" class="icon">
+<col align="left" class="command">
+<col align="center" class="key">
+<col align="justify" class="description">
+</colgroup>
+<thead><tr>
+<th align="center">Icon</th>
+<th align="left">Command</th>
+<th align="center">Key</th>
+<th align="justify">Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td align="center"><span class="inlinemediaobject"><img src="icons/new.png"></span></td>
+<td align="left"><a class="link" href="reference.html#new-project-cmd"><span class="command"><strong>New→New Project</strong></span> command</a></td>
+<td align="center"><span class="keycode">CTRL+N</span></td>
+<td align="justify">Create a new project.</td>
+</tr>
+<tr>
+<td align="center"><span class="inlinemediaobject"><img src="icons/new_aspect.png"></span></td>
+<td align="left"><a class="link" href="reference.html#new-cmd"><span class="command"><strong>New</strong></span> command</a></td>
+<td align="center"> </td>
+<td align="justify">Access to the <span class="emphasis"><em>New</em></span> sub-menu.</td>
+</tr>
+<tr>
+<td align="center"><span class="inlinemediaobject"><img src="icons/table.png"></span></td>
+<td align="left"><a class="link" href="reference.html#new-table-cmd"><span class="command"><strong>New→New Table</strong></span> command</a></td>
+<td align="center"><span class="keycode">CTRL+T</span></td>
+<td align="justify">Create a new table.</td>
+</tr>
+<tr>
+<td align="center"><span class="inlinemediaobject"><img src="icons/new_matrix.png"></span></td>
+<td align="left"><a class="link" href="reference.html#new-matrix-cmd"><span class="command"><strong>New→New Matrix</strong></span> command</a></td>
+<td align="center"><span class="keycode">CTRL+M</span></td>
+<td align="justify">Create a new matrix.</td>
+</tr>
+<tr>
+<td align="center"><span class="inlinemediaobject"><img src="icons/new_note.png"></span></td>
+<td align="left"><a class="link" href="reference.html#new-note-cmd"><span class="command"><strong>New→New Note/Script</strong></span> command</a></td>
+<td align="center"> </td>
+<td align="justify">Create a new note window, this object can be used as a calculator or to use scripts.</td>
+</tr>
+<tr>
+<td align="center"><span class="inlinemediaobject"><img src="icons/new_graph.png"></span></td>
+<td align="left"><a class="link" href="reference.html#new-graph-cmd"><span class="command"><strong>New→New Graph</strong></span> command</a></td>
+<td align="center"><span class="keycode">CTRL+G</span></td>
+<td align="justify">Create a new empty 2D plot.</td>
+</tr>
+<tr>
+<td align="center"><span class="inlinemediaobject"><img src="icons/newF.png"></span></td>
+<td align="left"><a class="link" href="reference.html#new-function-plot-cmd"><span class="command"><strong>New→New Function Plot</strong></span> command</a></td>
+<td align="center"><span class="keycode">CTRL+F</span></td>
+<td align="justify">Creates a new plot based on a function Y=f(X).</td>
+</tr>
+<tr>
+<td align="center"><span class="inlinemediaobject"><img src="icons/newFxy.png"></span></td>
+<td align="left"><a class="link" href="reference.html#new-surface-3d-plot-cmd"><span class="command"><strong>New→New 3D Surface Plot</strong></span> command</a></td>
+<td align="center"><span class="keycode">CTRL+ALT+Z</span></td>
+<td align="justify">Creates a new 3D plot based on a function Z=f(X,Y).</td>
+</tr>
+<tr>
+<td align="center"><span class="inlinemediaobject"><img src="icons/fileopen.png"></span></td>
+<td align="left"><a class="link" href="reference.html#open-cmd"><span class="command"><strong>Open</strong></span> command</a></td>
+<td align="center"><span class="keycode">CTRL+O</span></td>
+<td align="justify">Opens an existing SciDAVis project file.</td>
+</tr>
+<tr>
+<td align="center"><span class="inlinemediaobject"><img src="icons/open_template.png"></span></td>
+<td align="left"><a class="link" href="reference.html#open-template-cmd"><span class="command"><strong>Open Template</strong></span> command</a></td>
+<td align="center"> </td>
+<td align="justify">Opens an existing template SciDAVis project file.</td>
+</tr>
+<tr>
+<td align="center"><span class="inlinemediaobject"><img src="icons/filesave.png"></span></td>
+<td align="left"><a class="link" href="reference.html#save-project-cmd"><span class="command"><strong>Save Project</strong></span> command</a></td>
+<td align="center"><span class="keycode">CTRL+S</span></td>
+<td align="justify">Saves the current project.</td>
+</tr>
+<tr>
+<td align="center"><span class="inlinemediaobject"><img src="icons/save_template.png"></span></td>
+<td align="left"><a class="link" href="reference.html#save-as-template-cmd"><span class="command"><strong>Save as Template</strong></span> command</a></td>
+<td align="center"> </td>
+<td align="justify">Saves the current project as a template.</td>
+</tr>
+<tr>
+<td align="center"><span class="inlinemediaobject"><img src="icons/import.png"></span></td>
+<td align="left"><a class="link" href="reference.html#import-ascii-cmd"><span class="command"><strong>Import Ascii</strong></span> command</a></td>
+<td align="center"> </td>
+<td align="justify">Imports an ASCII file into one or multiple tables.</td>
+</tr>
+<tr>
+<td align="center"><span class="inlinemediaobject"><img src="icons/fileprint.png"></span></td>
+<td align="left"><a class="link" href="reference.html#print-cmd"><span class="command"><strong>Print</strong></span> command</a></td>
+<td align="center"><span class="keycode">CTRL+P</span></td>
+<td align="justify">Print the active window.</td>
+</tr>
+<tr>
+<td align="center"><span class="inlinemediaobject"><img src="icons/pdf.png"></span></td>
+<td align="left"><a class="link" href="reference.html#export-to-pdf-cmd"><span class="command"><strong>Export to PDF</strong></span> command</a></td>
+<td align="center"> </td>
+<td align="justify">Export to PDF.</td>
+</tr>
+<tr>
+<td align="center"><span class="inlinemediaobject"><img src="icons/folder.png"></span></td>
+<td align="left"><a class="link" href="sec-view-menu.html#project-explorer-cmd"><span class="command"><strong>Project Explorer</strong></span> command</a></td>
+<td align="center"><span class="keycode">CTRL+E</span></td>
+<td align="justify">Show or hide the project explorer.</td>
+</tr>
+<tr>
+<td align="center"><span class="inlinemediaobject"><img src="icons/log.png"></span></td>
+<td align="left"><a class="link" href="sec-view-menu.html#results-log-cmd"><span class="command"><strong>Results Log</strong></span> command</a></td>
+<td align="center"> </td>
+<td align="justify">Show or hide the results window.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<br class="table-break">
+</div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="sec-help-menu.html">Prev</a> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="sec-edit-toolbar.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">The Help Menu </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> The Edit Toolbar</td>
+</tr>
+</table>
+</div>
+</body>
+</html>
