@@ -1,0 +1,100 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Chapter 3. Analysis of data and curves</title>
+<link rel="stylesheet" href="scidavis.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<meta name="keywords" content="Qt, SciDAVis, Data, Analysis, Plotting">
+<link rel="home" href="index.html" title="The SciDAVis Handbook">
+<link rel="up" href="index.html" title="The SciDAVis Handbook">
+<link rel="prev" href="sec-adding-objects.html" title="Adding objects to a plot">
+<link rel="next" href="sec-filtering.html" title="Filtering of data curves">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">Chapter 3. Analysis of data and curves</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="sec-adding-objects.html">Prev</a> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="sec-filtering.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="chapter" title="Chapter 3. Analysis of data and curves">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="analysis"></a>Chapter 3. Analysis of data and curves</h2></div></div></div>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl>
+<dt><span class="sect1"><a href="analysis.html#sec-fft">Fast Fourier Transform</a></span></dt>
+<dt><span class="sect1"><a href="sec-filtering.html">Filtering of data curves</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="sec-filtering.html#sec-fft-filter-low">FFT low pass filter</a></span></dt>
+<dt><span class="sect2"><a href="sec-filtering.html#sec-fft-filter-high">FFT high pass filter</a></span></dt>
+<dt><span class="sect2"><a href="sec-filtering.html#sec-fft-filter-band">FFT band pass filter</a></span></dt>
+<dt><span class="sect2"><a href="sec-filtering.html#sec-fft-filter-block">FFT block band filter</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="sec-correlate.html">Correlation and autocorrelation</a></span></dt>
+<dt><span class="sect1"><a href="sec-convolute.html">Convolution of functions</a></span></dt>
+<dt><span class="sect1"><a href="sec-deconvolute.html">Deconvolution</a></span></dt>
+<dt><span class="sect1"><a href="sec-fitting.html">Fitting of data and curves</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="sec-fitting.html#sec-non-linear-curve-fit">Non Linear Curve Fit</a></span></dt>
+<dt><span class="sect2"><a href="sec-fitting.html#sec-ajustements-specifiques">Fitting to specific curves</a></span></dt>
+<dt><span class="sect2"><a href="sec-fitting.html#sec-fit-multipeak">Multi-Peaks fitting</a></span></dt>
+<dt><span class="sect2"><a href="sec-fitting.html#sec-default-parameters-fitting">Changing default parameters for fitting</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="sec-interpolate.html">Interpolation</a></span></dt>
+</dl>
+</div>
+<div class="sect1" title="Fast Fourier Transform">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="sec-fft"></a>Fast Fourier Transform</h2></div></div></div>
+<a class="indexterm" name="id2581080"></a><p>This function can be accessed by the <a class="link" href="sec-analysis-menu.html#fft-on-curves-cmd"><span class="command"><strong>FFT</strong></span> command</a> of the <a class="link" href="sec-analysis-menu.html#sec-analysis-tables-menu" title="Commands for the analysis of data in tables">Analysis-tables menu</a> when a table is selected, or <a class="link" href="sec-analysis-menu.html#sec-analysis-plots-menu" title="Commands for the analysis of curves in plots">Analysis-plots menu</a> when a plot is selected. The Fourier transform decomposes a signal in its elementary components by assuming that the signal x(t) can be describe as a sum:</p>
+<div class="equation">
+<a name="id2581723"></a><p class="title"><b>Equation 3.1. Fourier equation</b></p>
+<div class="equation-contents"><div class="mediaobject"><img src="equations/equation_fourier.png"></div></div>
+</div>
+<br class="equation-break"><p>in which ω<sub>n</sub> are the frequencies, a<sub>n</sub> are the amplitudes of each frequency and ψ<sub>n</sub> are the phase corresponding frequency. SciDAVis will compute these parameters and build a new plot of the amplitude as a function of the frequency. FFT can be performed on a curve to extract the characteristic frequencies.</p>
+<p>Let's assume you have the signal presented in the next figure. You can select the <a class="link" href="sec-analysis-menu.html#fft-on-curves-cmd"><span class="command"><strong>FFT</strong></span> command</a> of the <a class="link" href="sec-analysis-menu.html#sec-analysis-plots-menu" title="Commands for the analysis of curves in plots">Analysis-plots menu</a> to open the FFT dialog box.</p>
+<div class="figure">
+<a name="fig-exemple-fft-1"></a><p class="title"><b>Figure 3.1. A signal and the FFT dialog box for a plot.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/exemple-fft-1.png" alt="A signal and the FFT dialog box for a plot."></div></div>
+</div>
+<br class="figure-break"><p>If the <span class="emphasis"><em>Normalize Amplitude</em></span> check box is on, the amplitude curve is normalized to 1. If the <span class="emphasis"><em>Shift Results</em></span> check box is on, the frequencies are shifted in order to obtain a centered x-scale. By default, the <span class="emphasis"><em>Sampling Interval</em></span> corresponds to the interval between X-values. Giving a smaller value makes no sense, but you can increase this value in order to sample less values.</p>
+<p>SciDAVis will create a new plot window with the FFT amplitude curve, and a new table which contains the real part, the imaginary part, the amplitude, and the angle of the FFT. In this example, the amplitude curve has been normalized, and the frequencies have been shifted to obtain a centered x-scale.</p>
+<div class="figure">
+<a name="fig-exemple-fft-2"></a><p class="title"><b>Figure 3.2. The resulting FFT with the characteristic frequencies.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/exemple-fft-2.png" alt="The resulting FFT with the characteristic frequencies."></div></div>
+</div>
+<br class="figure-break"><p>In the case of a table, you must select the sampling column (X-values) and one columns (for real numbers) or two columns (for complex numbers) for Y-values.</p>
+<div class="figure">
+<a name="fig-exemple-fft-3"></a><p class="title"><b>Figure 3.3. The <span class="command">FFT</span> dialog box for a table.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/exemple-fft-3.png" alt="The FFT dialog box for a table."></div></div>
+</div>
+<br class="figure-break">
+</div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="sec-adding-objects.html">Prev</a> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="sec-filtering.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">Adding objects to a plot </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> Filtering of data curves</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

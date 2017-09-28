@@ -1,0 +1,82 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Chapter 1. Introduction</title>
+<link rel="stylesheet" href="scidavis.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<meta name="keywords" content="Qt, SciDAVis, Data, Analysis, Plotting">
+<link rel="home" href="index.html" title="The SciDAVis Handbook">
+<link rel="up" href="index.html" title="The SciDAVis Handbook">
+<link rel="prev" href="index.html" title="The SciDAVis Handbook">
+<link rel="next" href="command-line-options.html" title="Command Line Parameters">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">Chapter 1. Introduction</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="index.html">Prev</a> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="command-line-options.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="chapter" title="Chapter 1. Introduction">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="introduction"></a>Chapter 1. Introduction</h2></div></div></div>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl>
+<dt><span class="sect1"><a href="introduction.html#sec-scidavis-intro">What is SciDAVis?</a></span></dt>
+<dt><span class="sect1"><a href="command-line-options.html">Command Line Parameters</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="command-line-options.html#specify-a-file">Specify a File</a></span></dt>
+<dt><span class="sect2"><a href="command-line-options.html#scidavis-options">Command Line Options</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="general-concepts.html">General Concepts and Terms</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="general-concepts.html#sec-intro-table">Tables</a></span></dt>
+<dt><span class="sect2"><a href="general-concepts.html#sec-intro-matrix">Matrix</a></span></dt>
+<dt><span class="sect2"><a href="general-concepts.html#sec-intro-plot-window">Plot Window</a></span></dt>
+<dt><span class="sect2"><a href="general-concepts.html#sec-intro-note">Note</a></span></dt>
+<dt><span class="sect2"><a href="general-concepts.html#sec-intro-log-window">Log Window</a></span></dt>
+<dt><span class="sect2"><a href="general-concepts.html#sec-intro-project-explorer">The Project Explorer</a></span></dt>
+</dl></dd>
+</dl>
+</div>
+<div class="sect1" title="What is SciDAVis?">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="sec-scidavis-intro"></a>What is SciDAVis?</h2></div></div></div>
+<p>SciDAVis stands for <span class="emphasis"><em>Sci</em></span>entific <span class="emphasis"><em>D</em></span>ata <span class="emphasis"><em>A</em></span>nalysis and <span class="emphasis"><em>Vis</em></span>ualization. It is a free cross-platform program for two- and three-dimensional graphical presentation of data sets and for data analysis. The plots can be produced from data sets stored in <a class="link" href="general-concepts.html#sec-intro-table" title="Tables">tables</a>, in <a class="link" href="general-concepts.html#sec-intro-matrix" title="Matrix">matrix</a> or from analytical functions.</p>
+<p>The SciDAVis project started as a fork of QtiPlot with the aim of introducing some changes in design as well as project structure. The QtiPlot development was initiated in 2004 by Ion Vasilief. He was the only programmer until May 2006 when Knut Franke and Tilman Hoener zu Siederdissen joined the project. Not much later, Roger Gadiou officially joined as the main documentation writer. In June 2007, insuperable disagreements among the developers lead to the fork and the creation of the SciDAVis project by Knut Franke and Tilman Hoener zu Siederdissen, soon followed by Roger Gadiou. The project is hosted at <a class="ulink" href="http://sourceforge.net/project/scidavis" target="_top">Sourceforge</a>.</p>
+<p>SciDAVis aims to be a tool for analysis and graphical representation of data, allowing powerfull mathematical treatment and visualization of scientific data while keeping a user-friendly graphical user interface. Another keypoint for the SciDAVis project is to be a multi-system software, it should work on Windows, Linux, and OS-X systems.</p>
+<p>SciDAVis is a dynamic tool, the plots created from data sets and the spreadsheets owing the data are interconected. When the spreadsheets are modified, all the objects in the depending plots (curves, axes scales, legends) are automatically updated. For example, deleting a spreadsheet or only some columns will automatically remove all the corresponding curves from the depending plots.</p>
+<p>All settings of a complete set of tables, matrix and plots can be saved in project files, having the extention ".sciprj". These project files may be opened using the <a class="link" href="command-line-options.html#specify-a-file" title="Specify a File">command line</a>, using the <a class="link" href="reference.html#sec-file-menu" title="The File Menu">File menu</a>, or by using the <span class="inlinemediaobject"><img src="icons/fileopen.png"></span> icon from the <a class="link" href="toolbars.html#sec-file-toolbar" title="The File Toolbar">File toolbar</a>.</p>
+<p>The plots can be exported to several graphic formats such as JPEG or PNG and inserted as images in documents or presentations.</p>
+<p>Data analysis operations (integration, interpolation, FFT, curve fitting, etc) can be performed on the curves in a 2D plot via the <a class="link" href="sec-analysis-menu.html#sec-analysis-plots-menu" title="Commands for the analysis of curves in plots">Analysis-plots menu</a>. The results of all these operations are also stored in the project files. They can be visualized at any moment using the <a class="link" href="sec-view-menu.html#results-log-cmd"><span class="command"><strong>Results Log</strong></span> command</a> and can be deleted from the project file via the <a class="link" href="sec-edit-menu.html#clear-log-information-cmd"><span class="command"><strong>Clear Log Information</strong></span> command</a>.</p>
+<p>When the application is launched, a new project file is created consisting of a grey main window (the workspace) which contains an empty table. In order to be operational, this workspace must be populated with tables storing data sets, either by creating empty tables first (<a class="link" href="reference.html#new-table-cmd"><span class="command"><strong>New→New Table</strong></span> command</a>) and then filling them with data, or by importing ASCII files (<a class="link" href="reference.html#import-ascii-cmd"><span class="command"><strong>Import Ascii</strong></span> command</a>), which automatically creates new tables.</p>
+<p>The user can easily navigate through the objects of a project file using the <a class="link" href="sec-view-menu.html#project-explorer-cmd"><span class="command"><strong>Project Explorer</strong></span> command</a> or the <a class="link" href="sec-windows-menu.html" title="The Window Menu">Windows menu</a>. The project explorer also allows the user to perform various operations on the windows (tables and plots) in the workspace: hiding, minimazing, closing, renaming, printing, etc.</p>
+</div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="index.html">Prev</a> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="command-line-options.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">The SciDAVis Handbook </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> Command Line Parameters</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

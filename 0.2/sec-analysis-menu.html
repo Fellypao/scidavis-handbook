@@ -1,0 +1,296 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Analysis Menu</title>
+<link rel="stylesheet" href="scidavis.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<meta name="keywords" content="Qt, SciDAVis, Data, Analysis, Plotting">
+<link rel="home" href="index.html" title="The SciDAVis Handbook">
+<link rel="up" href="reference.html" title="Chapter 5. Command Reference">
+<link rel="prev" href="sec-tools-menu.html" title="The Tools Menu">
+<link rel="next" href="sec-table-menu.html" title="The Table Menu">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">The Analysis Menu</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="sec-tools-menu.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 5. Command Reference</th>
+<td width="20%" align="right"> <a accesskey="n" href="sec-table-menu.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="sect1" title="The Analysis Menu">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="sec-analysis-menu"></a>The Analysis Menu</h2></div></div></div>
+<p>The commands which are available in this menu are not the same if a table or a plot is selected. For most analysis commands, you car refer to the tutorial in <a class="xref" href="analysis.html" title="Chapter 3. Analysis of data and curves">Chapter 3, <i>Analysis of data and curves</i></a>.</p>
+<div class="sect2" title="Commands for the analysis of data in tables">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="sec-analysis-tables-menu"></a>Commands for the analysis of data in tables</h3></div></div></div>
+<div class="variablelist"><dl>
+<dt>
+<a name="statistics-on-columns-cmd"></a><span class="term"><span class="command"><strong>Statistics on Columns</strong></span></span>
+</dt>
+<dd>
+<p>Creates a new table providing basic statistical information about the selected columns in the active table: average, variance, standard deviation, max value, etc...</p>
+<div class="informalfigure">
+<a name="fig-statistics-columns"></a><div class="mediaobject"><img src="pics/statistics-columns.png"></div>
+</div>
+<p>You can select several columns in one table, one line will be created for each column. You can't select columns in different tables to obtain one single table of statistics.</p>
+</dd>
+<dt>
+<a name="statistics-on-rows-cmd"></a><span class="term"><span class="command"><strong>Statistics on Rows</strong></span></span>
+</dt>
+<dd>
+<p>Creates a new table providing basic statistical information about the selected rows in the active table: average, variance, standard deviation, max value, etc...</p>
+<p>See the <a class="link" href="sec-analysis-menu.html#statistics-on-columns-cmd"><span class="command"><strong>Statistics on Columns</strong></span> command</a> command for more details.</p>
+</dd>
+<dt>
+<a name="fft-on-tables-cmd"></a><span class="term"><span class="command"><strong>FFT</strong></span></span>
+</dt>
+<dd><p>Computes a direct or inverse Fast Fourier Transform. See the <a class="xref" href="analysis.html#sec-fft" title="Fast Fourier Transform">the section called “Fast Fourier Transform”</a> of the <a class="xref" href="analysis.html" title="Chapter 3. Analysis of data and curves">Chapter 3, <i>Analysis of data and curves</i></a> for more details.</p></dd>
+<dt>
+<a name="correlate-cmd"></a><span class="term"><span class="command"><strong>Correlate</strong></span></span>
+</dt>
+<dd><p>Does a cross-correlation of the two columns which are selected. See the <a class="xref" href="sec-correlate.html" title="Correlation and autocorrelation">the section called “Correlation and autocorrelation”</a> of the <a class="xref" href="analysis.html" title="Chapter 3. Analysis of data and curves">Chapter 3, <i>Analysis of data and curves</i></a> for more details.</p></dd>
+<dt>
+<a name="autocorrelate-cmd"></a><span class="term"><span class="command"><strong>Correlate</strong></span></span>
+</dt>
+<dd><p>Does a correlation of the selected column with itself. See the <a class="xref" href="sec-correlate.html" title="Correlation and autocorrelation">the section called “Correlation and autocorrelation”</a> of the <a class="xref" href="analysis.html" title="Chapter 3. Analysis of data and curves">Chapter 3, <i>Analysis of data and curves</i></a> for more details.</p></dd>
+<dt>
+<a name="convolute-cmd"></a><span class="term"><span class="command"><strong>Convolute</strong></span></span>
+</dt>
+<dd><p>Does a convolution of the two columns which are selected. The first one being the response and the second the signal. See the <a class="xref" href="sec-convolute.html" title="Convolution of functions">the section called “Convolution of functions”</a> of the <a class="xref" href="analysis.html" title="Chapter 3. Analysis of data and curves">Chapter 3, <i>Analysis of data and curves</i></a> for more details.</p></dd>
+<dt>
+<a name="deconvolute-cmd"></a><span class="term"><span class="command"><strong>Deconvolute</strong></span></span>
+</dt>
+<dd><p>Does a deconvolution of the two columns which are selected. The first one being the response and the second the signal. See the <a class="xref" href="sec-deconvolute.html" title="Deconvolution">the section called “Deconvolution”</a> of the <a class="xref" href="analysis.html" title="Chapter 3. Analysis of data and curves">Chapter 3, <i>Analysis of data and curves</i></a> for more details.</p></dd>
+<dt>
+<a name="fit-wizard-table-cmd"></a><span class="term"><span class="command"><strong>Fit Wizard</strong></span> (<span class="keycode">CTRL-Y</span>)</span>
+</dt>
+<dd><p>Opens the <span class="emphasis"><em>Non-linear Fit</em></span> dialog, allowing you to choose the curve to fit, the algorithm and the tolerance, the number of iterations to be performed, and to type the analytical function to use, the names of the fitting parameters and their initial guessed values. See the <a class="xref" href="sec-fitting.html#sec-non-linear-curve-fit" title="Non Linear Curve Fit">the section called “Non Linear Curve Fit”</a> of the <a class="xref" href="analysis.html" title="Chapter 3. Analysis of data and curves">Chapter 3, <i>Analysis of data and curves</i></a> for more details.</p></dd>
+</dl></div>
+</div>
+<div class="sect2" title="Commands for the analysis of curves in plots">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="sec-analysis-plots-menu"></a>Commands for the analysis of curves in plots</h3></div></div></div>
+<p>The following items are enabled only if the active window is a 2D Multilayer Plot Window. If the active plot layer contains more than one curve, and the Data Range Selectors are not enabled, a dialog window will pop-out allowing you to select the curve you want to analyse.</p>
+<p>In most of the cases (except for integration), a new red curve is added to the active plot layer and a a new table containing the data used to plot this curve is added to the workspace. Useful information about the operation performed will be showed in the <span class="command"><strong>Results Log</strong></span>.</p>
+<p>The commands <a class="link" href="sec-analysis-menu.html#fft-on-curves-cmd"><span class="command"><strong>FFT</strong></span> command</a> and <a class="link" href="sec-analysis-menu.html#fit-wizard-table-cmd"><span class="command"><strong>Fit Wizard</strong></span> command</a> are presented in the <a class="link" href="sec-analysis-menu.html#sec-analysis-tables-menu" title="Commands for the analysis of data in tables">Analysis-tables menu</a>.</p>
+<div class="variablelist"><dl>
+<dt>
+<a name="differentiate-cmd"></a><span class="term"><span class="command"><strong>Differentiate</strong></span></span>
+</dt>
+<dd>
+<p>Creates a new plot displaying the resulting curve of the numerical differentiation. The computation of the derivative is done by centered finite differences over the point before and the point after each data point:</p>
+<p>This command creates a new table which contains one column for X-values and one column for derivatives of Y-values. It also creates a new plot of the derivative. The numeric differentiation can generate a lot of noise for a given curve, and a smoothing may be necessary before this operation (see <a class="link" href="sec-analysis-menu.html#smooth-cmd"><span class="command"><strong>Smooth</strong></span> command</a>).</p>
+</dd>
+<dt>
+<a name="integrate-cmd"></a><span class="term"><span class="command"><strong>Integrate</strong></span></span>
+</dt>
+<dd>
+<a class="indexterm" name="id2608018"></a><p>Opens the integration dialog, allowing to choose the curve to integrate and the integration method. This command can't be used to obtain a cumulative curve from a selected curve, it can only compute the integral of the data between two limits.</p>
+<p>The first field is the curve that will be integrated. The second one is the order of the integration: the order 1 corresponds to the trapezoid rule, i.e. the curve is aproximated by a straight line between 2 successive points. If you choose the order 2, three successive points are used and a second order polynome is used to approximate the curve. etc. If you have a large amount of points in your curve, the order 1 is enough.</p>
+<div class="figure">
+<a name="fig-integrate-dialog"></a><p class="title"><b>Figure 5.26. The <span class="command">Integrate</span> dialog box.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/integrate.png" alt="The Integrate dialog box."></div></div>
+</div>
+<br class="figure-break"><p>The result of the integration will be given in the <span class="command"><strong>Results Log</strong></span>.</p>
+<div class="informalfigure">
+<a name="fig-integrate-result"></a><div class="mediaobject"><img src="pics/integrate1.png"></div>
+</div>
+</dd>
+<dt>
+<a name="smooth-cmd"></a><span class="term"><span class="command"><strong>Smooth</strong></span></span>
+</dt>
+<dd>
+<p>These commands will generate a new curve by dooing a smoothing ofthe selected curve.</p>
+<div class="variablelist"><dl>
+<dt>
+<a name="savitsky-golay-cmd"></a><span class="term"><span class="command"><strong>Smooth→Savitsky-Golay</strong></span></span>
+</dt>
+<dd>
+<p>This command performs a smoothing of the selected curve with the Savitzky-Golay method. The formula used to smooth the curve defined by the points y<sub>i</sub>=f(x<sub>i</sub>) is:</p>
+<div class="informalequation"><div class="mediaobject"><img src="equations/savitzky-golay.png"></div></div>
+<p>The f<sub>i</sub> values are computed by fitting the data points to a polynome, they depend on the number of points used for the smoothing of the curve and the order of the polynome. Compared to the moving window average method, the advantage of this smoothing method is that the values of extrema are not truncated. The dialog allows to specify the curve which will be smoothed, the value of the order of the polynome, the number of data points used for the polynomial fit before and after each point and the color used to draw the smoothed curved. A new table will be created to store the data points x<sub>i</sub>, z<sub>i</sub>.</p>
+<div class="figure">
+<a name="fig-smooth-1"></a><p class="title"><b>Figure 5.27. The <span class="command">Smooth→Savitsky-Golay</span> dialog.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/smooth-sg.png" alt="The Smooth→Savitsky-Golay dialog."></div></div>
+</div>
+<br class="figure-break">
+</dd>
+<dt>
+<a name="moving-window-cmd"></a><span class="term"><span class="command"><strong>Smooth→Moving Window Average</strong></span></span>
+</dt>
+<dd>
+<p>This command performs a smoothing of the selected curve with the moving window average method. The formula used to smooth the curve defined by the points y<sub>i</sub>=f(x<sub>i</sub>) is:</p>
+<div class="informalequation"><div class="mediaobject"><img src="equations/equation_moving_window.png"></div></div>
+<p>The greater the number of points <span class="emphasis"><em>n</em></span>, the smoother the resulting curve z<sub>i</sub>=f(x<sub>i</sub>) is. The dialog allows to specify the curve which will be smoothed, the value of <span class="emphasis"><em>n</em></span> and the color used to draw the smoothed curve. A new table will be created to store the data points x<sub>i</sub>, z<sub>i</sub>.</p>
+<div class="figure">
+<a name="fig-smooth-2"></a><p class="title"><b>Figure 5.28. The <span class="command">Smooth→Moving Window Average</span> dialog.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/smooth-mw.png" alt="The Smooth→Moving Window Average dialog."></div></div>
+</div>
+<br class="figure-break"><p>Depending on the number of data points and on the variation of the Y values, smoothing can give very different results.</p>
+<div class="figure">
+<a name="fig-comparison-smooth"></a><p class="title"><b>Figure 5.29. Comparison of the two smoothing methods.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/smoothing.png" alt="Comparison of the two smoothing methods."></div></div>
+</div>
+<br class="figure-break">
+</dd>
+<dt><span class="term"><span class="command"><strong>Smooth→Moving Window Average</strong></span></span></dt>
+<dd>
+<p>This command allow a smoothing based on FFT filtering of data. It can be used when you have noisy curves with a large number of data.</p>
+<div class="figure">
+<a name="fig-smooth-fft"></a><p class="title"><b>Figure 5.30. The dialog and an example of FFT smoothing.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/smooth-fft.png" alt="The dialog and an example of FFT smoothing."></div></div>
+</div>
+<br class="figure-break">
+</dd>
+</dl></div>
+</dd>
+<dt>
+<a name="fft-filter-cmd"></a><span class="term"><span class="command"><strong>FFT Filter</strong></span></span>
+</dt>
+<dd>
+<p></p>
+<div class="variablelist"><dl>
+<dt>
+<a name="fft-low-pass-cmd"></a><span class="term"><span class="command"><strong>FFT Filter→Low Pass</strong></span></span>
+</dt>
+<dd>
+<p>This command allows to filter the high frequencies of a signal. See the <a class="link" href="sec-filtering.html#sec-fft-filter-low" title="FFT low pass filter">filtering section</a> for more details. A dialog box will be opened in which you can select the curve to filter and the cut-off frequency of the filter.</p>
+<p>This command creates a new table with the filtered data, and a new curve will be added on the current plot. See <a class="xref" href="sec-filtering.html" title="Filtering of data curves">the section called “Filtering of data curves”</a> of the <a class="xref" href="analysis.html" title="Chapter 3. Analysis of data and curves">Chapter 3, <i>Analysis of data and curves</i></a> for details.</p>
+</dd>
+<dt>
+<a name="fft-high-pass-cmd"></a><span class="term"><span class="command"><strong>FFT Filter→High Pass</strong></span></span>
+</dt>
+<dd>
+<p>This command allows to filter the low frequencies of a signal. See the <a class="link" href="sec-filtering.html#sec-fft-filter-high" title="FFT high pass filter">filtering section</a> for more details. A dialog box will be opened in which you can select the curve to filter and the cut-off frequency of the filter.</p>
+<p>This command creates a new table with the filtered data, and a new curve will be added on the current plot. See <a class="xref" href="sec-filtering.html" title="Filtering of data curves">the section called “Filtering of data curves”</a> of the <a class="xref" href="analysis.html" title="Chapter 3. Analysis of data and curves">Chapter 3, <i>Analysis of data and curves</i></a> for details.</p>
+</dd>
+<dt>
+<a name="fft-band-pass-cmd"></a><span class="term"><span class="command"><strong>FFT Filter→Band Pass</strong></span></span>
+</dt>
+<dd>
+<p>This command allows to filter the low and high frequencies of a signal. See the <a class="link" href="sec-filtering.html#sec-fft-filter-band" title="FFT band pass filter">filtering section</a> for more details. A dialog box will be opened in which you can select the curve to filter and the cut-off frequency of the filter.</p>
+<p>This command creates a new table with the filtered data, and a new curve will be added on the current plot. See <a class="xref" href="sec-filtering.html" title="Filtering of data curves">the section called “Filtering of data curves”</a> of the <a class="xref" href="analysis.html" title="Chapter 3. Analysis of data and curves">Chapter 3, <i>Analysis of data and curves</i></a> for details.</p>
+</dd>
+<dt>
+<a name="fft-band-block-cmd"></a><span class="term"><span class="command"><strong>FFT Filter→Block Band</strong></span></span>
+</dt>
+<dd>
+<p>This command allows to keep the low and high frequencies of a signal. See the <a class="link" href="sec-filtering.html#sec-fft-filter-block" title="FFT block band filter">filtering section</a> for more details. A dialog box will be opened in which you can select the curve to filter and the cut-off frequency of the filter.</p>
+<p>This command creates a new table with the filtered data, and a new curve will be added on the current plot. See <a class="xref" href="sec-filtering.html" title="Filtering of data curves">the section called “Filtering of data curves”</a> of the <a class="xref" href="analysis.html" title="Chapter 3. Analysis of data and curves">Chapter 3, <i>Analysis of data and curves</i></a> for details.</p>
+</dd>
+</dl></div>
+</dd>
+<dt>
+<a name="interpolate-cmd"></a><span class="term"><span class="command"><strong>Interpolate</strong></span></span>
+</dt>
+<dd>
+<p>Performs an interpolation. The curve must have enough data points to compute the interpolated points, if not a warning message will be prompted out.</p>
+<p>The methods available to perform the interpolation are <span class="emphasis"><em>Linear</em></span> (the curve must contain at least 3 points), <span class="emphasis"><em>Cubic Spline</em></span> (the curve you analyse must contain at least 4 points, if not a warning message will be prompted out, <span class="emphasis"><em>Non-rounded Akima spline</em></span> (the curve you analyse must contain at least 5 points). See the <a class="xref" href="sec-interpolate.html" title="Interpolation">the section called “Interpolation”</a> of the <a class="xref" href="analysis.html" title="Chapter 3. Analysis of data and curves">Chapter 3, <i>Analysis of data and curves</i></a> for a comparison of the differents methods.</p>
+<p>This command creates a new curve on the current plot, and a new table.</p>
+</dd>
+<dt>
+<a name="fft-on-curves-cmd"></a><span class="term"><span class="command"><strong>FFT</strong></span></span>
+</dt>
+<dd><p>Performs a <a class="link" href="analysis.html#sec-fft" title="Fast Fourier Transform">forward or inverse FFT</a> transform of the selected curve. The inverse FFT transform of a forward transform will result in a data set identical to that used for the forward transform.</p></dd>
+<dt>
+<a name="quick-fit-cmd"></a><span class="term"><span class="command"><strong>Quick Fit</strong></span></span>
+</dt>
+<dd>
+<p></p>
+<div class="variablelist"><dl>
+<dt>
+<a name="fit-linear-cmd"></a><span class="term"><span class="command"><strong>Quick Fit→Fit Linear</strong></span></span>
+</dt>
+<dd><p>Performs a <a class="link" href="sec-fitting.html#sec-fit-linear" title="Fitting to a line">linear fit</a> of the selected curve. The results will be given in the <a class="link" href="general-concepts.html#sec-intro-log-window" title="Log Window">Log panel</a></p></dd>
+<dt>
+<a name="fit-polynomial-cmd"></a><span class="term"><span class="command"><strong>Quick Fit→Fit Polynomial</strong></span></span>
+</dt>
+<dd><p>Opens the Polynomial Fit dialog, allowing you to choose the curve to fit, the order of the polynomial function to use, the number of points of the resulting curve and the abscissae limits for the fit.</p></dd>
+<dt>
+<a name="fit-exp-decay-cmd"></a><span class="term"><span class="command"><strong>Quick Fit→Fit Exponential Decay</strong></span></span>
+</dt>
+<dd>
+<p></p>
+<div class="variablelist"><dl>
+<dt>
+<a name="fit-exp-decay-1-cmd"></a><span class="term"><span class="command"><strong>Quick Fit→Fit Exponential Decay→First Order</strong></span></span>
+</dt>
+<dd><p>Opens the Exponential Fit dialog, allowing you to choose the curve to fit and the initial guesses for the fit parameters.</p></dd>
+<dt>
+<a name="fit-exp-decay-2-cmd"></a><span class="term"><span class="command"><strong>Quick Fit→Fit Exponential Decay→Second Order</strong></span></span>
+</dt>
+<dd><p>Opens a dialog, allowing you to choose the curve to fit and the initial guesses for the fit parameters.</p></dd>
+<dt>
+<a name="fit-exp-decay-3-cmd"></a><span class="term"><span class="command"><strong>Quick Fit→Fit Exponential Decay→Third Order</strong></span></span>
+</dt>
+<dd><p>Opens a dialog, allowing you to choose the curve to fit and the initial guesses for the fit parameters.</p></dd>
+</dl></div>
+</dd>
+<dt>
+<a name="fit-exp-growth-cmd"></a><span class="term"><span class="command"><strong>Quick Fit→Fit Exponential Growth</strong></span></span>
+</dt>
+<dd><p>Performs an exponential growth fit of the selected curve.</p></dd>
+<dt>
+<a name="fit-lorentzian-cmd"></a><span class="term"><span class="command"><strong>Quick Fit→Fit Lorentzian</strong></span></span>
+</dt>
+<dd><p>Performs a lorentzian fit of the selected curve. It can be used to obtain a correlation equation of a bell shaped data set (see <a class="xref" href="sec-fitting.html#sec-fit-lorentzian" title="Fitting to a Lorentz function">the section called “Fitting to a Lorentz function”</a> for details). </p></dd>
+<dt>
+<a name="fit-gaussian-cmd"></a><span class="term"><span class="command"><strong>Quick Fit→Fit Gaussian</strong></span></span>
+</dt>
+<dd><p>Performs a gaussian fit of the selected curve.It can be used to obtain a correlation equation of a bell shaped data set (see <a class="xref" href="sec-fitting.html#sec-fit-gaussian" title="Fitting to a Gauss function">the section called “Fitting to a Gauss function”</a> for details).</p></dd>
+<dt>
+<a name="fit-bolzmann-cmd"></a><span class="term"><span class="command"><strong>Quick Fit→Fit Bolzmann (Sigmoïdal)</strong></span></span>
+</dt>
+<dd><p>Performs a fit to a bolzmann function of the selected curve. It can be used to obtain a correlation equation of a S shaped data set. (see <a class="xref" href="sec-fitting.html#sec-fit-bolzmann" title="Fitting to a Bolzmann function">the section called “Fitting to a Bolzmann function”</a> for details).</p></dd>
+<dt>
+<a name="fit-multipeak-cmd"></a><span class="term"><span class="command"><strong>Quick Fit→Fit Multipeak</strong></span></span>
+</dt>
+<dd>
+<p></p>
+<div class="variablelist"><dl>
+<dt>
+<a name="fit-multipeak-gaussian-cmd"></a><span class="term"><span class="command"><strong>Quick Fit→Fit Multipeak→Gaussian</strong></span></span>
+</dt>
+<dd><p>Performs a fit to a sum of N gaussian functions of the selected curve. (see <a class="xref" href="sec-fitting.html#sec-fit-multipeak" title="Multi-Peaks fitting">the section called “Multi-Peaks fitting”</a> for details).</p></dd>
+<dt>
+<a name="fit-multipeak-lorentzian-cmd"></a><span class="term"><span class="command"><strong>Quick Fit→Fit Multipeak→Lorentzian</strong></span></span>
+</dt>
+<dd><p>Performs a fit to a sum of N lorentz functions of the selected curve. (see <a class="xref" href="sec-fitting.html#sec-fit-multipeak" title="Multi-Peaks fitting">the section called “Multi-Peaks fitting”</a> for details).</p></dd>
+</dl></div>
+</dd>
+</dl></div>
+</dd>
+<dt>
+<a name="fit-wizard-plot-cmd"></a><span class="term"><span class="command"><strong>Fit Wizard</strong></span> (<span class="keycode">CTRL+Y</span>)</span>
+</dt>
+<dd><p>Performs a fit of the selected curve. This opens the general dialog for the fitting of curves. See the <a class="xref" href="sec-fitting.html#sec-non-linear-curve-fit" title="Non Linear Curve Fit">the section called “Non Linear Curve Fit”</a> for a tutorial on this command. Some default parameters can be modified with the <a class="link" href="sec-edit-menu.html#preferences-cmd"><span class="command"><strong>Preferences</strong></span> command</a>, see the <a class="xref" href="sec-fitting.html#sec-default-parameters-fitting" title="Changing default parameters for fitting">the section called “Changing default parameters for fitting”</a> for details</p></dd>
+</dl></div>
+</div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="sec-tools-menu.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="reference.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="sec-table-menu.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">The Tools Menu </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> The Table Menu</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

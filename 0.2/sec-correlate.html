@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Correlation and autocorrelation</title>
+<link rel="stylesheet" href="scidavis.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<meta name="keywords" content="Qt, SciDAVis, Data, Analysis, Plotting">
+<link rel="home" href="index.html" title="The SciDAVis Handbook">
+<link rel="up" href="analysis.html" title="Chapter 3. Analysis of data and curves">
+<link rel="prev" href="sec-filtering.html" title="Filtering of data curves">
+<link rel="next" href="sec-convolute.html" title="Convolution of functions">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">Correlation and autocorrelation</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="sec-filtering.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 3. Analysis of data and curves</th>
+<td width="20%" align="right"> <a accesskey="n" href="sec-convolute.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="sect1" title="Correlation and autocorrelation">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="sec-correlate"></a>Correlation and autocorrelation</h2></div></div></div>
+<a class="indexterm" name="id2582267"></a><p>This function can be accessed by the <a class="link" href="sec-analysis-menu.html#correlate-cmd"><span class="command"><strong>Correlate</strong></span> command</a> of the <a class="link" href="sec-analysis-menu.html#sec-analysis-tables-menu" title="Commands for the analysis of data in tables">Analysis-tables menu</a> when a table is selected. The correlation function, also known as the covariance function is used to test the similarity of two signals <span class="emphasis"><em>x(t)</em></span> and <span class="emphasis"><em>y(t)</em></span>. It is computed by:</p>
+<div class="equation">
+<a name="id2582305"></a><p class="title"><b>Equation 3.2. </b></p>
+<div class="equation-contents"><div class="mediaobject"><img src="equations/equation_covariance.png"></div></div>
+</div>
+<br class="equation-break"><p>in which <img src="equations/equation_x-m.png"> and <img src="equations/equation_y-m.png"> are the mean values of the signals <span class="emphasis"><em>x(t)</em></span> and <span class="emphasis"><em>y(t)</em></span> respectively. If the number of points is <span class="emphasis"><em>N</em></span>, the function will be computed between <span class="emphasis"><em>-N/2</em></span> and <span class="emphasis"><em>N/2</em></span>. The abscissae are therefore point numbers and not <span class="emphasis"><em>t</em></span> values.</p>
+<p>To perform a cross correlation between two signal, they must be in the same table and use the same abscissae. You just have to select the two columns in the table, and select the  <a class="link" href="sec-analysis-menu.html#correlate-cmd"><span class="command"><strong>Correlate</strong></span> command</a> from the <a class="link" href="sec-analysis-menu.html#sec-analysis-tables-menu" title="Commands for the analysis of data in tables">Analysis-tables menu</a>. A plot will be created and the values of the correlation function will be added as two new columns in the table.</p>
+<div class="figure">
+<a name="fig-exemple-correlation-1"></a><p class="title"><b>Figure 3.8. An example of a correlation between two functions: the two signals.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/exemple-correlation-1.png" alt="An example of a correlation between two functions: the two signals."></div></div>
+</div>
+<br class="figure-break"><div class="figure">
+<a name="fig-exemple-correlation-2"></a><p class="title"><b>Figure 3.9. An example of a correlation between two functions: the correlation function.</b></p>
+<div class="figure-contents"><div class="mediaobject"><img src="pics/exemple-correlation-2.png" alt="An example of a correlation between two functions: the correlation function."></div></div>
+</div>
+<br class="figure-break"><p>The correlation of a signal with itself can also be used in spectral analysis (it is then called autocorrelation or autocovariance function). This operation can be performed by selecting one column in a table and use the <a class="link" href="sec-analysis-menu.html#autocorrelate-cmd"><span class="command"><strong>Autocorrelate</strong></span> command</a> from the <a class="link" href="sec-analysis-menu.html#sec-analysis-tables-menu" title="Commands for the analysis of data in tables">Analysis-tables menu</a>.</p>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="sec-filtering.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="analysis.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="sec-convolute.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">Filtering of data curves </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> Convolution of functions</td>
+</tr>
+</table>
+</div>
+</body>
+</html>
