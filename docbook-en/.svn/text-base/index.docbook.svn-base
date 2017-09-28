@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+		Docbook main file for Scidavis Manual
+		*************************************
+
+		updated for Scidavis version 0.2.3
+
+*************************************************************************
+-->
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "/usr/share/xml/docbook/xml-dtd-4.5/docbookx.dtd" [
+<!--
+		general terms for the application
+-->
+  <!ENTITY appname "SciDAVis">
+  <!ENTITY kappname "&appname;">
+  <!ENTITY version "0.2.3">
+  <!ENTITY kappversion "&version;">
+  <!ENTITY kappdirectory "scidavis">
+  <!ENTITY kappdownload "http://sourceforge.net/project/scidavis" >
+  <!ENTITY pic-dir "pics/" >
+  <!ENTITY file-ext "sciprj" >
+<!--
+		for python scripting...
+-->
+  <!ENTITY python-rc "scidavisrc.py" >
+  <!ENTITY python-pref "sci" >
+<!--
+		miscellaneous...
+-->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+  <!ENTITY ion "Ion Vasilief">
+  <!ENTITY email-ion "ion_vasilief@yahoo.fr">
+  <!ENTITY roger "Roger Gadiou">
+  <!ENTITY email-roger "Roger.Gadiou@orange.fr">
+  <!ENTITY tilman "Tilman Hoener zu Siederdissen">
+  <!ENTITY email-tilman "thzs@gmx.net">
+  <!ENTITY knut "Knut Franke">
+  <!ENTITY email-knut "Knut.Franke@gmx.de">
+  <!ENTITY homepage "&kappdownload;">
+  <!ENTITY xml  "<acronym>XML</acronym>">
+  <!ENTITY xslt "<acronym>XSLT</acronym>">
+  <!ENTITY html "<acronym>HTML</acronym>">
+  <!ENTITY css  "<acronym>CSS</acronym>">
+<!--
+		the chapters of the book
+-->
+  <!ENTITY using-chapter SYSTEM "using.docbook">
+  <!ENTITY introduction-chapter SYSTEM "introduction.docbook">
+  <!ENTITY reference-chapter SYSTEM "reference.docbook">
+  <!ENTITY toolbars-chapter SYSTEM "toolbars.docbook">
+  <!ENTITY dialogs-chapter SYSTEM "dialogs.docbook">
+  <!ENTITY analysis-chapter SYSTEM "analysis.docbook">
+  <!ENTITY scripting-chapter SYSTEM "scripting.docbook">
+  <!ENTITY appendix-chapter SYSTEM "appendix.docbook">
+  <!ENTITY faq-chapter SYSTEM "faq.docbook">
+<!--
+	entities for commands are in a separated file
+	which is created by the create-command-entities script
+-->
+  <!ENTITY % commands-entities SYSTEM "commands.docbook">
+  %commands-entities;
+<!--
+	some entities for variable or parameters often used
+-->
+  <!ENTITY ymin "<emphasis>Y<subscript>min</subscript></emphasis>">
+  <!ENTITY ymax "<emphasis>Y<subscript>max</subscript></emphasis>">
+  <!ENTITY ymean "<emphasis>Y<subscript>mean</subscript></emphasis>">
+  <!ENTITY xmin "<emphasis>X<subscript>min</subscript></emphasis>">
+  <!ENTITY xmax "<emphasis>X<subscript>max</subscript></emphasis>">
+  <!ENTITY xmean "<emphasis>X<subscript>mean</subscript></emphasis>">
+]
+>
+
+<book lang="en">
+
+<bookinfo>
+
+<date>October 2009</date>
+<releaseinfo>Version updated for &appname; &version;</releaseinfo>
+
+<title>The &appname; Handbook</title>
+
+<authorgroup>
+  <author>
+    <firstname>Ion</firstname>
+    <surname>Vasilief</surname>
+    <affiliation>
+      <address><email>&email-ion;</email></address>
+    </affiliation>
+  </author>
+  <author>
+    <firstname>Roger</firstname>
+    <surname>Gadiou</surname>
+    <affiliation>
+      <address><email>&email-roger;</email></address>
+    </affiliation>
+  </author>
+  <author>
+    <firstname>Knut</firstname>
+    <surname>Franke</surname>
+    <affiliation>
+      <address><email>&email-knut;</email></address>
+    </affiliation>
+  </author>
+</authorgroup>
+
+<copyright>
+  <year>2001</year>
+  <year>2002</year>
+  <year>2003</year>
+  <year>2004</year>
+  <year>2005</year>
+  <holder>&ion;</holder>
+</copyright>
+<copyright>
+  <year>2006</year>
+  <year>2007</year>
+  <holder>&roger;, &knut; and &ion;</holder>
+</copyright>
+<copyright>
+  <year>2008</year>
+  <year>2009</year>
+  <holder>&roger; and &knut;</holder>
+</copyright>
+
+<legalnotice>
+<para><emphasis>Legal notice:</emphasis> Permission is granted to copy, distribute and/or modify this document under the terms of the <link linkend="fdl">GNU Free Documentation License</link>, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts.</para>
+</legalnotice>
+
+<abstract>
+  <para>This document is a handbook for using &appname;, a program for two- and three-dimensional graphical presentation of data sets and for data analysis. It is updated for version &version;. This manual is organized in several chapters:</para>
+  <itemizedlist>
+    <listitem>
+      <para>The <link linkend="introduction">first one</link> describes the main concepts and terms which are used in &appname;.</para>
+    </listitem>
+    <listitem>
+      <para>The <link linkend="using">second</link> and <link linkend="analysis">third</link> chapters build a tutorial on how to obtain plots from different data sets, and to perform mathematical and statistical analysis of data and curves. They are the ones you need to read first to understand the basics of &appname; and to be able to work with.</para>
+    </listitem>
+    <listitem>
+      <para>The next chapter describe some specific possibilities of &appname;, that is the <link linkend="scripting">scripting</link>.</para>
+    </listitem>
+    <listitem>
+      <para>The two last chapters are descriptions of all the <link linkend="reference">commands</link> and <link linkend="toolbars">toolbars</link> used in &appname;. These chapters are the reference manual of &appname;.</para>
+    </listitem>
+  </itemizedlist>
+</abstract>
+
+<keywordset>
+  <keyword>Qt</keyword>
+  <keyword>&appname;</keyword>
+  <keyword>Data</keyword>
+  <keyword>Analysis</keyword>
+  <keyword>Plotting</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+&introduction-chapter;
+</chapter>
+<chapter id="using">
+&using-chapter;
+</chapter>
+<chapter id="analysis">
+&analysis-chapter;
+</chapter>
+<chapter id="scripting">
+&scripting-chapter;
+</chapter>
+<chapter id="reference">
+&reference-chapter;
+</chapter>
+<chapter id="toolbars">
+&toolbars-chapter;
+</chapter>
+<appendix id="manual_appendix">
+&appendix-chapter;
+</appendix>
+<appendix id="faq">
+&faq-chapter;
+</appendix>
+<index id="manual-index">
+<title>index</title>
+</index>
+
+</book>
