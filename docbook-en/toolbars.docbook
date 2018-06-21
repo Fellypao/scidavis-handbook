@@ -73,7 +73,7 @@ The <emphasis>File Toolbar</emphasis> allows to access commands mainly from the 
   <row>
    <entry>&new-note-icon;</entry>
    <entry>&new-note-lnk;</entry>
-   <entry></entry>
+   <entry>&new-note-key;</entry>
    <entry>Create a new note window, this object can be used as a calculator or to use scripts.</entry>
   </row>
   <row>

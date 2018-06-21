@@ -10,7 +10,7 @@
     <para>The constants _e=e=E and _pi=pi=PI=Pi are defined, as well as the
 		 operators and functions listed below. muParser is purely a parser for mathematical
 		 expressions and as such does not support executing complex scripts. However,
-		 you can make formulas easier to read and modify by assigning subexpressions to
+		 you can make formulas easier to read and modify by assigning sub-expressions to
 		 variables and inserting comments.
 	 </para>
 	 <para><emphasis>Variable assignments</emphasis> evaluate to the assigned value, so
@@ -21,6 +21,13 @@
 	 </para>
 	 <para><emphasis>Comments</emphasis> start with a hash mark (#) and run till the end
 		 of the line.</para>
+	 <para>It is important to note that the muParser commands listed in this section are 
+		intended to be used to work inside the <emphasis>Formula</emphasis> tab of 
+		a <emphasis>Table</emphasis>, i.e. most of them will not work as a 
+		<emphasis>script</emphasis> in a <emphasis>Note</emphasis>. Of course, if
+		one try to execute something like 'a=cos(pi*pi)' in a <emphasis>Note</emphasis>, 
+		it will run without errors, but the 'a' value will not be known by the user.
+	 </para>
 
     <table frame="sides" pgwide="1" tocentry="1">
       <title>Supported Mathematical Operators</title>
@@ -48,7 +55,7 @@
           <row>
             <entry>-</entry>
 
-            <entry>Substraction</entry>
+            <entry>Subtraction</entry>
           </row>
 
           <row>
@@ -72,19 +79,31 @@
           <row>
             <entry>and</entry>
 
-            <entry>logical and (returns 0 or 1)</entry>
+            <entry>logical and (returns 0 or 1) - works only if SciDAVis is built using muParser 1.x versions</entry>
+          </row>
+
+          <row>
+            <entry>&amp;&amp;</entry>
+
+            <entry>logical and (returns 0 or 1) - works only if SciDAVis is built using muParser &gt;= 2.0.0</entry>
           </row>
 
           <row>
             <entry>or</entry>
 
-            <entry>logical or (returns 0 or 1)</entry>
+            <entry>logical or (returns 0 or 1) - works only if SciDAVis is built using muParser 1.x versions</entry>
+          </row>
+
+          <row>
+            <entry>||</entry>
+
+            <entry>logical or (returns 0 or 1) - works only if SciDAVis is built using muParser &gt;= 2.0.0</entry>
           </row>
 
           <row>
             <entry>xor</entry>
 
-            <entry>logical exclusive or (returns 0 or 1)</entry>
+	    <entry>logical exclusive or (returns 0 or 1) - works only if SciDAVis is built using muParser 1.x versions; there are no equivalent operator for muParser &gt;= 2.0.0</entry>
           </row>
 
           <row>
@@ -152,25 +171,25 @@
             <row>
               <entry>acos(x)</entry>
 
-              <entry>inverse cosinus</entry>
+              <entry>inverse cosine</entry>
             </row>
 
             <row>
               <entry>acosh(x)</entry>
 
-              <entry>inverse hyperbolic cosinus</entry>
+              <entry>inverse hyperbolic cosine</entry>
             </row>
 
             <row>
               <entry>asin(x)</entry>
 
-              <entry>inverse sinus</entry>
+              <entry>inverse sine</entry>
             </row>
 
             <row>
               <entry>asinh(x)</entry>
 
-              <entry>inverse hyperbolic sinus</entry>
+              <entry>inverse hyperbolic sine</entry>
             </row>
 
             <row>
@@ -260,13 +279,13 @@
             <row>
               <entry>cos(x)</entry>
 
-              <entry>cosinus of x</entry>
+              <entry>cosine of x</entry>
             </row>
 
             <row>
               <entry>cosh(x)</entry>
 
-              <entry>hyperbolic cosinus of x</entry>
+              <entry>hyperbolic cosine of x</entry>
             </row>
 
             <row>
@@ -332,19 +351,19 @@
             <row>
               <entry>ln(x)</entry>
 
-              <entry>natural logarythm of x</entry>
+              <entry>natural logarithm of x</entry>
             </row>
 
             <row>
               <entry>log(x)</entry>
 
-              <entry>decimal logarythm of x</entry>
+              <entry>decimal logarithm of x</entry>
             </row>
 
             <row>
               <entry>log2(x)</entry>
 
-              <entry>base 2 logarythm of x</entry>
+              <entry>base 2 logarithm of x</entry>
             </row>
 
 				<row>
@@ -404,13 +423,13 @@
             <row>
               <entry>sin(x)</entry>
 
-              <entry>sinus of x</entry>
+              <entry>sine of x</entry>
             </row>
 
             <row>
               <entry>sinh(x)</entry>
 
-              <entry>hyperblic sinus of x</entry>
+              <entry>hyperbolic sine of x</entry>
             </row>
 
             <row>
@@ -454,7 +473,7 @@
             <row>
               <entry>cell(a,b)</entry>
 
-				  <entry>In the contex of a matrix, returns the value at row a and column b.
+				  <entry>In the context of a matrix, returns the value at row a and column b.
 					  In the context of a table, returns the value at column a and row b (remember that tables use column logic).
 					  Everywhere else, this function is undefined.
 
@@ -466,7 +485,7 @@
 				<row>
 					<entry>cell_(column, row)</entry>
 					<entry>
-						In the context of a table, return the value of a cell specified using 1-based indices.
+						In the context of a table, return the value of a cell specified using 1-based indexes.
 						Wherever possible, you should use cell() instead, because inserting/removing/moving
 						columns will break formulas using cell_().
 					</entry>
@@ -509,9 +528,16 @@
               <entry>if(e1,e2,e3)</entry>
 
               <entry>if e1 is true, e2 is executed else e3 is
-              executed.</entry>
+		executed (works only if SciDAVis is built using muParser 1.x versions).</entry>
             </row>
 
+	    <row>
+              <entry>e1?e2:e3</entry>
+
+              <entry>if e1 is true, e2 is executed else e3 is
+		executed (C++ style syntax; works only if SciDAVis is built using muParser &gt;= 2.0.0).</entry>
+            </row>
+	    
             <row>
               <entry>tablecol(t,c)</entry>
 
@@ -529,10 +555,10 @@
     <indexterm><primary>Scripting</primary><secondary>Python</secondary></indexterm>
 
     <para>This module provides bindings to the <ulink
-    url="http://www.python.org">Python</ulink> programming language. Basic
+    url="https://www.python.org">Python</ulink> programming language. Basic
     usage in the context of &appname; will be discussed below, but for more
     in-depth information on the language itself, please refer to its excellent
-    <ulink url="http://www.python.org/doc">documentation</ulink>.</para>
+    <ulink url="https://www.python.org/doc">documentation</ulink>.</para>
 
     <sect2>
 		 <title>Getting Started</title>
@@ -557,10 +583,10 @@
 			 "Evaluate" from the context menu. You are rewarded by a new line,
 			 stating (to general astonishment), that the result of evaluating
 			 your expression is <computeroutput>#&gt; 5</computeroutput>. If
-			 you have <ulink url="http://www.scipy.org">SciPy</ulink> and/or
-			 <ulink url="http://pygsl.sf.net">PyGSL</ulink> installed, you
+			 you have <ulink url="https://www.scipy.org">SciPy</ulink> and/or
+			 <ulink url="http://pygsl.sourceforge.net">PyGSL</ulink> installed, you
 			 will have immediate access to a huge number of interesting
-			 functions, browsable via the submenu "Functions" of the context
+			 functions, browseable via the sub-menu "Functions" of the context
 			 menu. Pressing Shift+F1 while in this menu will give you a short
 			 description of the current function. The advantage of only
 			 executing/evaluating single lines or selections on request is that
@@ -741,8 +767,8 @@ def f():
       linkend="Python-init">initialization file</link> shipped with &appname;).
       Along with them, the constants e (Euler's number) and pi (the one and
       only) are defined. Many, many more functions can be obtained by installing
-		<ulink url="http://www.scipy.org">SciPy</ulink> and/or
-		<ulink url="http://pygsl.sf.net">PyGSL</ulink>.</para>
+		<ulink url="https://www.scipy.org">SciPy</ulink> and/or
+		<ulink url="http://pygsl.sourceforge.net">PyGSL</ulink>.</para>
 
       <table frame="sides" pgwide="1" tocentry="1">
         <title>Supported Mathematical Functions</title>
@@ -764,13 +790,13 @@ def f():
             <row>
               <entry>acos(x)</entry>
 
-              <entry>inverse cosinus</entry>
+              <entry>inverse cosine</entry>
             </row>
 
             <row>
               <entry>asin(x)</entry>
 
-              <entry>inverse sinus</entry>
+              <entry>inverse sine</entry>
             </row>
 
             <row>
@@ -794,13 +820,13 @@ def f():
             <row>
               <entry>cos(x)</entry>
 
-              <entry>cosinus of x</entry>
+              <entry>cosine of x</entry>
             </row>
 
             <row>
               <entry>cosh(x)</entry>
 
-              <entry>hyperbolic cosinus of x</entry>
+              <entry>hyperbolic cosine of x</entry>
             </row>
 
             <row>
@@ -856,13 +882,13 @@ def f():
             <row>
               <entry>log(x)</entry>
 
-              <entry>natural (base e) logarythm of x</entry>
+              <entry>natural (base e) logarithm of x</entry>
             </row>
 
             <row>
               <entry>log10(x)</entry>
 
-              <entry>decimal (base 10) logarythm of x</entry>
+              <entry>decimal (base 10) logarithm of x</entry>
             </row>
 
             <row>
@@ -887,13 +913,13 @@ def f():
             <row>
               <entry>sin(x)</entry>
 
-              <entry>sinus of x</entry>
+              <entry>sine of x</entry>
             </row>
 
             <row>
               <entry>sinh(x)</entry>
 
-              <entry>hyperblic sinus of x</entry>
+              <entry>hyperbolic sine of x</entry>
             </row>
 
             <row>
@@ -968,7 +994,7 @@ m = f.matrix(name, recursive=False)
 g = f.graph(name, recursive=False)
 n = f.note(name, recursive=False)
 </programlisting>
-            If you supply True for the recursive argument, a depth-first recursive search of all subfolders will be performed and the first match returned.</para>
+            If you supply True for the recursive argument, a depth-first recursive search of all sub-folders will be performed and the first match returned.</para>
 
 
         <para>Also, every piece of code is executed in the context of an
@@ -1141,7 +1167,7 @@ g = plot(table, column, type)
               </listitem>
             </varlistentry>
           </variablelist> You can plot more than one column at once by giving
-        a Python tuple (see the <ulink url="http://docs.python.org/tut">Python
+        a Python tuple (see the <ulink url="https://docs.python.org/3/tutorial/index.html">Python
         Tutorial</ulink>) as an argument: <programlisting width="40">
 g = plot(table("table1"), (2,4,7), 2)
 	  </programlisting></para>
@@ -1187,7 +1213,7 @@ l.setLegend(text)
 	  </programlisting> You can also customize the scales of the different axes using: <programlisting width="40">
 l.setScale(int axis, double start, double end, double step=0.0, int majorTicks=5, int minorTicks=5, int type=0, bool inverted=False);
 </programlisting>
-	  where <varname>axis</varname>is one of <varname>Layer.Left</varname>, <varname>Layer.Right</varname>, <varname>Layer.Bottom</varname>, <varname>Layer.Top</varname>,
+	  where <varname>axis</varname> is one of <varname>Layer.Left</varname>, <varname>Layer.Right</varname>, <varname>Layer.Bottom</varname>, <varname>Layer.Top</varname>,
 type specifies the desired scale type: <varname>0</varname> for <varname>Linear</varname> or <varname>1</varname> for <varname>Log10</varname>
 and <varname>step</varname> defines the size of the interval between the major scale ticks. If not specified (default value is 0.0), the step size is calculated automatically. The other flags should be self-explanatory.</para>
 	  <para>Now, here is how you can export a layer <programlisting width="40">
@@ -1314,7 +1340,7 @@ f.covarianceMatrix("cov")
 		 <para>Classes mentioned below that start with "Q" mostly belong to Qt and can be used via
 			 PyQt (with the exception of classes starting with "Qwt", which belong to Qwt).
 			 If you want to know what you can do with such classes (e.g. QIcon or QDateTime), see the
-			 <ulink url="http://www.riverbankcomputing.co.uk/static/Docs/PyQt4/html/classes.html">PyQt
+			 <ulink url="http://pyqt.sourceforge.net/Docs/PyQt4/classes.html">PyQt
 				 reference documentation</ulink>. It's also useful to know that you can call any QWidget
 			 method exported by PyQt on instances of MDIWindow (and thus Table, Graph, Matrix and
 			 Note).
@@ -1610,22 +1636,22 @@ tab.normalize()
 				 <varlistentry>
 					 <term>text(string or int, int)</term>
 					 <listitem>DEPRECATED. Use column(col).textAt(row) or str(column(col).valueAt(row)) instead (depending on the column's mode).
-					 CAVEAT: text() indices are 1-based, while column() and textAt() use more conventional 0-based indices!</listitem>
+					 CAVEAT: text() indexes are 1-based, while column() and textAt() use more conventional 0-based indexes!</listitem>
 				 </varlistentry>
 				 <varlistentry>
 					 <term>cell(string or int, int)</term>
 					 <listitem>DEPRECATED. Use column(col).valueAt(row) instead.
-					 CAVEAT: cell() indices are 1-based, while column() and valueAt() use more conventional 0-based indices!</listitem>
+					 CAVEAT: cell() indexes are 1-based, while column() and valueAt() use more conventional 0-based indexes!</listitem>
 				 </varlistentry>
 				 <varlistentry>
 					 <term>setText(string or int, int, string</term>
 					 <listitem>DEPRECATED. Use column(col).setTextAt(row,value) instead.
-					 CAVEAT: setText() indices are 1-based, while column() and setTextAt() use more conventional 0-based indices!</listitem>
+					 CAVEAT: setText() indexes are 1-based, while column() and setTextAt() use more conventional 0-based indexes!</listitem>
 				 </varlistentry>
 				 <varlistentry>
 					 <term>setCell(string or int, int, double</term>
 					 <listitem>DEPRECATED. Use column(col).setValueAt(row,value) instead.
-					 CAVEAT: setCell() indices are 1-based, while column() and setValueAt() use more conventional 0-based indices!</listitem>
+					 CAVEAT: setCell() indexes are 1-based, while column() and setValueAt() use more conventional 0-based indexes!</listitem>
 				 </varlistentry>
 				 <varlistentry>
 					 <term>colName(int)</term>
@@ -1985,7 +2011,7 @@ layer.replot()
 				 </varlistentry>
 				 <varlistentry>
 					 <term>setFillColor(QColor)</term>
-					 <listitem>Sets the color used for filling the interiour of the symbol. Modifies brush().
+					 <listitem>Sets the color used for filling the interior of the symbol. Modifies brush().
 						 Note that due to the setFillColor(int) overload, and unlike other
 						 methods accepting QColor arguments, basic colors need to be explicitly specified
 						 as QtGui.QColor(Qt.white) etc. instead of just Qt.white.
@@ -2009,7 +2035,7 @@ layer.replot()
 				 <varlistentry>
 					 <term>setSize(int,int=-1)</term>
 					 <listitem>setSize(width,height) sets the size of the symbol in paint (pixel) coordinates.
-						 If height=-1 (default), it is set to equalt to width.</listitem>
+						 If height=-1 (default), it is set to equal to width.</listitem>
 				 </varlistentry>
 				 <varlistentry>
 					 <term>setBrush(QBrush)</term>
@@ -2033,7 +2059,7 @@ layer.replot()
 				 </varlistentry>
 				 <varlistentry>
 					 <term>brush()</term>
-					 <listitem>Returns the currently set brush (a QBrush) for filling the interiour of the symbol.
+					 <listitem>Returns the currently set brush (a QBrush) for filling the interior of the symbol.
 						 Due to a design limitation of Qwt, setting attributes of the brush directly has no effect.
 						 You need to create a copy of the brush, change its attributes and hand it again to setBrush().
 					 </listitem>
@@ -2432,12 +2458,12 @@ layer.replot()
 					 <term>insertParametricCurve(string, string, double=0, double=1,
 						 string=&quot;t&quot;, int=100, string=QtCore.QString())</term>
 					 <listitem>insertParametricCurve(x_formula, y_formula, from, to, parameter, points, title)
-						 insert a fucntion curve specified by formulas for the abscissa and ordinate
+						 insert a function curve specified by formulas for the abscissa and ordinate
 						 components in cartesian coordinates, both of which are evaluated using muParser
 						 with given parameter (&quot;t&quot; by default), and returns a boolean indicating
 						 success or failure. Optionally, the interval [start,end]
 						 covered by the free parameter, the number of points where the function will be
-						 evaluated and the curvet title can be overridden.
+						 evaluated and the curve title can be overridden.
 						 Added in &appname; 0.2.4.
 					 </listitem>
 				 </varlistentry>
@@ -2446,7 +2472,7 @@ layer.replot()
 						 QColor=QColor(Qt.black), bool=True, bool=True, bool=True)</term>
 					 <listitem>addErrorBars(curve, table, err_col_name, orientation, width, cap_length, color,
 						 through, minus, plus) adds error bars to the curve specified by its name (as
-						 displayed in the add/remove curve dialog and the curves's context menu). Data
+						 displayed in the add/remove curve dialog and the curves' context menu). Data
 						 for the error bars is taken from the given table and column. Optionally, you can
 						 override the orientation (default is 1 for vertical, 0 means horizontal), the
 						 width of the pen used to draw the error bars, the length of the caps in pixels,
@@ -2652,7 +2678,7 @@ layer.replot()
 					 <term>export(string)</term>
 					 <listitem>Quickly export layer to the indicated file, without bothering about the
 						 exportImage()/exportVector() distinction and related options. The file format
-						 is determined automatically by looking at the extension of the specfied file
+						 is determined automatically by looking at the extension of the specified file
 						 name; supported formats depend on your installation of Qt and can be viewed by
 						 invoking the export dialog from the GUI and looking through the
 						 &quot;file type&quot; box.</listitem>
@@ -2804,7 +2830,7 @@ g.arrangeLayers()
 					 <term>export(string)</term>
 					 <listitem>Quickly export graph to the indicated file, without bothering about the
 						 exportImage()/exportVector() distinction and related options. The file format
-						 is determined automatically by looking at the extension of the specfied file
+						 is determined automatically by looking at the extension of the specified file
 						 name; supported formats depend on your installation of Qt and can be viewed by
 						 invoking the export dialog from the GUI and looking through the
 						 &quot;file type&quot; box.</listitem>
@@ -2856,7 +2882,7 @@ n.exportASCII("output.txt")
 		 </sect3>
 		 <sect3><title>class ApplicationWindow (inherits QMainWindow)</title>
 			 <para>Manages the current project. The project from which a piece of Python code is
-				 excecuted is accessible via the module attribute <varname>scidavis.app</varname>.
+				 executed is accessible via the module attribute <varname>scidavis.app</varname>.
 				 However, most of the time, this instance is used implicitly via methods copied to the
 				 global namespace by the default scidavisrc.py configuration file.</para>
 			 <programlisting width="80">
@@ -3029,7 +3055,7 @@ app.activeFolder().save("subproject.sciprj")
 					 <term>setActiveFolder(folder)</term>
 					 <listitem>Given a Folder object, changes the active folder to it.
 						 Since MDIWindows are always added to the active folder, this is necessary for
-						 script-driven creation of objects in specific subfolders. Added in &appname; 0.2.5.
+						 script-driven creation of objects in specific sub-folders. Added in &appname; 0.2.5.
 					 </listitem>
 				 </varlistentry>
 				 <varlistentry>
@@ -3057,7 +3083,7 @@ app.activeFolder().save("subproject.sciprj")
 				 <varlistentry>
 					 <term>setPreferences(Layer)</term>
 					 <listitem>DEPRECATED. Prior to &appname; 0.2.4, it was necessary to call this on a
-						 layer created using Graph.addLayer() if you wanted the layer to be intialized
+						 layer created using Graph.addLayer() if you wanted the layer to be initialized
 						 correctly. This is now done automatically as part of addLayer(); doing so again
 						 doesn't hurt, but is not necessary any more. 
 					 </listitem>
@@ -3255,7 +3281,7 @@ app.activeFolder().save("subproject.sciprj")
 				 </varlistentry>
 				 <varlistentry>
 					 <term>folders()</term>
-					 <listitem>Returns the list of subfolders.</listitem>
+					 <listitem>Returns the list of sub-folders.</listitem>
 				 </varlistentry>
 				 <varlistentry>
 					 <term>folder(string, bool=True, bool=False)</term>
@@ -3280,25 +3306,25 @@ app.activeFolder().save("subproject.sciprj")
 				 <varlistentry>
 					 <term>table(string, bool=False)</term>
 					 <listitem>table(name, recursive) returns the table of the given name in this folder;
-						 if no such table exists and recursive is True, subfolders are searched as well.
+						 if no such table exists and recursive is True, sub-folders are searched as well.
 					 </listitem>
 				 </varlistentry>
 				 <varlistentry>
 					 <term>matrix(string, bool=False)</term>
 					 <listitem>matrix(name, recursive) returns the matrix of the given name in this folder;
-						 if no such matrix exists and recursive is True, subfolders are searched as well.
+						 if no such matrix exists and recursive is True, sub-folders are searched as well.
 					 </listitem>
 				 </varlistentry>
 				 <varlistentry>
 					 <term>graph(string, bool=False)</term>
 					 <listitem>graph(name, recursive) returns the graph of the given name in this folder;
-						 if no such graph exists and recursive is True, subfolders are searched as well.
+						 if no such graph exists and recursive is True, sub-folders are searched as well.
 					 </listitem>
 				 </varlistentry>
 				 <varlistentry>
 					 <term>note(string, bool=False)</term>
 					 <listitem>note(name, recursive) returns the note of the given name in this folder;
-						 if no such note exists and recursive is True, subfolders are searched as well.
+						 if no such note exists and recursive is True, sub-folders are searched as well.
 					 </listitem>
 				 </varlistentry>
 				 <varlistentry>
@@ -3313,7 +3339,7 @@ app.activeFolder().save("subproject.sciprj")
 				 </varlistentry>
 				 <varlistentry>
 					 <term>addChild(folder)</term>
-					 <listitem>Adds another folder as a subfolder to this one.
+					 <listitem>Adds another folder as a sub-folders to this one.
 						 Added in &appname; 0.2.5.</listitem>
 				 </varlistentry>
 			 </variablelist>
@@ -3328,8 +3354,8 @@ app.activeFolder().save("subproject.sciprj")
       of your projects. The default initialization file shipped with &appname;
       imports Python's <link linkend="Python-functions">standard math
       functions</link> as well as special functions from <ulink
-		url="http://www.scipy.org">SciPy</ulink> and <ulink
-		url="http://pygsl.sf.net">PyGSL</ulink>(if available). Also, it
+		url="https://www.scipy.org">SciPy</ulink> and <ulink
+		url="http://pygsl.sourceforge.net">PyGSL</ulink>(if available). Also, it
       creates some handy shortcuts, like
       <userinput>table("table1")</userinput> for
       <userinput>&python-pref;.app.table("table1")</userinput>.</para>
@@ -3361,7 +3387,7 @@ app.activeFolder().save("subproject.sciprj")
 			<title>Recommended approach to per-user configuration</title>
 
 			<para>
-				In order to give you full controll over the process of setting up the
+				In order to give you full control over the process of setting up the
 				Python environment within &appname;, a per-user configuration file
 				(.&python-rc;) will supersede any system-wide configuration file. That
 				is, GSL and SciPy functions as well as many &appname;-specific

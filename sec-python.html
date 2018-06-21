@@ -27,13 +27,13 @@
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="sec-python"></a>Python</h2></div></div></div>
-<a class="indexterm" name="idp1379995452"></a><p>This module provides bindings to the <a class="ulink" href="http://www.python.org" target="_top">Python</a> programming language. Basic
+<a class="indexterm" name="idp1373790900"></a><p>This module provides bindings to the <a class="ulink" href="https://www.python.org" target="_top">Python</a> programming language. Basic
     usage in the context of SciDAVis will be discussed below, but for more
     in-depth information on the language itself, please refer to its excellent
-    <a class="ulink" href="http://www.python.org/doc" target="_top">documentation</a>.</p>
+    <a class="ulink" href="https://www.python.org/doc" target="_top">documentation</a>.</p>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="idp1379997012"></a>Getting Started</h3></div></div></div>
+<a name="idp1373792460"></a>Getting Started</h3></div></div></div>
 <p>Make sure your current project uses Python as its interpreter by
 			 selecting the menu point Scripting-&gt;Scripting Language and
 			 double-clicking on "Python" in the resulting dialog (if the dialog
@@ -53,10 +53,10 @@
 			 "Evaluate" from the context menu. You are rewarded by a new line,
 			 stating (to general astonishment), that the result of evaluating
 			 your expression is <code class="computeroutput">#&gt; 5</code>. If
-			 you have <a class="ulink" href="http://www.scipy.org" target="_top">SciPy</a> and/or
-			 <a class="ulink" href="http://pygsl.sf.net" target="_top">PyGSL</a> installed, you
+			 you have <a class="ulink" href="https://www.scipy.org" target="_top">SciPy</a> and/or
+			 <a class="ulink" href="http://pygsl.sourceforge.net" target="_top">PyGSL</a> installed, you
 			 will have immediate access to a huge number of interesting
-			 functions, browsable via the submenu "Functions" of the context
+			 functions, browseable via the sub-menu "Functions" of the context
 			 menu. Pressing Shift+F1 while in this menu will give you a short
 			 description of the current function. The advantage of only
 			 executing/evaluating single lines or selections on request is that
@@ -77,10 +77,10 @@
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="idp1380002156"></a>Python Basics</h3></div></div></div>
+<a name="idp1373797604"></a>Python Basics</h3></div></div></div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380002476"></a>Expressions</h4></div></div></div>
+<a name="idp1373797924"></a>Expressions</h4></div></div></div>
 <p>Mathematical expressions work largely as expected. However,
 				there's one caveat, especially when switching from muParser:
 				<strong class="userinput"><code>a^b</code></strong> does not mean "raise a to the power of b" but
@@ -95,7 +95,7 @@
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380005260"></a>Statements</h4></div></div></div>
+<a name="idp1373800708"></a>Statements</h4></div></div></div>
 <p>One thing you have to know when working with Python is that
 				indentation is very important. It is used for grouping (most other
 				languages use either braces or keywords like
@@ -182,7 +182,7 @@ else:
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="idp1380014452"></a>Evaluation Reloaded</h3></div></div></div>
+<a name="idp1373809940"></a>Evaluation Reloaded</h3></div></div></div>
 <p>As we've already mentioned above, there's a bit more to evaluation
 				than just expressions. Note that Python itself can indeed only
 				evaluate expressions; the following describes a feature of SciDAVis
@@ -237,14 +237,14 @@ def f():
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="Python-functions"></a>Mathematical Functions</h3></div></div></div>
-<a class="indexterm" name="idp1380020716"></a><p>Python comes with some basic mathematical functions that are
+<a class="indexterm" name="idp1373816180"></a><p>Python comes with some basic mathematical functions that are
       automatically imported (if you use the <a class="link" href="sec-python.html#Python-init" title="The Initialization File">initialization file</a> shipped with SciDAVis).
       Along with them, the constants e (Euler's number) and pi (the one and
       only) are defined. Many, many more functions can be obtained by installing
-		<a class="ulink" href="http://www.scipy.org" target="_top">SciPy</a> and/or
-		<a class="ulink" href="http://pygsl.sf.net" target="_top">PyGSL</a>.</p>
+		<a class="ulink" href="https://www.scipy.org" target="_top">SciPy</a> and/or
+		<a class="ulink" href="http://pygsl.sourceforge.net" target="_top">PyGSL</a>.</p>
 <div class="table">
-<a name="idp1380023028"></a><p class="title"><b>Table 4.4. Supported Mathematical Functions</b></p>
+<a name="idp1373818492"></a><p class="title"><b>Table 4.4. Supported Mathematical Functions</b></p>
 <div class="table-contents"><table summary="Supported Mathematical Functions" width="100%" border="1">
 <colgroup>
 <col align="left" class="name">
@@ -257,11 +257,11 @@ def f():
 <tbody>
 <tr>
 <td align="left">acos(x)</td>
-<td align="justify">inverse cosinus</td>
+<td align="justify">inverse cosine</td>
 </tr>
 <tr>
 <td align="left">asin(x)</td>
-<td align="justify">inverse sinus</td>
+<td align="justify">inverse sine</td>
 </tr>
 <tr>
 <td align="left">atan(x)</td>
@@ -277,11 +277,11 @@ def f():
 </tr>
 <tr>
 <td align="left">cos(x)</td>
-<td align="justify">cosinus of x</td>
+<td align="justify">cosine of x</td>
 </tr>
 <tr>
 <td align="left">cosh(x)</td>
-<td align="justify">hyperbolic cosinus of x</td>
+<td align="justify">hyperbolic cosine of x</td>
 </tr>
 <tr>
 <td align="left">degrees(x)</td>
@@ -319,11 +319,11 @@ def f():
 </tr>
 <tr>
 <td align="left">log(x)</td>
-<td align="justify">natural (base e) logarythm of x</td>
+<td align="justify">natural (base e) logarithm of x</td>
 </tr>
 <tr>
 <td align="left">log10(x)</td>
-<td align="justify">decimal (base 10) logarythm of x</td>
+<td align="justify">decimal (base 10) logarithm of x</td>
 </tr>
 <tr>
 <td align="left">modf(x)</td>
@@ -340,11 +340,11 @@ def f():
 </tr>
 <tr>
 <td align="left">sin(x)</td>
-<td align="justify">sinus of x</td>
+<td align="justify">sine of x</td>
 </tr>
 <tr>
 <td align="left">sinh(x)</td>
-<td align="justify">hyperblic sinus of x</td>
+<td align="justify">hyperbolic sine of x</td>
 </tr>
 <tr>
 <td align="left">sqrt(x)</td>
@@ -370,7 +370,7 @@ def f():
       SciDAVis.</p>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380042340"></a>Establishing contact</h4></div></div></div>
+<a name="idp1373837828"></a>Establishing contact</h4></div></div></div>
 <p>Accessing the objects in your project is straight-forward,
         </p>
 <pre class="programlisting" width="40">
@@ -418,7 +418,7 @@ g = f.graph(name, recursive=False)
 n = f.note(name, recursive=False)
 </pre>
 <p>
-            If you supply True for the recursive argument, a depth-first recursive search of all subfolders will be performed and the first match returned.</p>
+            If you supply True for the recursive argument, a depth-first recursive search of all sub-folders will be performed and the first match returned.</p>
 <p>Also, every piece of code is executed in the context of an
 	  object which you can access via the <code class="varname">self</code> variable. For example,
         entering <strong class="userinput"><code>self.cell("t",i)</code></strong> as a column formula
@@ -427,7 +427,7 @@ n = f.note(name, recursive=False)
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380047460"></a>Working with Tables</h4></div></div></div>
+<a name="idp1373842948"></a>Working with Tables</h4></div></div></div>
 <p>We'll assume that you have assigned some table to the variable
         <code class="varname">t</code>. You can access its numeric cell values with
         </p>
@@ -486,7 +486,7 @@ t.notifyChanges()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380053852"></a>Working with Matrices</h4></div></div></div>
+<a name="idp1373849340"></a>Working with Matrices</h4></div></div></div>
 <p>We'll assume that you have assigned some matrix to the variable
         <code class="varname">m</code>. Accessing cell values is very similar to Table,
         but since Matrix doesn't use column logic, row arguments are specified
@@ -506,7 +506,7 @@ m.numCols()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380055932"></a>Plotting and Working with Graphs</h4></div></div></div>
+<a name="idp1373851372"></a>Plotting and Working with Graphs</h4></div></div></div>
 <p>If you want to create a new Graph window for some data in table
         table1, you can use the plot command: </p>
 <pre class="programlisting" width="40">
@@ -539,7 +539,7 @@ g = plot(table, column, type)
 <dd><p>Rows</p></dd>
 </dl></div>
 <p> You can plot more than one column at once by giving
-        a Python tuple (see the <a class="ulink" href="http://docs.python.org/tut" target="_top">Python
+        a Python tuple (see the <a class="ulink" href="https://docs.python.org/3/tutorial/index.html" target="_top">Python
         Tutorial</a>) as an argument: </p>
 <pre class="programlisting" width="40">
 g = plot(table("table1"), (2,4,7), 2)
@@ -596,7 +596,7 @@ l.setLegend(text)
 l.setScale(int axis, double start, double end, double step=0.0, int majorTicks=5, int minorTicks=5, int type=0, bool inverted=False);
 </pre>
 <p>
-	  where <code class="varname">axis</code>is one of <code class="varname">Layer.Left</code>, <code class="varname">Layer.Right</code>, <code class="varname">Layer.Bottom</code>, <code class="varname">Layer.Top</code>,
+	  where <code class="varname">axis</code> is one of <code class="varname">Layer.Left</code>, <code class="varname">Layer.Right</code>, <code class="varname">Layer.Bottom</code>, <code class="varname">Layer.Top</code>,
 type specifies the desired scale type: <code class="varname">0</code> for <code class="varname">Linear</code> or <code class="varname">1</code> for <code class="varname">Log10</code>
 and <code class="varname">step</code> defines the size of the interval between the major scale ticks. If not specified (default value is 0.0), the step size is calculated automatically. The other flags should be self-explanatory.</p>
 <p>Now, here is how you can export a layer </p>
@@ -615,7 +615,7 @@ g.exportToEPS(filename)
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380078468"></a>Fitting</h4></div></div></div>
+<a name="idp1373873300"></a>Fitting</h4></div></div></div>
 <p>Assuming you have a Graph named "graph1" with a curve entitled
         "table1_2" (on its active layer), a minimal Fit example would be:
         </p>
@@ -702,14 +702,14 @@ f.covarianceMatrix("cov")
 <p>Classes mentioned below that start with "Q" mostly belong to Qt and can be used via
 			 PyQt (with the exception of classes starting with "Qwt", which belong to Qwt).
 			 If you want to know what you can do with such classes (e.g. QIcon or QDateTime), see the
-			 <a class="ulink" href="http://www.riverbankcomputing.co.uk/static/Docs/PyQt4/html/classes.html" target="_top">PyQt
+			 <a class="ulink" href="http://pyqt.sourceforge.net/Docs/PyQt4/classes.html" target="_top">PyQt
 				 reference documentation</a>. It's also useful to know that you can call any QWidget
 			 method exported by PyQt on instances of MDIWindow (and thus Table, Graph, Matrix and
 			 Note).
 		 </p>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380092292"></a>class AbstractAspect (inherits QObject)</h4></div></div></div>
+<a name="idp1373887068"></a>class AbstractAspect (inherits QObject)</h4></div></div></div>
 <p>A base class for content of a project. While currently the only AbstractAspect
 				 accessible to you is Column, a future release will make more extensive usage of this;
 				 probably with some revisions in the design, so only some basic functions are documented
@@ -747,7 +747,7 @@ table("my-table").column("2").remove()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380101556"></a>class Column (inherits AbstractAspect)</h4></div></div></div>
+<a name="idp1373896308"></a>class Column (inherits AbstractAspect)</h4></div></div></div>
 <p>Represents a column in a table.</p>
 <p>In addition to the valueAt()/setValueAt() interface described below, starting with
 				 SciDAVis 0.2.4, Y columns support
@@ -835,7 +835,7 @@ dest.copy(col, 5, 2, 10)
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380125084"></a>class MDIWindow (inherits QWidget)</h4></div></div></div>
+<a name="idp1373919836"></a>class MDIWindow (inherits QWidget)</h4></div></div></div>
 <p>Base class of Table, Matrix, Graph and Note. A redesigned analogue under the name of "Part" (inheriting from AbstractAspect) is under development; it should be possible to provide a backwards-compatible interface, though.</p>
 <pre class="programlisting" width="80">
 tmp = newTable("temp1", 2, 10)
@@ -870,7 +870,7 @@ tmp.close()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380133516"></a>class Table (inherits MDIWindow)</h4></div></div></div>
+<a name="idp1373928268"></a>class Table (inherits MDIWindow)</h4></div></div></div>
 <p>Class of table (spreadsheet) windows.</p>
 <pre class="programlisting" width="80">
 tab = newTable("tabula",2,10)
@@ -897,16 +897,16 @@ tab.normalize()
 					 </dd>
 <dt><span class="term">text(string or int, int)</span></dt>
 <dd>DEPRECATED. Use column(col).textAt(row) or str(column(col).valueAt(row)) instead (depending on the column's mode).
-					 CAVEAT: text() indices are 1-based, while column() and textAt() use more conventional 0-based indices!</dd>
+					 CAVEAT: text() indexes are 1-based, while column() and textAt() use more conventional 0-based indexes!</dd>
 <dt><span class="term">cell(string or int, int)</span></dt>
 <dd>DEPRECATED. Use column(col).valueAt(row) instead.
-					 CAVEAT: cell() indices are 1-based, while column() and valueAt() use more conventional 0-based indices!</dd>
+					 CAVEAT: cell() indexes are 1-based, while column() and valueAt() use more conventional 0-based indexes!</dd>
 <dt><span class="term">setText(string or int, int, string</span></dt>
 <dd>DEPRECATED. Use column(col).setTextAt(row,value) instead.
-					 CAVEAT: setText() indices are 1-based, while column() and setTextAt() use more conventional 0-based indices!</dd>
+					 CAVEAT: setText() indexes are 1-based, while column() and setTextAt() use more conventional 0-based indexes!</dd>
 <dt><span class="term">setCell(string or int, int, double</span></dt>
 <dd>DEPRECATED. Use column(col).setValueAt(row,value) instead.
-					 CAVEAT: setCell() indices are 1-based, while column() and setValueAt() use more conventional 0-based indices!</dd>
+					 CAVEAT: setCell() indexes are 1-based, while column() and setValueAt() use more conventional 0-based indexes!</dd>
 <dt><span class="term">colName(int)</span></dt>
 <dd>DEPRECATED. Use column(col).name() instead.</dd>
 <dt><span class="term">setColName(int,string)</span></dt>
@@ -944,7 +944,7 @@ tab.normalize()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380151468"></a>class Matrix (inherits MDIWindow)</h4></div></div></div>
+<a name="idp1373946220"></a>class Matrix (inherits MDIWindow)</h4></div></div></div>
 <p>Class of matrix windows.</p>
 <pre class="programlisting" width="80">
 mat = newMatrix("mat", 10, 20)
@@ -1000,7 +1000,7 @@ mat.recalculate()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380166540"></a>class ArrowMarker</h4></div></div></div>
+<a name="idp1373961292"></a>class ArrowMarker</h4></div></div></div>
 <p>A line or an arrow displayed on a graph.</p>
 <pre class="programlisting" width="80">
 arrow = ArrowMarker()
@@ -1049,7 +1049,7 @@ layer.replot()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380175988"></a>class ImageMarker</h4></div></div></div>
+<a name="idp1373970740"></a>class ImageMarker</h4></div></div></div>
 <p>An image to be displayed on a graph.</p>
 <pre class="programlisting" width="80">
 layer = newGraph().activeLayer()
@@ -1073,7 +1073,7 @@ layer.replot()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380180980"></a>class Legend</h4></div></div></div>
+<a name="idp1373975732"></a>class Legend</h4></div></div></div>
 <p>Text boxes displayed on a graph. While this is also used for legends, a better
 				 (since more general) name would probably be TextMarker.</p>
 <pre class="programlisting" width="80">
@@ -1109,7 +1109,7 @@ layer.replot()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380187340"></a>class QwtSymbol</h4></div></div></div>
+<a name="idp1373982092"></a>class QwtSymbol</h4></div></div></div>
 <p>Represents a type of symbol on a scatter plot (ellipse, rectangle etc.) together
 				 with attributes determining parameters like color, size etc. This class is part of the
 				 Qwt library, but exported and documented as part of SciDAVis's API for simplicity. Also,
@@ -1154,7 +1154,7 @@ layer.replot()
 <dd>Convenience overload of setOutlineColor(QColor) choosing the color to be set from
 						 the palette used by SciDAVis for automatically assigning colors to new curves.</dd>
 <dt><span class="term">setFillColor(QColor)</span></dt>
-<dd>Sets the color used for filling the interiour of the symbol. Modifies brush().
+<dd>Sets the color used for filling the interior of the symbol. Modifies brush().
 						 Note that due to the setFillColor(int) overload, and unlike other
 						 methods accepting QColor arguments, basic colors need to be explicitly specified
 						 as QtGui.QColor(Qt.white) etc. instead of just Qt.white.
@@ -1170,7 +1170,7 @@ layer.replot()
 <dd>Sets size of the symbol in paint (pixel) coordinates.</dd>
 <dt><span class="term">setSize(int,int=-1)</span></dt>
 <dd>setSize(width,height) sets the size of the symbol in paint (pixel) coordinates.
-						 If height=-1 (default), it is set to equalt to width.</dd>
+						 If height=-1 (default), it is set to equal to width.</dd>
 <dt><span class="term">setBrush(QBrush)</span></dt>
 <dd>Sets the brush used to fill the interior of the symbol. See PyQt documentation
 						 for how to construct a QBrush.</dd>
@@ -1186,7 +1186,7 @@ layer.replot()
 						 QwtSymbol.VLine, QwtSymbol.Star1, QwtSymbol.Star2, QwtSymbol.Hexagon.
 					 </dd>
 <dt><span class="term">brush()</span></dt>
-<dd>Returns the currently set brush (a QBrush) for filling the interiour of the symbol.
+<dd>Returns the currently set brush (a QBrush) for filling the interior of the symbol.
 						 Due to a design limitation of Qwt, setting attributes of the brush directly has no effect.
 						 You need to create a copy of the brush, change its attributes and hand it again to setBrush().
 					 </dd>
@@ -1207,7 +1207,7 @@ layer.replot()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380204364"></a>class QwtPlotCurve</h4></div></div></div>
+<a name="idp1374007308"></a>class QwtPlotCurve</h4></div></div></div>
 <p>Represents a curve with symbols and/or lines on a graph.
 				 This class is part of the Qwt library, but exported and documented as part of
 				 SciDAVis's API for simplicity. Also, convenience methods for setting outline/fill
@@ -1309,7 +1309,7 @@ layer.replot()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1379902876"></a>class Grid</h4></div></div></div>
+<a name="idp1374027180"></a>class Grid</h4></div></div></div>
 <p>Handles options related to the grid drawn on a Layer. Added in SciDAVis 0.2.4.</p>
 <pre class="programlisting" width="80">
 layer = newGraph().activeLayer()
@@ -1380,7 +1380,7 @@ layer.replot()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380250276"></a>class Layer (inherits QWidget)</h4></div></div></div>
+<a name="idp1374045020"></a>class Layer (inherits QWidget)</h4></div></div></div>
 <p>A layer on a graph. All elements in a graph are organized in layers, so whenever
 				 you're working with graphs, you're also dealing with layers. Note that many changes
 				 do not show up until you call replot() - if you're changing many options on a complex
@@ -1466,19 +1466,19 @@ layer.replot()
 <dt><span class="term">insertParametricCurve(string, string, double=0, double=1,
 						 string="t", int=100, string=QtCore.QString())</span></dt>
 <dd>insertParametricCurve(x_formula, y_formula, from, to, parameter, points, title)
-						 insert a fucntion curve specified by formulas for the abscissa and ordinate
+						 insert a function curve specified by formulas for the abscissa and ordinate
 						 components in cartesian coordinates, both of which are evaluated using muParser
 						 with given parameter ("t" by default), and returns a boolean indicating
 						 success or failure. Optionally, the interval [start,end]
 						 covered by the free parameter, the number of points where the function will be
-						 evaluated and the curvet title can be overridden.
+						 evaluated and the curve title can be overridden.
 						 Added in SciDAVis 0.2.4.
 					 </dd>
 <dt><span class="term">addErrorBars(string, Table, string, int=1, int=1, int=8,
 						 QColor=QColor(Qt.black), bool=True, bool=True, bool=True)</span></dt>
 <dd>addErrorBars(curve, table, err_col_name, orientation, width, cap_length, color,
 						 through, minus, plus) adds error bars to the curve specified by its name (as
-						 displayed in the add/remove curve dialog and the curves's context menu). Data
+						 displayed in the add/remove curve dialog and the curves' context menu). Data
 						 for the error bars is taken from the given table and column. Optionally, you can
 						 override the orientation (default is 1 for vertical, 0 means horizontal), the
 						 width of the pen used to draw the error bars, the length of the caps in pixels,
@@ -1616,7 +1616,7 @@ layer.replot()
 <dt><span class="term">export(string)</span></dt>
 <dd>Quickly export layer to the indicated file, without bothering about the
 						 exportImage()/exportVector() distinction and related options. The file format
-						 is determined automatically by looking at the extension of the specfied file
+						 is determined automatically by looking at the extension of the specified file
 						 name; supported formats depend on your installation of Qt and can be viewed by
 						 invoking the export dialog from the GUI and looking through the
 						 "file type" box.</dd>
@@ -1650,7 +1650,7 @@ layer.replot()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380302084"></a>class Graph (inherits MDIWindow)</h4></div></div></div>
+<a name="idp1374096796"></a>class Graph (inherits MDIWindow)</h4></div></div></div>
 <p>A graph window, consisting of layers, which in turn contain plot curves and markers.
 			 </p>
 <pre class="programlisting" width="80">
@@ -1723,7 +1723,7 @@ g.arrangeLayers()
 <dt><span class="term">export(string)</span></dt>
 <dd>Quickly export graph to the indicated file, without bothering about the
 						 exportImage()/exportVector() distinction and related options. The file format
-						 is determined automatically by looking at the extension of the specfied file
+						 is determined automatically by looking at the extension of the specified file
 						 name; supported formats depend on your installation of Qt and can be viewed by
 						 invoking the export dialog from the GUI and looking through the
 						 "file type" box.</dd>
@@ -1733,7 +1733,7 @@ g.arrangeLayers()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380318100"></a>class Note (inherits MDIWidget)</h4></div></div></div>
+<a name="idp1374112812"></a>class Note (inherits MDIWidget)</h4></div></div></div>
 <p>A note/script window containing arbitrary text, all or parts of which can be executed
 				 as Python code. Triggering executing of code in a Note currently doesn't work reliably,
 				 but this can essentially be circumvented using exec(str(note.text())).</p>
@@ -1762,9 +1762,9 @@ n.exportASCII("output.txt")
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380323796"></a>class ApplicationWindow (inherits QMainWindow)</h4></div></div></div>
+<a name="idp1374118508"></a>class ApplicationWindow (inherits QMainWindow)</h4></div></div></div>
 <p>Manages the current project. The project from which a piece of Python code is
-				 excecuted is accessible via the module attribute <code class="varname">scidavis.app</code>.
+				 executed is accessible via the module attribute <code class="varname">scidavis.app</code>.
 				 However, most of the time, this instance is used implicitly via methods copied to the
 				 global namespace by the default scidavisrc.py configuration file.</p>
 <pre class="programlisting" width="80">
@@ -1881,7 +1881,7 @@ app.activeFolder().save("subproject.sciprj")
 <dt><span class="term">setActiveFolder(folder)</span></dt>
 <dd>Given a Folder object, changes the active folder to it.
 						 Since MDIWindows are always added to the active folder, this is necessary for
-						 script-driven creation of objects in specific subfolders. Added in SciDAVis 0.2.5.
+						 script-driven creation of objects in specific sub-folders. Added in SciDAVis 0.2.5.
 					 </dd>
 <dt><span class="term">rootFolder()</span></dt>
 <dd>Returns the root folder of the project.</dd>
@@ -1899,7 +1899,7 @@ app.activeFolder().save("subproject.sciprj")
 						 on previous versions.</dd>
 <dt><span class="term">setPreferences(Layer)</span></dt>
 <dd>DEPRECATED. Prior to SciDAVis 0.2.4, it was necessary to call this on a
-						 layer created using Graph.addLayer() if you wanted the layer to be intialized
+						 layer created using Graph.addLayer() if you wanted the layer to be initialized
 						 correctly. This is now done automatically as part of addLayer(); doing so again
 						 doesn't hurt, but is not necessary any more. 
 					 </dd>
@@ -1907,7 +1907,7 @@ app.activeFolder().save("subproject.sciprj")
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380354052"></a>class Fit (inherits QObject)</h4></div></div></div>
+<a name="idp1374148756"></a>class Fit (inherits QObject)</h4></div></div></div>
 <p>This is the abstract base class of the various models that can be used for
 				 least-squares parameter fitting; in other words, you can only create instances of
 				 subclasses of this class, but the methods described here are common to all of these
@@ -2023,7 +2023,7 @@ app.activeFolder().save("subproject.sciprj")
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380376684"></a>class Folder (inherits QObject)</h4></div></div></div>
+<a name="idp1374170844"></a>class Folder (inherits QObject)</h4></div></div></div>
 <div class="variablelist"><dl class="variablelist compact">
 <dt><span class="term">Folder(name)</span></dt>
 <dd>Construct a new folder with the given name. You can add it as a subfolder
@@ -2038,7 +2038,7 @@ app.activeFolder().save("subproject.sciprj")
 <dt><span class="term">path()</span></dt>
 <dd>Returns the absolute path of this folder within its project (a string).</dd>
 <dt><span class="term">folders()</span></dt>
-<dd>Returns the list of subfolders.</dd>
+<dd>Returns the list of sub-folders.</dd>
 <dt><span class="term">folder(string, bool=True, bool=False)</span></dt>
 <dd>
 						 folder(name, case_sensitive, partial_match) returns the first subfolder matching
@@ -2057,19 +2057,19 @@ app.activeFolder().save("subproject.sciprj")
 					 </dd>
 <dt><span class="term">table(string, bool=False)</span></dt>
 <dd>table(name, recursive) returns the table of the given name in this folder;
-						 if no such table exists and recursive is True, subfolders are searched as well.
+						 if no such table exists and recursive is True, sub-folders are searched as well.
 					 </dd>
 <dt><span class="term">matrix(string, bool=False)</span></dt>
 <dd>matrix(name, recursive) returns the matrix of the given name in this folder;
-						 if no such matrix exists and recursive is True, subfolders are searched as well.
+						 if no such matrix exists and recursive is True, sub-folders are searched as well.
 					 </dd>
 <dt><span class="term">graph(string, bool=False)</span></dt>
 <dd>graph(name, recursive) returns the graph of the given name in this folder;
-						 if no such graph exists and recursive is True, subfolders are searched as well.
+						 if no such graph exists and recursive is True, sub-folders are searched as well.
 					 </dd>
 <dt><span class="term">note(string, bool=False)</span></dt>
 <dd>note(name, recursive) returns the note of the given name in this folder;
-						 if no such note exists and recursive is True, subfolders are searched as well.
+						 if no such note exists and recursive is True, sub-folders are searched as well.
 					 </dd>
 <dt><span class="term">rootFolder()</span></dt>
 <dd>Returns the root folder of the project this folder belongs to.
@@ -2078,7 +2078,7 @@ app.activeFolder().save("subproject.sciprj")
 <dd>Given a file name, saves the content of this folder as a project file.
 						 Added in SciDAVis 0.2.4.</dd>
 <dt><span class="term">addChild(folder)</span></dt>
-<dd>Adds another folder as a subfolder to this one.
+<dd>Adds another folder as a sub-folders to this one.
 						 Added in SciDAVis 0.2.5.</dd>
 </dl></div>
 </div>
@@ -2090,7 +2090,7 @@ app.activeFolder().save("subproject.sciprj")
       modules and define functions and classes that will be available in all
       of your projects. The default initialization file shipped with SciDAVis
       imports Python's <a class="link" href="sec-python.html#Python-functions" title="Mathematical Functions">standard math
-      functions</a> as well as special functions from <a class="ulink" href="http://www.scipy.org" target="_top">SciPy</a> and <a class="ulink" href="http://pygsl.sf.net" target="_top">PyGSL</a>(if available). Also, it
+      functions</a> as well as special functions from <a class="ulink" href="https://www.scipy.org" target="_top">SciPy</a> and <a class="ulink" href="http://pygsl.sourceforge.net" target="_top">PyGSL</a>(if available). Also, it
       creates some handy shortcuts, like
       <strong class="userinput"><code>table("table1")</code></strong> for
       <strong class="userinput"><code>sci.app.table("table1")</code></strong>.</p>
@@ -2108,9 +2108,9 @@ app.activeFolder().save("subproject.sciprj")
       file).</p>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="idp1380393348"></a>Recommended approach to per-user configuration</h4></div></div></div>
+<a name="idp1374187476"></a>Recommended approach to per-user configuration</h4></div></div></div>
 <p>
-				In order to give you full controll over the process of setting up the
+				In order to give you full control over the process of setting up the
 				Python environment within SciDAVis, a per-user configuration file
 				(.scidavisrc.py) will supersede any system-wide configuration file. That
 				is, GSL and SciPy functions as well as many SciDAVis-specific

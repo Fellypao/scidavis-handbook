@@ -22,6 +22,7 @@
     <!ENTITY new-matrix-icon '<inlinemediaobject><imageobject><imagedata format="PNG" fileref="icons/new_matrix.png"/></imageobject></inlinemediaobject>'>
   <!ENTITY new-note-cmd  "<command>New&rarr;New Note/Script</command>">
     <!ENTITY new-note-lnk '<link linkend="new-note-cmd"><command>New&rarr;New Note/Script</command> command</link>'>
+    <!ENTITY new-note-key "<keycode>CTRL+ALT+N</keycode>">
     <!ENTITY new-note-icon '<inlinemediaobject><imageobject><imagedata format="PNG" fileref="icons/new_note.png"/></imageobject></inlinemediaobject>'>
   <!ENTITY new-graph-cmd  "<command>New&rarr;New Graph</command>">
     <!ENTITY new-graph-lnk '<link linkend="new-graph-cmd"><command>New&rarr;New Graph</command> command</link>'>
