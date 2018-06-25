@@ -68,11 +68,7 @@
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="sec-2d-plots"></a>2D X-Y plots</h2></div></div></div>
-<<<<<<< HEAD
 <a class="indexterm" name="idp1395204988"></a><p>A 2D plot is based on curves which are defined by Y values as functions of X values. There are different ways to obtain a 2D plot depending on the way the (X,Y) values are defined:</p>
-=======
-<a class="indexterm" name="idp1372855884"></a><p>A 2D plot is based on curves which are defined by Y values as functions of X values. There are different ways to obtain a 2D plot depending on the way the (X,Y) values are defined:</p>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>You can have your (X,Y) values in a <a class="link" href="general-concepts.html#sec-intro-table" title="Tables">table</a>. You need to select at least one column as X values and one column as Y values. This is specified with the <a class="link" href="sec-table-menu.html#set-column-as-cmd"><span class="command"><strong>Set Column as</strong></span> command</a>. Then you can select the columns and use one command of the <a class="link" href="sec-plot-menu.html" title="The Plot Menu">Plot menu</a> to plot the data.</p></li>
 <li class="listitem"><p>If you want to plot a function, you don't need a table. You can use directly the <a class="link" href="reference.html#new-function-plot-cmd"><span class="command"><strong>New→New Function Plot</strong></span> command</a>. This will open the corresponding dialog box and you will be able to define the mathematical expression of your function. In this case, plot can be obtained from functions in cartesian coordinates Y(X), but also in parametered coordinates (X(t),Y(t)), or in angular coordinates r(theta);.</p></li>
@@ -83,11 +79,7 @@
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="sec-2d-plot-from-data"></a>2D plot from data.</h3></div></div></div>
-<<<<<<< HEAD
 <a class="indexterm" name="idp1395256156"></a><p>The data must be stored in a <a class="link" href="general-concepts.html#sec-intro-table" title="Tables">table</a>. There are several possibilities to insert your (X,Y) values in the table: you can write them directly from the keyboard, or read them from a file. Here we will use the first solution, refer to the <a class="link" href="reference.html#import-ascii-cmd"><span class="command"><strong>Import Ascii</strong></span> command</a> to use the second one.</p>
-=======
-<a class="indexterm" name="idp1372907020"></a><p>The data must be stored in a <a class="link" href="general-concepts.html#sec-intro-table" title="Tables">table</a>. There are several possibilities to insert your (X,Y) values in the table: you can write them directly from the keyboard, or read them from a file. Here we will use the first solution, refer to the <a class="link" href="reference.html#import-ascii-cmd"><span class="command"><strong>Import Ascii</strong></span> command</a> to use the second one.</p>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>The first step is to create an empty project with the <a class="link" href="reference.html#new-project-cmd"><span class="command"><strong>New→New Project</strong></span> command</a> from the <a class="link" href="reference.html#sec-file-menu" title="The File Menu">File menu</a>, you can also use the key <span class="keycode">CTRL+N</span> or the <span class="inlinemediaobject"><img src="icons/new.png"></span> icon from the <a class="link" href="toolbars.html#sec-file-toolbar" title="The File Toolbar">File toolbar</a>. Then create a new table with the <a class="link" href="reference.html#new-table-cmd"><span class="command"><strong>New→New Table</strong></span> command</a> from the <a class="link" href="reference.html#sec-file-menu" title="The File Menu">File menu</a> or with the <span class="keycode">CTRL+T</span> or with the <span class="inlinemediaobject"><img src="icons/table.png"></span> icon from the <a class="link" href="toolbars.html#sec-file-toolbar" title="The File Toolbar">File toolbar</a>.</p>
 <p>At its creation, the table has two column (one for X and one for Y) and 32 rows. You can add rows and columns by selecting a row or a column and using the right button of the mouse, you can also modify the number of rows and columns with the <a class="link" href="sec-table-menu.html#table-dimensions-cmd"><span class="command"><strong>Dimensions</strong></span> command</a> from the <a class="link" href="sec-table-menu.html" title="The Table Menu">Table menu</a>. Then, enter your values, and you obtain the table shown in figure <a class="xref" href="using.html#fig-simple-2dplot-1" title="Figure 2.1. A simple 2D plot: the table.">2.1</a></p>
 <div class="figure">
@@ -106,11 +98,7 @@
 </div>
 <br class="figure-break"><p>Finally, you have to save your project in a '.sciprj' file with the <a class="link" href="reference.html#save-project-cmd"><span class="command"><strong>Save Project</strong></span> command</a> from the <a class="link" href="reference.html#sec-file-menu" title="The File Menu">File menu</a> or with the <span class="keycode">CTRL+S</span> or with the <span class="inlinemediaobject"><img src="icons/filesave.png"></span> icon from the <a class="link" href="toolbars.html#sec-file-toolbar" title="The File Toolbar">File toolbar</a>. Depending on your application, you can export your plot to a standard image file with the command  <a class="link" href="reference.html#export-graph-current-cmd"><span class="command"><strong>Export Graph→Current</strong></span> command</a> from the <a class="link" href="reference.html#sec-file-menu" title="The File Menu">File menu</a> (or with the <span class="keycode">ALT+G</span> keycode).
 </p>
-<<<<<<< HEAD
 <a class="indexterm" name="idp1395286548"></a><p>There are several types of plots which can be built from a table. They are presented in the <a class="link" href="sec-plot-menu.html" title="The Plot Menu">Plot menu</a>. One important feature is that it is possible to use up to four axis for the data. For example, create a new table, modify its dimension to 4 columns and 7 rows. Then select the third column and set it as X with the <a class="link" href="sec-table-menu.html#set-column-as-cmd"><span class="command"><strong>Set Column as</strong></span> command</a> from the <a class="link" href="sec-table-menu.html" title="The Table Menu">Table menu</a>; you can then enter the values of two series (X1,Y1) and (X2,Y2) as show in the figure <a class="xref" href="using.html#fig-two-axes-plot" title="Figure 2.4. A table with two series of values (X1,Y1) and (X2,Y2).">2.4</a>.</p>
-=======
-<a class="indexterm" name="idp1372938140"></a><p>There are several types of plots which can be built from a table. They are presented in the <a class="link" href="sec-plot-menu.html" title="The Plot Menu">Plot menu</a>. One important feature is that it is possible to use up to four axis for the data. For example, create a new table, modify its dimension to 4 columns and 7 rows. Then select the third column and set it as X with the <a class="link" href="sec-table-menu.html#set-column-as-cmd"><span class="command"><strong>Set Column as</strong></span> command</a> from the <a class="link" href="sec-table-menu.html" title="The Table Menu">Table menu</a>; you can then enter the values of two series (X1,Y1) and (X2,Y2) as show in the figure <a class="xref" href="using.html#fig-two-axes-plot" title="Figure 2.4. A table with two series of values (X1,Y1) and (X2,Y2).">2.4</a>.</p>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <div class="figure">
 <a name="fig-two-axes-plot"></a><p class="title"><b>Figure 2.4. A table with two series of values (X1,Y1) and (X2,Y2).</b></p>
 <div class="figure-contents"><div class="mediaobject"><img src="tutorial/2axes-2dplot-1.png" alt="A table with two series of values (X1,Y1) and (X2,Y2)."></div></div>
@@ -125,17 +113,10 @@
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="sec-2d-plot-from-function"></a>2D plot from function.</h3></div></div></div>
-<<<<<<< HEAD
 <a class="indexterm" name="idp1395298428"></a><p>There are two ways to obtain such a plot: you can plot directly a function or fill a table with the values calculated from this function before doing a plot in the classical way.</p>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="idp1395299468"></a>Direct plot of a function.</h4></div></div></div>
-=======
-<a class="indexterm" name="idp1372950092"></a><p>There are two ways to obtain such a plot: you can plot directly a function or fill a table with the values calculated from this function before doing a plot in the classical way.</p>
-<div class="sect3">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="idp1372951100"></a>Direct plot of a function.</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>If you just want to plot a function, you can use the <a class="link" href="reference.html#new-function-plot-cmd"><span class="command"><strong>New→New Function Plot</strong></span> command</a> from the <a class="link" href="reference.html#sec-file-menu" title="The File Menu">File menu</a> or with the <span class="keycode">CTRL+F</span> or with the <span class="inlinemediaobject"><img src="icons/newF.png"></span> icon from the <a class="link" href="toolbars.html#sec-file-toolbar" title="The File Toolbar">File toolbar</a>.</p>
 <p>You can then enter the expression of your mathematical function, the X range used for the plot, and the number of points used in this X range. See the <a class="link" href="sec-graph-menu.html#add-function-cmd"><span class="command"><strong>Add Function</strong></span> command</a> for details.</p>
 <div class="figure">
@@ -157,11 +138,7 @@
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="sec-table-function-plot"></a>Filling of a table with the values of a function.</h4></div></div></div>
-<<<<<<< HEAD
 <a class="indexterm" name="idp1395312884"></a><p>If you just want to work not only with the plot but also with the data, you can create a new table as explained in the <a class="link" href="using.html#sec-2d-plot-from-data" title="2D plot from data.">previous section</a>. Then you can fill this table with the values of a function with the <a class="link" href="sec-table-menu.html#assign-formula-cmd"><span class="command"><strong>Assign Formula</strong></span> command</a>. The main advantage of this method is that you can do further analysis of the calculated data as the are kept in a table.</p>
-=======
-<a class="indexterm" name="idp1372964628"></a><p>If you just want to work not only with the plot but also with the data, you can create a new table as explained in the <a class="link" href="using.html#sec-2d-plot-from-data" title="2D plot from data.">previous section</a>. Then you can fill this table with the values of a function with the <a class="link" href="sec-table-menu.html#assign-formula-cmd"><span class="command"><strong>Assign Formula</strong></span> command</a>. The main advantage of this method is that you can do further analysis of the calculated data as the are kept in a table.</p>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>To obtain the same plot as in the previous example, you need to create a new table (key <span class="keycode">CTRL+T</span>) and use the <a class="link" href="sec-table-menu.html#table-dimensions-cmd"><span class="command"><strong>Dimensions</strong></span> command</a> to define 300 rows, then select the first column and use the command <a class="link" href="sec-table-menu.html#assign-formula-cmd"><span class="command"><strong>Assign Formula</strong></span> command</a> from the context menu, or from the <a class="link" href="sec-table-menu.html" title="The Table Menu">Table menu</a>. The row number symbol is <span class="emphasis"><em>i</em></span>, so you can enter the function expression <span class="emphasis"><em>i/10</em></span> (figure <a class="xref" href="using.html#fig-table-function-plot-1" title="Figure 2.9. Function plot: filling of the X column.">2.9</a>).</p>
 <div class="figure">
 <a name="fig-table-function-plot-1"></a><p class="title"><b>Figure 2.9. Function plot: filling of the X column.</b></p>
@@ -215,11 +192,7 @@
 <div class="sect4">
 <div class="titlepage"><div><div><h5 class="title">
 <a name="sec-plot-details-layer"></a>Options for the layer</h5></div></div></div>
-<<<<<<< HEAD
 <a class="indexterm" name="idp1395350132"></a><p>This dialog can be used to modify the background color of the global plot area (i.e. the layer), the color of the canvas (that is the area in which curves are plotted), and the border of the plot. This border is for the global plot, if you want to add a border to the canvas, you can use the <span class="emphasis"><em>general</em></span> tag of the <a class="link" href="sec-format-menu.html#format-axes-cmd"><span class="command"><strong>Axes</strong></span> command</a>. If the image format use to save the plots support it, you can also control the transparency of these objects through the opacity parameter. The default value is 255 which means no transparency. See the <a class="link" href="reference.html#export-graph-cmd"><span class="command"><strong>Export Graph</strong></span> command</a> for details on image formats.</p>
-=======
-<a class="indexterm" name="idp1373001652"></a><p>This dialog can be used to modify the background color of the global plot area (i.e. the layer), the color of the canvas (that is the area in which curves are plotted), and the border of the plot. This border is for the global plot, if you want to add a border to the canvas, you can use the <span class="emphasis"><em>general</em></span> tag of the <a class="link" href="sec-format-menu.html#format-axes-cmd"><span class="command"><strong>Axes</strong></span> command</a>. If the image format use to save the plots support it, you can also control the transparency of these objects through the opacity parameter. The default value is 255 which means no transparency. See the <a class="link" href="reference.html#export-graph-cmd"><span class="command"><strong>Export Graph</strong></span> command</a> for details on image formats.</p>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <div class="figure">
 <a name="fig-plot-details-layer"></a><p class="title"><b>Figure 2.11. The <span class="emphasis"><em>Plot details</em></span> Dialog: general properties of the layers.</b></p>
 <div class="figure-contents"><div class="mediaobject"><img src="pics/plot-details-layer.png" alt="The Plot details Dialog: general properties of the layers."></div></div>
@@ -229,13 +202,8 @@
 <div class="sect4">
 <div class="titlepage"><div><div><h5 class="title">
 <a name="sec-plot-details-series"></a>Custom curves for data series</h5></div></div></div>
-<<<<<<< HEAD
 <a class="indexterm" name="idp1395355812"></a><p>The commands can be accessed by a double click on a curve, or by using the <a class="link" href="sec-format-menu.html#format-plot-cmd"><span class="command"><strong>Plot</strong></span> command</a> and selecting a curve in the window on the left. The right part of the dialog box contains several tabs which depend on the kind of plot that you are using. The left part of the dialog window shows the curves which are plotted in the active layer. All the modifications will be done on the selected curve.</p>
 <a class="indexterm" name="idp1395357716"></a><p>In this dialog box, beside the customization of data curves, you can change the columns which are used by clicking on the <span class="emphasis"><em>Plot Associations...</em></span> button. This will open a dialog which can be used to select the columns of the table which are used as X and Y values.</p>
-=======
-<a class="indexterm" name="idp1373007372"></a><p>The commands can be accessed by a double click on a curve, or by using the <a class="link" href="sec-format-menu.html#format-plot-cmd"><span class="command"><strong>Plot</strong></span> command</a> and selecting a curve in the window on the left. The right part of the dialog box contains several tabs which depend on the kind of plot that you are using. The left part of the dialog window shows the curves which are plotted in the active layer. All the modifications will be done on the selected curve.</p>
-<a class="indexterm" name="idp1373009276"></a><p>In this dialog box, beside the customization of data curves, you can change the columns which are used by clicking on the <span class="emphasis"><em>Plot Associations...</em></span> button. This will open a dialog which can be used to select the columns of the table which are used as X and Y values.</p>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <div class="figure">
 <a name="fig-plot-associations"></a><p class="title"><b>Figure 2.12. The <span class="emphasis"><em>Plot details</em></span> Dialog: Plot Associations.</b></p>
 <div class="figure-contents"><div class="mediaobject"><img src="pics/plot-associations.png" alt="The Plot details Dialog: Plot Associations."></div></div>
@@ -277,19 +245,11 @@
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="sec-default-2d-plot"></a>Changing default 2D plot options</h3></div></div></div>
-<<<<<<< HEAD
 <a class="indexterm" name="idp1395376740"></a><p>There are two ways to modify the default style which is used for plots. The first one applies to all plot and is reached by the <a class="link" href="sec-edit-menu.html#preferences-cmd"><span class="command"><strong>Preferences</strong></span> command</a> (in the <a class="link" href="sec-edit-menu.html" title="The Edit Menu">Edit menu</a>). And the second one is to define templates for a specific family of plots with the <a class="link" href="reference.html#save-as-template-cmd"><span class="command"><strong>Save as Template</strong></span> command</a>.</p>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="sec-preferences-2d-plot"></a>Modification of default options</h4></div></div></div>
 <a class="indexterm" name="idp1395380260"></a><p>In the dialog box which is opened by the <span class="command"><strong>Preferences</strong></span>, the third set of options is used to customize the default aspect of <span class="emphasis"><em>2D plots</em></span>. The first tab is used to set some general options. Most of them are obvious to understand. If <span class="emphasis"><em>autoscaling</em></span> is set, the scales of the axes will be reset to their default values each time a modification is done on the data series. The <span class="emphasis"><em>scale font</em></span> option is set by default, in this case the size of the font are modified each time the window size is modified.</p>
-=======
-<a class="indexterm" name="idp1373028340"></a><p>There are two ways to modify the default style which is used for plots. The first one applies to all plot and is reached by the <a class="link" href="sec-edit-menu.html#preferences-cmd"><span class="command"><strong>Preferences</strong></span> command</a> (in the <a class="link" href="sec-edit-menu.html" title="The Edit Menu">Edit menu</a>). And the second one is to define templates for a specific family of plots with the <a class="link" href="reference.html#save-as-template-cmd"><span class="command"><strong>Save as Template</strong></span> command</a>.</p>
-<div class="sect3">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="sec-preferences-2d-plot"></a>Modification of default options</h4></div></div></div>
-<a class="indexterm" name="idp1373031844"></a><p>In the dialog box which is opened by the <span class="command"><strong>Preferences</strong></span>, the third set of options is used to customize the default aspect of <span class="emphasis"><em>2D plots</em></span>. The first tab is used to set some general options. Most of them are obvious to understand. If <span class="emphasis"><em>autoscaling</em></span> is set, the scales of the axes will be reset to their default values each time a modification is done on the data series. The <span class="emphasis"><em>scale font</em></span> option is set by default, in this case the size of the font are modified each time the window size is modified.</p>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <div class="figure">
 <a name="fig-preferences-dialog-3a"></a><p class="title"><b>Figure 2.18. The preferences dialog: 2D plot options.</b></p>
 <div class="figure-contents"><div class="mediaobject"><img src="pics/preferences-dialog3a.png" alt="The preferences dialog: 2D plot options."></div></div>

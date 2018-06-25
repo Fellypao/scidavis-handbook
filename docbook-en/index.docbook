@@ -4,11 +4,7 @@
 		Docbook main file for Scidavis Manual
 		*************************************
 
-<<<<<<< HEAD
 		updated for SciDAVis version >= 1.23 ***
-=======
-		updated for SciDAVis version >= 1.22 ***
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 
 *************************************************************************
 -->
@@ -18,11 +14,7 @@
 -->
   <!ENTITY appname "SciDAVis">
   <!ENTITY kappname "&appname;">
-<<<<<<< HEAD
   <!ENTITY version "1.23">
-=======
-  <!ENTITY version "1.22">
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 
   <!ENTITY kappversion "&version;">
   <!ENTITY kappdirectory "scidavis">

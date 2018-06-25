@@ -27,21 +27,13 @@
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="sec-python"></a>Python</h2></div></div></div>
-<<<<<<< HEAD
 <a class="indexterm" name="idp1396139684"></a><p>This module provides bindings to the <a class="ulink" href="https://www.python.org" target="_top">Python</a> programming language. Basic
-=======
-<a class="indexterm" name="idp1373790900"></a><p>This module provides bindings to the <a class="ulink" href="https://www.python.org" target="_top">Python</a> programming language. Basic
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
     usage in the context of SciDAVis will be discussed below, but for more
     in-depth information on the language itself, please refer to its excellent
     <a class="ulink" href="https://www.python.org/doc" target="_top">documentation</a>.</p>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<<<<<<< HEAD
 <a name="idp1396141244"></a>Getting Started</h3></div></div></div>
-=======
-<a name="idp1373792460"></a>Getting Started</h3></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>Make sure your current project uses Python as its interpreter by
 			 selecting the menu point Scripting-&gt;Scripting Language and
 			 double-clicking on "Python" in the resulting dialog (if the dialog
@@ -85,17 +77,10 @@
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<<<<<<< HEAD
 <a name="idp1396146604"></a>Python Basics</h3></div></div></div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="idp1396146972"></a>Expressions</h4></div></div></div>
-=======
-<a name="idp1373797604"></a>Python Basics</h3></div></div></div>
-<div class="sect3">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="idp1373797924"></a>Expressions</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>Mathematical expressions work largely as expected. However,
 				there's one caveat, especially when switching from muParser:
 				<strong class="userinput"><code>a^b</code></strong> does not mean "raise a to the power of b" but
@@ -110,11 +95,7 @@
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396150076"></a>Statements</h4></div></div></div>
-=======
-<a name="idp1373800708"></a>Statements</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>One thing you have to know when working with Python is that
 				indentation is very important. It is used for grouping (most other
 				languages use either braces or keywords like
@@ -230,11 +211,7 @@ else:
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<<<<<<< HEAD
 <a name="idp1396165756"></a>Evaluation Reloaded</h3></div></div></div>
-=======
-<a name="idp1373809940"></a>Evaluation Reloaded</h3></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>As we've already mentioned above, there's a bit more to evaluation
 				than just expressions. Note that Python itself can indeed only
 				evaluate expressions; the following describes a feature of SciDAVis
@@ -289,22 +266,14 @@ def f():
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="Python-functions"></a>Mathematical Functions</h3></div></div></div>
-<<<<<<< HEAD
 <a class="indexterm" name="idp1396171892"></a><p>Python comes with some basic mathematical functions that are
-=======
-<a class="indexterm" name="idp1373816180"></a><p>Python comes with some basic mathematical functions that are
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
       automatically imported (if you use the <a class="link" href="sec-python.html#Python-init" title="The Initialization File">initialization file</a> shipped with SciDAVis).
       Along with them, the constants e (Euler's number) and pi (the one and
       only) are defined. Many, many more functions can be obtained by installing
 		<a class="ulink" href="https://www.scipy.org" target="_top">SciPy</a> and/or
 		<a class="ulink" href="http://pygsl.sourceforge.net" target="_top">PyGSL</a>.</p>
 <div class="table">
-<<<<<<< HEAD
 <a name="idp1396174308"></a><p class="title"><b>Table 4.4. Supported Mathematical Functions</b></p>
-=======
-<a name="idp1373818492"></a><p class="title"><b>Table 4.4. Supported Mathematical Functions</b></p>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <div class="table-contents"><table summary="Supported Mathematical Functions" width="100%" border="1">
 <colgroup>
 <col align="left" class="name">
@@ -430,11 +399,7 @@ def f():
       SciDAVis.</p>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396194668"></a>Establishing contact</h4></div></div></div>
-=======
-<a name="idp1373837828"></a>Establishing contact</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>Accessing the objects in your project is straight-forward,
         </p>
 <pre class="programlisting" width="40">
@@ -491,11 +456,7 @@ n = f.note(name, recursive=False)
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396199980"></a>Working with Tables</h4></div></div></div>
-=======
-<a name="idp1373842948"></a>Working with Tables</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>We'll assume that you have assigned some table to the variable
         <code class="varname">t</code>. You can access its numeric cell values with
         </p>
@@ -554,11 +515,7 @@ t.notifyChanges()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396206708"></a>Working with Matrices</h4></div></div></div>
-=======
-<a name="idp1373849340"></a>Working with Matrices</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>We'll assume that you have assigned some matrix to the variable
         <code class="varname">m</code>. Accessing cell values is very similar to Table,
         but since Matrix doesn't use column logic, row arguments are specified
@@ -578,11 +535,7 @@ m.numCols()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396208820"></a>Plotting and Working with Graphs</h4></div></div></div>
-=======
-<a name="idp1373851372"></a>Plotting and Working with Graphs</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>If you want to create a new Graph window for some data in table
         table1, you can use the plot command: </p>
 <pre class="programlisting" width="40">
@@ -691,11 +644,7 @@ g.exportToEPS(filename)
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396231444"></a>Fitting</h4></div></div></div>
-=======
-<a name="idp1373873300"></a>Fitting</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>Assuming you have a Graph named "graph1" with a curve entitled
         "table1_2" (on its active layer), a minimal Fit example would be:
         </p>
@@ -789,11 +738,7 @@ f.covarianceMatrix("cov")
 		 </p>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396245212"></a>class AbstractAspect (inherits QObject)</h4></div></div></div>
-=======
-<a name="idp1373887068"></a>class AbstractAspect (inherits QObject)</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>A base class for content of a project. While currently the only AbstractAspect
 				 accessible to you is Column, a future release will make more extensive usage of this;
 				 probably with some revisions in the design, so only some basic functions are documented
@@ -831,11 +776,7 @@ table("my-table").column("2").remove()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396254452"></a>class Column (inherits AbstractAspect)</h4></div></div></div>
-=======
-<a name="idp1373896308"></a>class Column (inherits AbstractAspect)</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>Represents a column in a table.</p>
 <p>In addition to the valueAt()/setValueAt() interface described below, starting with
 				 SciDAVis 0.2.4, Y columns support
@@ -923,11 +864,7 @@ dest.copy(col, 5, 2, 10)
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396277980"></a>class MDIWindow (inherits QWidget)</h4></div></div></div>
-=======
-<a name="idp1373919836"></a>class MDIWindow (inherits QWidget)</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>Base class of Table, Matrix, Graph and Note. A redesigned analogue under the name of "Part" (inheriting from AbstractAspect) is under development; it should be possible to provide a backwards-compatible interface, though.</p>
 <pre class="programlisting" width="80">
 tmp = newTable("temp1", 2, 10)
@@ -962,11 +899,7 @@ tmp.close()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396286412"></a>class Table (inherits MDIWindow)</h4></div></div></div>
-=======
-<a name="idp1373928268"></a>class Table (inherits MDIWindow)</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>Class of table (spreadsheet) windows.</p>
 <pre class="programlisting" width="80">
 tab = newTable("tabula",2,10)
@@ -1040,11 +973,7 @@ tab.normalize()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396304364"></a>class Matrix (inherits MDIWindow)</h4></div></div></div>
-=======
-<a name="idp1373946220"></a>class Matrix (inherits MDIWindow)</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>Class of matrix windows.</p>
 <pre class="programlisting" width="80">
 mat = newMatrix("mat", 10, 20)
@@ -1100,11 +1029,7 @@ mat.recalculate()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396319436"></a>class ArrowMarker</h4></div></div></div>
-=======
-<a name="idp1373961292"></a>class ArrowMarker</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>A line or an arrow displayed on a graph.</p>
 <pre class="programlisting" width="80">
 arrow = ArrowMarker()
@@ -1153,11 +1078,7 @@ layer.replot()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396328884"></a>class ImageMarker</h4></div></div></div>
-=======
-<a name="idp1373970740"></a>class ImageMarker</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>An image to be displayed on a graph.</p>
 <pre class="programlisting" width="80">
 layer = newGraph().activeLayer()
@@ -1181,11 +1102,7 @@ layer.replot()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396333876"></a>class Legend</h4></div></div></div>
-=======
-<a name="idp1373975732"></a>class Legend</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>Text boxes displayed on a graph. While this is also used for legends, a better
 				 (since more general) name would probably be TextMarker.</p>
 <pre class="programlisting" width="80">
@@ -1221,11 +1138,7 @@ layer.replot()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396340236"></a>class QwtSymbol</h4></div></div></div>
-=======
-<a name="idp1373982092"></a>class QwtSymbol</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>Represents a type of symbol on a scatter plot (ellipse, rectangle etc.) together
 				 with attributes determining parameters like color, size etc. This class is part of the
 				 Qwt library, but exported and documented as part of SciDAVis's API for simplicity. Also,
@@ -1323,11 +1236,7 @@ layer.replot()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396357252"></a>class QwtPlotCurve</h4></div></div></div>
-=======
-<a name="idp1374007308"></a>class QwtPlotCurve</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>Represents a curve with symbols and/or lines on a graph.
 				 This class is part of the Qwt library, but exported and documented as part of
 				 SciDAVis's API for simplicity. Also, convenience methods for setting outline/fill
@@ -1429,11 +1338,7 @@ layer.replot()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396040852"></a>class Grid</h4></div></div></div>
-=======
-<a name="idp1374027180"></a>class Grid</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>Handles options related to the grid drawn on a Layer. Added in SciDAVis 0.2.4.</p>
 <pre class="programlisting" width="80">
 layer = newGraph().activeLayer()
@@ -1504,11 +1409,7 @@ layer.replot()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396403172"></a>class Layer (inherits QWidget)</h4></div></div></div>
-=======
-<a name="idp1374045020"></a>class Layer (inherits QWidget)</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>A layer on a graph. All elements in a graph are organized in layers, so whenever
 				 you're working with graphs, you're also dealing with layers. Note that many changes
 				 do not show up until you call replot() - if you're changing many options on a complex
@@ -1778,11 +1679,7 @@ layer.replot()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396455684"></a>class Graph (inherits MDIWindow)</h4></div></div></div>
-=======
-<a name="idp1374096796"></a>class Graph (inherits MDIWindow)</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>A graph window, consisting of layers, which in turn contain plot curves and markers.
 			 </p>
 <pre class="programlisting" width="80">
@@ -1865,11 +1762,7 @@ g.arrangeLayers()
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396471700"></a>class Note (inherits MDIWidget)</h4></div></div></div>
-=======
-<a name="idp1374112812"></a>class Note (inherits MDIWidget)</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>A note/script window containing arbitrary text, all or parts of which can be executed
 				 as Python code. Triggering executing of code in a Note currently doesn't work reliably,
 				 but this can essentially be circumvented using exec(str(note.text())).</p>
@@ -1898,11 +1791,7 @@ n.exportASCII("output.txt")
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396477396"></a>class ApplicationWindow (inherits QMainWindow)</h4></div></div></div>
-=======
-<a name="idp1374118508"></a>class ApplicationWindow (inherits QMainWindow)</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>Manages the current project. The project from which a piece of Python code is
 				 executed is accessible via the module attribute <code class="varname">scidavis.app</code>.
 				 However, most of the time, this instance is used implicitly via methods copied to the
@@ -2047,11 +1936,7 @@ app.activeFolder().save("subproject.sciprj")
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396507644"></a>class Fit (inherits QObject)</h4></div></div></div>
-=======
-<a name="idp1374148756"></a>class Fit (inherits QObject)</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>This is the abstract base class of the various models that can be used for
 				 least-squares parameter fitting; in other words, you can only create instances of
 				 subclasses of this class, but the methods described here are common to all of these
@@ -2167,11 +2052,7 @@ app.activeFolder().save("subproject.sciprj")
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396529732"></a>class Folder (inherits QObject)</h4></div></div></div>
-=======
-<a name="idp1374170844"></a>class Folder (inherits QObject)</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <div class="variablelist"><dl class="variablelist compact">
 <dt><span class="term">Folder(name)</span></dt>
 <dd>Construct a new folder with the given name. You can add it as a subfolder
@@ -2256,11 +2137,7 @@ app.activeFolder().save("subproject.sciprj")
       file).</p>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<<<<<<< HEAD
 <a name="idp1396546420"></a>Recommended approach to per-user configuration</h4></div></div></div>
-=======
-<a name="idp1374187476"></a>Recommended approach to per-user configuration</h4></div></div></div>
->>>>>>> 2b3048a41b092da7da9b7066adb9feeddd9a5538
 <p>
 				In order to give you full control over the process of setting up the
 				Python environment within SciDAVis, a per-user configuration file
