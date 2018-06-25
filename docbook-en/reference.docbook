@@ -58,7 +58,7 @@ The active items in the menus depend on the active window in the project. If the
           </listitem>
        </varlistentry>
        <varlistentry id="new-note-cmd">
-          <term>&new-note-cmd;</term>
+          <term>&new-note-cmd; (&new-note-key;)</term>
           <listitem>
              <para>Creates a new note window in the project. A note is a simple text window which can be used to add comments to the current project.</para>
              <informalfigure id="fig-new-note">

@@ -27,11 +27,11 @@
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="sec-filtering"></a>Filtering of data curves</h2></div></div></div>
-<a class="indexterm" name="idp1379711836"></a><a class="indexterm" name="idp1379712356"></a><p>In this section, it will be assumed that you have the signal presented in the previous section (see figure <a class="xref" href="analysis.html#fig-exemple-fft-1" title="Figure 3.1. A signal and the FFT dialog box for a plot.">Figure 3.1, “A signal and the FFT dialog box for a plot.”</a>). We can analyze this signal by doing a FFT on the data curve and it will show that this signal has a power spectrum with high and low frequencies (see figure <a class="xref" href="analysis.html#fig-exemple-fft-2" title="Figure 3.2. The resulting FFT with the characteristic frequencies.">Figure 3.2, “The resulting FFT with the characteristic frequencies.”</a>). The newt sections will show the influence of the different filters on this data curve.</p>
+<a class="indexterm" name="idp1395851796"></a><a class="indexterm" name="idp1395852316"></a><p>In this section, it will be assumed that you have the signal presented in the previous section (see figure <a class="xref" href="analysis.html#fig-exemple-fft-1" title="Figure 3.1. A signal and the FFT dialog box for a plot.">Figure 3.1, “A signal and the FFT dialog box for a plot.”</a>). We can analyze this signal by doing a FFT on the data curve and it will show that this signal has a power spectrum with high and low frequencies (see figure <a class="xref" href="analysis.html#fig-exemple-fft-2" title="Figure 3.2. The resulting FFT with the characteristic frequencies.">Figure 3.2, “The resulting FFT with the characteristic frequencies.”</a>). The newt sections will show the influence of the different filters on this data curve.</p>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="sec-fft-filter-low"></a>FFT low pass filter</h3></div></div></div>
-<a class="indexterm" name="idp1379714892"></a><p>This filter allows to cut the high frequencies of a signal. You just have to select the cut-off frequency of the filter. Let us assume that we want to keep the frequencies below 1.5 Hz, we will obtain:</p>
+<a class="indexterm" name="idp1395854780"></a><p>This filter allows to cut the high frequencies of a signal. You just have to select the cut-off frequency of the filter. Let us assume that we want to keep the frequencies below 1.5 Hz, we will obtain:</p>
 <div class="figure">
 <a name="fig-filter-fft-low-signal"></a><p class="title"><b>Figure 3.4. Signal after a FFT low pass filter</b></p>
 <div class="figure-contents"><div class="mediaobject"><img src="pics/filter-fft-low-signal.png" alt="Signal after a FFT low pass filter"></div></div>
@@ -44,7 +44,7 @@
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="sec-fft-filter-high"></a>FFT high pass filter</h3></div></div></div>
-<a class="indexterm" name="idp1379719548"></a><p>This filter allows to cut the low frequencies of a signal. You just have to select the cut-off frequency of the filter. Let us assume that we want to keep the frequencies above 1.5 Hz, we will obtain:</p>
+<a class="indexterm" name="idp1395859436"></a><p>This filter allows to cut the low frequencies of a signal. You just have to select the cut-off frequency of the filter. Let us assume that we want to keep the frequencies above 1.5 Hz, we will obtain:</p>
 <div class="figure">
 <a name="fig-filter-fft-high-signal"></a><p class="title"><b>Figure 3.5. Signal after a FFT high pass filter</b></p>
 <div class="figure-contents"><div class="mediaobject"><img src="pics/filter-fft-high-signal.png" alt="Signal after a FFT high pass filter"></div></div>
@@ -57,7 +57,7 @@
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="sec-fft-filter-band"></a>FFT band pass filter</h3></div></div></div>
-<a class="indexterm" name="idp1379724164"></a><p>This filter allows to cut the low and high frequencies of a signal. You just have to select the high and low cut-off frequencies of the filter. Let us assume that we want to keep the frequencies between 1.5 and 3.5 Hz, we will obtain:</p>
+<a class="indexterm" name="idp1395864052"></a><p>This filter allows to cut the low and high frequencies of a signal. You just have to select the high and low cut-off frequencies of the filter. Let us assume that we want to keep the frequencies between 1.5 and 3.5 Hz, we will obtain:</p>
 <div class="figure">
 <a name="fig-filter-fft-band-signal"></a><p class="title"><b>Figure 3.6. Signal after a FFT band pass filter</b></p>
 <div class="figure-contents"><div class="mediaobject"><img src="pics/filter-fft-band-signal.png" alt="Signal after a FFT band pass filter"></div></div>
@@ -70,7 +70,7 @@
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="sec-fft-filter-block"></a>FFT block band filter</h3></div></div></div>
-<a class="indexterm" name="idp1379728716"></a><p>This filter allows to keep the low and high frequencies of a signal. You just have to select the high and low cut-off frequencies of the filter. Let us assume that we want to remove the frequencies between 1.5 and 3.5 Hz, we will obtain:</p>
+<a class="indexterm" name="idp1395868604"></a><p>This filter allows to keep the low and high frequencies of a signal. You just have to select the high and low cut-off frequencies of the filter. Let us assume that we want to remove the frequencies between 1.5 and 3.5 Hz, we will obtain:</p>
 <div class="figure">
 <a name="fig-filter-fft-block-signal"></a><p class="title"><b>Figure 3.7. Signal after a FFT block band filter</b></p>
 <div class="figure-contents"><div class="mediaobject"><img src="pics/filter-fft-block-signal.png" alt="Signal after a FFT block band filter"></div></div>

@@ -14,17 +14,17 @@ file included in the KDE distribution. -->
 <para>2004-2007 &ion; <email>&email-ion;</email></para>
 <para>2006-2009 &tilman; <email>&email-tilman;</email></para> 
 <para>2006-2009 &knut; <email>&email-knut;</email></para>
-<para>2012-2017 &russell; <email>&email-russell;</email></para>
+<para>2012-2018 &russell; <email>&email-russell;</email></para>
 <para>2013-2015 &dimitry; <email>&email-dimitry;</email></para>
 <para>2016 &arun; <email>&email-arun;</email></para>
-<para>2017 &gbm; <email>&email-gbm;</email></para>
+<para>2017-2018 &gbm; <email>&email-gbm;</email></para>
 <para>2017 &alxpl; <email>&email-alxpl;</email></para>
 
 <para>Documentation copyright:</para>
 <para>2004-2007 &ion; <email>&email-ion;</email></para>
 <para>2006-2009 &roger; <email>&email-roger;</email></para>
 <para>2006-2009 &knut; <email>&email-knut;</email></para>
-<para>2017 &fellype; <email>&email-fellype;</email></para>
+<para>2017-2018 &fellype; <email>&email-fellype;</email></para>
 <para>2017 &gbm; <email>&email-gbm;</email></para>
 
 <para>Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts.</para>
@@ -133,11 +133,11 @@ If you want to build &appname; from sources, don't forget first to download and 
 <ulink url="https://www.qt.io/">Qt</ulink>,
 <ulink url="http://qwtplot3d.sourceforge.net/">QwtPlot3D</ulink>,
 <ulink url="http://qwt.sourceforge.net/index.html">Qwt</ulink>,
-<!-- <ulink url="http://sourceforge.net/projects/liborigin/">liborigin</ulink>,   -->
+<ulink url="http://sourceforge.net/projects/liborigin/">liborigin</ulink>,
 <ulink url="http://www.zlib.net/">zlib</ulink>,  
-<ulink url="http://muparser.sourceforge.net">muParser</ulink>, and
-<ulink url="http://www.gnu.org/software/gsl/">GSL</ulink> libraries/dependencies. And also
-<ulink url="http://www.python.org/">Python</ulink>,
+<ulink url="http://beltoforion.de/article.php?a=muparser">muParser</ulink>, and
+<ulink url="https://www.gnu.org/software/gsl/">GSL</ulink> libraries/dependencies. And also
+<ulink url="https://www.python.org/">Python</ulink>,
 <ulink url="https://www.riverbankcomputing.com/software/sip/intro">SIP</ulink> and
 <ulink url="https://riverbankcomputing.com/software/pyqt/intro">PyQt</ulink> if you want to enable Python scripting in &appname;.
 </para>
@@ -165,7 +165,7 @@ If you want to build &appname; from sources, don't forget first to download and 
 <varlistentry>
   <term>muParser</term>
   <listitem>
-    <para>You also need the <ulink url="http://muparser.sourceforge.net/">muParser</ulink>
+    <para>You also need the <ulink url="http://beltoforion.de/article.php?a=muparser">muParser</ulink>
 	 library 1.28 or later.</para>
   </listitem>
 </varlistentry>
@@ -210,14 +210,14 @@ The latest version of liborigin source code is now shipped with SciDAVis source 
 <sect1 id="installation-from-binary">
 <title>Installation from binary packages</title>
 
-<para>&appname; distributes binaries (usually for Windows and Mac) which can be downloaded from <ulink url="https://sourceforge.net/projects/scidavis/files/">the &appname; page on Sourceforge</ulink>. Many Linux distributions have &appname; binaries in their repositories. You can also find the latest &appname; version for some distributions at <ulink url="http://software.opensuse.org//download.html?project=home:hpcoder1&amp;package=scidavis">the openSUSE build service</ulink>. &appname; can be built easily on <ulink url="https://www.archlinux.org/">Arch Linux</ulink> and <ulink url="http://www.slackware.com/">Slackware</ulink> at <ulink url="https://aur.archlinux.org/packages/scidavis/">AUR</ulink> and <ulink url="https://slackbuilds.org/repository/14.2/academic/scidavis/">SlackBuilds.org</ulink>, respectively.</para>
+<para>&appname; distributes binaries (usually for Windows and MacOS) which can be downloaded from <ulink url="https://sourceforge.net/projects/scidavis/files/">the &appname; page on Sourceforge</ulink>. Many Linux distributions have &appname; binaries in their repositories. You can also find the latest &appname; version for some distributions at <ulink url="http://software.opensuse.org//download.html?project=home:hpcoder1&amp;package=scidavis">the openSUSE build service</ulink>. &appname; can be built easily on <ulink url="https://www.archlinux.org/">Arch Linux</ulink> and <ulink url="http://www.slackware.com/">Slackware</ulink> at <ulink url="https://aur.archlinux.org/packages/scidavis/">AUR</ulink> and <ulink url="https://slackbuilds.org/repository/14.2/academic/scidavis/">SlackBuilds.org</ulink>, respectively.</para>
 
 </sect1>
 
 <sect1 id="compilation">
 <title>Compilation and Installation from sources</title>
 
-<para>To compile &appname; from sources, download the latest source distribution from <ulink url="https://sourceforge.net/projects/scidavis/files/">the &appname; page on Sourceforge</ulink>. It comes as a tar.gz archive containing detailed building instructions. If you are interested in the current development, you can also obtain a snapshot from the <ulink url="&gitpage;">&appname; GitHub repository</ulink>.</para>
+<para>To compile &appname; from sources, download the latest source distribution from <ulink url="https://sourceforge.net/projects/scidavis/files/">the &appname; page on Sourceforge</ulink>. It comes as a tar.gz archive containing detailed build instructions. If you are interested in the current development, you can also obtain a snapshot from the <ulink url="&gitpage;">&appname; GitHub repository</ulink>.</para>
 
 </sect1>
 

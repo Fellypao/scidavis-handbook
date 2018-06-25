@@ -33,9 +33,9 @@
 <dt><span class="sect1"><a href="scripting.html#sec-muParser">muParser</a></span></dt>
 <dt><span class="sect1"><a href="sec-python.html">Python</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="sec-python.html#idp1379997012">Getting Started</a></span></dt>
-<dt><span class="sect2"><a href="sec-python.html#idp1380002156">Python Basics</a></span></dt>
-<dt><span class="sect2"><a href="sec-python.html#idp1380014452">Evaluation Reloaded</a></span></dt>
+<dt><span class="sect2"><a href="sec-python.html#idp1396141244">Getting Started</a></span></dt>
+<dt><span class="sect2"><a href="sec-python.html#idp1396146604">Python Basics</a></span></dt>
+<dt><span class="sect2"><a href="sec-python.html#idp1396165756">Evaluation Reloaded</a></span></dt>
 <dt><span class="sect2"><a href="sec-python.html#Python-functions">Mathematical Functions</a></span></dt>
 <dt><span class="sect2"><a href="sec-python.html#Python-API-Intro">Accessing SciDAVis's functions from Python</a></span></dt>
 <dt><span class="sect2"><a href="sec-python.html#Python-API">API documentation</a></span></dt>
@@ -43,15 +43,15 @@
 </dl></dd>
 </dl>
 </div>
-<a class="indexterm" name="idp1379907468"></a><p>SciDAVis supports different interpreters
+<a class="indexterm" name="idp1396047428"></a><p>SciDAVis supports different interpreters
   for evaluating mathematical expressions and for executing scripts.</p>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="sec-muParser"></a>muParser</h2></div></div></div>
-<a class="indexterm" name="idp1379895916"></a><p>The constants _e=e=E and _pi=pi=PI=Pi are defined, as well as the
+<a class="indexterm" name="idp1396035876"></a><p>The constants _e=e=E and _pi=pi=PI=Pi are defined, as well as the
 		 operators and functions listed below. muParser is purely a parser for mathematical
 		 expressions and as such does not support executing complex scripts. However,
-		 you can make formulas easier to read and modify by assigning subexpressions to
+		 you can make formulas easier to read and modify by assigning sub-expressions to
 		 variables and inserting comments.
 	 </p>
 <p><span class="emphasis"><em>Variable assignments</em></span> evaluate to the assigned value, so
@@ -62,8 +62,15 @@
 	 </p>
 <p><span class="emphasis"><em>Comments</em></span> start with a hash mark (#) and run till the end
 		 of the line.</p>
+<p>It is important to note that the muParser commands listed in this section are 
+		intended to be used to work inside the <span class="emphasis"><em>Formula</em></span> tab of 
+		a <span class="emphasis"><em>Table</em></span>, i.e. most of them will not work as a 
+		<span class="emphasis"><em>script</em></span> in a <span class="emphasis"><em>Note</em></span>. Of course, if
+		one try to execute something like 'a=cos(pi*pi)' in a <span class="emphasis"><em>Note</em></span>, 
+		it will run without errors, but the 'a' value will not be known by the user.
+	 </p>
 <div class="table">
-<a name="idp1379940228"></a><p class="title"><b>Table 4.1. Supported Mathematical Operators</b></p>
+<a name="idp1396081644"></a><p class="title"><b>Table 4.1. Supported Mathematical Operators</b></p>
 <div class="table-contents"><table summary="Supported Mathematical Operators" width="100%" border="1">
 <colgroup>
 <col align="left" class="name">
@@ -80,7 +87,7 @@
 </tr>
 <tr>
 <td align="left">-</td>
-<td align="justify">Substraction</td>
+<td align="justify">Subtraction</td>
 </tr>
 <tr>
 <td align="left">*</td>
@@ -96,15 +103,23 @@
 </tr>
 <tr>
 <td align="left">and</td>
-<td align="justify">logical and (returns 0 or 1)</td>
+<td align="justify">logical and (returns 0 or 1) - works only if SciDAVis is built using muParser 1.x versions</td>
+</tr>
+<tr>
+<td align="left">&amp;&amp;</td>
+<td align="justify">logical and (returns 0 or 1) - works only if SciDAVis is built using muParser &gt;= 2.0.0</td>
 </tr>
 <tr>
 <td align="left">or</td>
-<td align="justify">logical or (returns 0 or 1)</td>
+<td align="justify">logical or (returns 0 or 1) - works only if SciDAVis is built using muParser 1.x versions</td>
+</tr>
+<tr>
+<td align="left">||</td>
+<td align="justify">logical or (returns 0 or 1) - works only if SciDAVis is built using muParser &gt;= 2.0.0</td>
 </tr>
 <tr>
 <td align="left">xor</td>
-<td align="justify">logical exclusive or (returns 0 or 1)</td>
+<td align="justify">logical exclusive or (returns 0 or 1) - works only if SciDAVis is built using muParser 1.x versions; there are no equivalent operator for muParser &gt;= 2.0.0</td>
 </tr>
 <tr>
 <td align="left">&lt;</td>
@@ -134,7 +149,7 @@
 </table></div>
 </div>
 <br class="table-break"><div class="table">
-<a name="idp1379951500"></a><p class="title"><b>Table 4.2. Mathematical Functions</b></p>
+<a name="idp1396094860"></a><p class="title"><b>Table 4.2. Mathematical Functions</b></p>
 <div class="table-contents"><table summary="Mathematical Functions" width="100%" border="1">
 <colgroup>
 <col align="left" class="name">
@@ -151,19 +166,19 @@
 </tr>
 <tr>
 <td align="left">acos(x)</td>
-<td align="justify">inverse cosinus</td>
+<td align="justify">inverse cosine</td>
 </tr>
 <tr>
 <td align="left">acosh(x)</td>
-<td align="justify">inverse hyperbolic cosinus</td>
+<td align="justify">inverse hyperbolic cosine</td>
 </tr>
 <tr>
 <td align="left">asin(x)</td>
-<td align="justify">inverse sinus</td>
+<td align="justify">inverse sine</td>
 </tr>
 <tr>
 <td align="left">asinh(x)</td>
-<td align="justify">inverse hyperbolic sinus</td>
+<td align="justify">inverse hyperbolic sine</td>
 </tr>
 <tr>
 <td align="left">atan(x)</td>
@@ -228,11 +243,11 @@
 </tr>
 <tr>
 <td align="left">cos(x)</td>
-<td align="justify">cosinus of x</td>
+<td align="justify">cosine of x</td>
 </tr>
 <tr>
 <td align="left">cosh(x)</td>
-<td align="justify">hyperbolic cosinus of x</td>
+<td align="justify">hyperbolic cosine of x</td>
 </tr>
 <tr>
 <td align="left">erf(x)</td>
@@ -278,15 +293,15 @@
 </tr>
 <tr>
 <td align="left">ln(x)</td>
-<td align="justify">natural logarythm of x</td>
+<td align="justify">natural logarithm of x</td>
 </tr>
 <tr>
 <td align="left">log(x)</td>
-<td align="justify">decimal logarythm of x</td>
+<td align="justify">decimal logarithm of x</td>
 </tr>
 <tr>
 <td align="left">log2(x)</td>
-<td align="justify">base 2 logarythm of x</td>
+<td align="justify">base 2 logarithm of x</td>
 </tr>
 <tr>
 <td align="left">w0(x)</td>
@@ -332,11 +347,11 @@
 </tr>
 <tr>
 <td align="left">sin(x)</td>
-<td align="justify">sinus of x</td>
+<td align="justify">sine of x</td>
 </tr>
 <tr>
 <td align="left">sinh(x)</td>
-<td align="justify">hyperblic sinus of x</td>
+<td align="justify">hyperbolic sine of x</td>
 </tr>
 <tr>
 <td align="left">sqrt(x)</td>
@@ -354,7 +369,7 @@
 </table></div>
 </div>
 <br class="table-break"><div class="table">
-<a name="idp1379986020"></a><p class="title"><b>Table 4.3. Non-Mathematical Functions</b></p>
+<a name="idp1396129380"></a><p class="title"><b>Table 4.3. Non-Mathematical Functions</b></p>
 <div class="table-contents"><table summary="Non-Mathematical Functions" width="100%" border="1">
 <colgroup>
 <col align="left" class="name">
@@ -367,7 +382,7 @@
 <tbody>
 <tr>
 <td align="left">cell(a,b)</td>
-<td align="justify">In the contex of a matrix, returns the value at row a and column b.
+<td align="justify">In the context of a matrix, returns the value at row a and column b.
 					  In the context of a table, returns the value at column a and row b (remember that tables use column logic).
 					  Everywhere else, this function is undefined.
 
@@ -378,7 +393,7 @@
 <tr>
 <td align="left">cell_(column, row)</td>
 <td align="justify">
-						In the context of a table, return the value of a cell specified using 1-based indices.
+						In the context of a table, return the value of a cell specified using 1-based indexes.
 						Wherever possible, you should use cell() instead, because inserting/removing/moving
 						columns will break formulas using cell_().
 					</td>
@@ -415,7 +430,12 @@
 <tr>
 <td align="left">if(e1,e2,e3)</td>
 <td align="justify">if e1 is true, e2 is executed else e3 is
-              executed.</td>
+		executed (works only if SciDAVis is built using muParser 1.x versions).</td>
+</tr>
+<tr>
+<td align="left">e1?e2:e3</td>
+<td align="justify">if e1 is true, e2 is executed else e3 is
+		executed (C++ style syntax; works only if SciDAVis is built using muParser &gt;= 2.0.0).</td>
 </tr>
 <tr>
 <td align="left">tablecol(t,c)</td>
